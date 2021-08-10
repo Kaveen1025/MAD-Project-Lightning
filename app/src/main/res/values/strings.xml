@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MAD-Project-Design-phase</string>
+    <string name="GetStaredBtnTxt">Get Started</string>
+    <string name="Login"><b>LOG IN</b></string>
+    <string name="EmailPlaceholder">Email</string>
+    <string name="PasswordPlaceHolder">Password</string>
+    <string name="ForgotPasswordLink"><u>Forgot Password ?</u></string>
+    <string name="signInBtn">Sign in</string>
+    <string name="signUpBtn">Sign up</string>
+    <string name="WelcomeBackTxt">Welcome Back!</string>
+    <string name="todo">TODO</string>
+    <string name="reorderDes">Reorder_Icon</string>
+    <string name="notificationDes">Notification_Icon</string>
+    <string name="profileDes">Profile_Icon</string>
+    <string name="cartDes">Cart_Icon</string>
+    <string name="customerName">Thomas Shelby</string>
+    <string name="customerEmail">TommyShelby@gmail.com</string>
+    <string name="LogoutBtn">Log out</string>
+    <string name="sidebarFavRestaurant">My Favorite Restaurants</string>
+    <string name="sidebarFavFood">My Favorite Foods</string>
+    <string name="sidebarMyReviews">My Reviews</string>
+    <string name="sidebarFoodReview">Food Reviews</string>
+    <string name="sidebarRestReviews">Restaurant Reviews</string>
+    <string name="sidebarCards">Cards</string>
+    <string name="sidebarOrders">Orders</string>
+    <string name="sidebarPurchaseHistory">Purchase History</string>
+</resources>
