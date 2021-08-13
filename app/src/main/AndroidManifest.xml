@@ -9,11 +9,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MADProjectDesignphase">
-        <!--<activity android:name=".Side_bar_viewed"></activity>-->
+       <!-- <activity
+            android:name=".create_review"
+            android:exported="true" /> -->
+        <!--
+         <activity
+            android:name=".update_review"
+            android:exported="true" />
+        -->
+        <!-- <activity -->
+        <!-- android:name=".update_delete_review" -->
+        <!-- android:exported="true" /> -->
+        <!-- <activity -->
+        <!-- android:name=".customise_food" -->
+        <!-- android:exported="true" /> -->
+        <!-- <activity -->
+        <!-- android:name=".My_reviews" -->
+        <!-- android:exported="true" /> -->
+        <!-- <activity -->
+        <!-- android:name=".rate_food" -->
+        <!-- android:exported="true" /> -->
+        <!-- <activity -->
+        <!-- android:name=".favorits_food" -->
+        <!-- android:exported="true" /> &lt;!&ndash; <activity android:name=".Side_bar_viewed"></activity> &ndash;&gt; -->
         <!-- <activity android:name=".login_page_2" android:parentActivityName=".login_page"></activity> -->
         <!-- <activity android:name=".login_page"  android:parentActivityName=".login_page"/> -->
         <activity
-            android:name=".Side_bar_viewed"
+            android:name=".favorits_food"
             android:parentActivityName=".login_page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
