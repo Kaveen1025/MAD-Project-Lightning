@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainSearch">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="327dp"
+                android:layout_marginRight="327dp"
+                android:layout_marginBottom="7dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="@string/reorderDes"
+                app:srcCompat="@drawable/ic_reorder"
+                tools:ignore="VectorDrawableCompat" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="114dp"
+                android:layout_marginRight="114dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="@string/notificationDes"
+                app:srcCompat="@drawable/ic_notification"
+                tools:ignore="VectorDrawableCompat" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="78dp"
+                android:layout_marginRight="78dp"
+                android:layout_marginBottom="12dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="@string/profileDes"
+                app:srcCompat="@drawable/ic_profile"
+                tools:ignore="VectorDrawableCompat" />
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="13dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="@string/cartDes"
+                app:srcCompat="@drawable/ic_cart"
+                tools:ignore="VectorDrawableCompat" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.112">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </RelativeLayout>
+
+    </SearchView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginRight="140dp"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.326" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView193"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginTop="111dp"
+                    android:text="@string/cuisineType2"
+                    android:textColor="@color/ThemeBlack"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/imageView43"
+                    android:layout_width="match_parent"
+                    android:layout_height="176dp"
+                    android:layout_marginTop="-41dp"
+                    android:layout_marginEnd="-3dp"
+                    android:layout_marginRight="-3dp"
+                    android:clickable="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/jccc" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginEnd="215dp"
+        android:layout_marginRight="215dp"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.326" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginTop="111dp"
+                    android:text="@string/cuisineType1"
+                    android:textColor="@color/ThemeBlack"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="176dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-41dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:clickable="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/icccc" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+<!--    // first row-->
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginRight="140dp"
+        android:layout_marginTop="250dp"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.326" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView19344"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginTop="111dp"
+                    android:layout_marginEnd="48dp"
+                    android:layout_marginRight="54dp"
+                    android:text="@string/cuisineType4"
+                    android:textColor="@color/ThemeBlack"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView434"
+                android:layout_width="match_parent"
+                android:layout_height="176dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-41dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:clickable="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/indccc" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginEnd="215dp"
+        android:layout_marginRight="215dp"
+        android:layout_marginTop="250dp"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.326" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView1944"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginTop="111dp"
+                    android:text="@string/cuisineType3"
+                    android:textColor="@color/ThemeBlack"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView444"
+                android:layout_width="match_parent"
+                android:layout_height="176dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-41dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:clickable="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/accc" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+<!--    row 2 -->
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginRight="140dp"
+        android:layout_marginTop="500dp"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.326" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView193443"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginTop="111dp"
+                    android:text="@string/cuisineType6"
+                    android:textColor="@color/ThemeBlack"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView4343"
+                android:layout_width="match_parent"
+                android:layout_height="176dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-41dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:clickable="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/othercc" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginEnd="215dp"
+        android:layout_marginRight="215dp"
+        android:layout_marginTop="500dp"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.326" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView19443"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginTop="111dp"
+                    android:text="@string/cuisineType5"
+                    android:textColor="@color/ThemeBlack"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView4443"
+                android:layout_width="match_parent"
+                android:layout_height="176dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-41dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:clickable="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/vegccc" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginLeft="175dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginRight="180dp"
+        android:text="@string/cuisine"
+        android:textColor="@color/ThemeBlack"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.216" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
