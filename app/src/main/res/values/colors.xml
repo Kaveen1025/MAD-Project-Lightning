@@ -11,4 +11,5 @@
     <color name="ThemeGreen">#289944</color>
     <color name="FavoriteIcon">#FF007F</color>
     <color name="RedDelete">#DE0000</color>
+    <color name="ratingYellow">#FFDF00</color>
 </resources>

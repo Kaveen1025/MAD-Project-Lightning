@@ -75,4 +75,21 @@
     <string name="craete_review_review">Write a Review</string>
     <string name="create_review_btn_submit">Submit</string>
 
+    <string name="edit_card_topic">Edit Card</string>
+    <string name="edit_card_visa">Visa</string>
+    <string name="edit_card_no">7845 9632 7852 3196</string>
+    <string name="edit_card_name">H S WEERASINGHE</string>
+    <string name="edit_card_date">04/21</string>
+    <string name="edit_card_btn_reset">Reset</string>
+    <string name="edit_card_btn_update">Update</string>
+    <string name="add_details_topic">Add Details</string>
+    <string name="add_details_cardType">Card Type</string>
+    <string name="add_details_cardNo">Card Number</string>
+    <string name="add_details_name">Card Holder"'s Name</string>
+    <string name="add_details_date">Expiration date  MM/YY</string>
+    <string name="add_details_cvv">CVV / CVC</string>
+    <string name="add_details_button">PAY</string>
+    <string name="add_a_card_title">Add a Card</string>
+    <string name="add_a_card_cancel_btn">Cancel</string>
+    <string name="add_a_card_save_btn">Save</string>
 </resources>
