@@ -74,4 +74,56 @@ Can totally recommend it and will definitely come back again.</string>
     <string name="showMoreBtn">Show More</string>
     <string name="submitAReviewBtn">Submit a review</string>
     <string name="sampleUserName">John wok</string>
+
+
+    <!--    Heshini-->
+
+    <string name="selectCardHeader"><b>SELECT A CARD</b></string>
+    <string name="cardType">VISA CARD</string>
+    <string name="cardNo">XXXX XXXX XXXX 3196</string>
+    <string name="cardNo2">XXXX XXXX XXXX 4586</string>
+    <string name="selectBtn">Select</string>
+    <string name="cvcHint">cvv / cvc</string>
+    <string name="payBtn">Pay</string>
+    <string name="cardDetails"><b>CARD DETAILS</b></string>
+    <string name="cardTypes">VISA</string>
+    <string name="BankNAme">SEYLAN</string>
+    <string name="cardHolderHeader">Card Holder</string>
+    <string name="CardHolderName">H S WEERASINGHE</string>
+    <string name="cardExpirationDateHeader">MM/YY</string>
+    <string name="cardExpirationDate">04/21</string>
+    <string name="checkoutHeader"><b>CHECKOUT</b></string>
+    <string name="DeliveryHeader">Delivering To : </string>
+    <string name="OrderHeader">Order For : </string>
+    <string name="RecipientDetailsHeader"><u>Recipient Details</u></string>
+    <string name="titleHeader">Title : </string>
+    <string name="NameHeader">Name : </string>
+    <string name="PhoneHeader">Phone No : </string>
+    <string name="orderHeader"><u>Order / Payment Details</u></string>
+    <string name="payOnlineRadio">Pay Online</string>
+    <string name="payOnDelivery">Pay on delivery</string>
+    <string name="NextBtn">Next</string>
+    <string name="notificationHeader"><b>NOTIFICATION</b></string>
+    <string name="notificationMsg">"Shrimp Hot" is now Available for you</string>
+    <string name="viewBtn">View</string>
+    <string name="okBtn">Ok</string>
+    <string name="notificationMsg2"><b>Your order has been delivered</b></string>
+    <string name="notificationMsgExpand">Your order has been delivered to the given location. Please rate us for a better experience next time</string>
+    <string name="rating">Ratings</string>
+    <string name="restaurantAddress">525 Broad Street (3 blocks north of the lake) Lake Geneva, WI 53147</string>
+    <string name="menu">MENU</string>
+    <string name="foodItem1">Chicken Burger</string>
+    <string name="foodRatings">View Ratings</string>
+    <string name="priceLKR">LKR</string>
+    <string name="price">340/=</string>
+    <string name="price2">450/=</string>
+    <string name="PurchaseHistoryHeader"><b>PURCHASE HISTORY</b></string>
+    <string name="totalHeader">Total</string>
+    <string name="tableHeader1">ID</string>
+    <string name="tableHeader2">DATE AND TIME</string>
+    <string name="tableheader3">PRICE</string>
+    <string name="ID">PM00945</string>
+    <string name="dateAndTime">04/08/2021 10:45AM</string>
+    <string name="prices">LKR 2500</string>
+    <string name="totalPrice">LKR 10000</string>
 </resources>
