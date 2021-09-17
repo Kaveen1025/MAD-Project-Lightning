@@ -102,7 +102,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/RestaurantName"
+        android:text="@string/restaurantName1"
         android:textColor="@color/ThemeBlack"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -111,20 +111,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.457" />
-
-    <TextView
-        android:id="@+id/textView75"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/rating"
-        android:textColor="@color/ThemeBlack"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.706"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.504" />
 
     <TextView
         android:id="@+id/textView76"
@@ -157,7 +143,7 @@
         android:id="@+id/textView86"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Rating"
+        android:text="@string/Ratings"
         android:textColor="@color/ThemeBlack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -194,7 +180,7 @@
                 android:layout_marginStart="147dp"
                 android:layout_marginLeft="147dp"
                 android:layout_marginBottom="18dp"
-                android:text="@string/menu"
+                android:text="@string/Hedermenu"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
         </RelativeLayout>
@@ -205,7 +191,7 @@
         android:layout_width="79dp"
         android:layout_height="40dp"
         android:clickable="true"
-        android:text="@string/viewBtn"
+        android:text="@string/VIEWBTN"
         android:textColor="@color/ThemeBlack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -285,7 +271,7 @@
                 android:layout_marginEnd="111dp"
                 android:layout_marginRight="111dp"
                 android:layout_marginBottom="39dp"
-                android:text="@string/price"
+                android:text="@string/foodprice"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="20sp" />
 
@@ -299,7 +285,7 @@
                 android:layout_marginEnd="169dp"
                 android:layout_marginRight="169dp"
                 android:layout_marginBottom="39dp"
-                android:text="@string/priceLKR"
+                android:text="@string/LkrHeader"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="20sp" />
 
@@ -327,7 +313,7 @@
                 android:layout_marginEnd="7dp"
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="47dp"
-                android:text="@string/Rating"
+                android:text="@string/Ratings"
                 android:textColor="@color/ThemeBlack" />
 
         </RelativeLayout>
@@ -399,10 +385,10 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="114dp"
-                android:layout_marginRight="114dp"
-                android:layout_marginBottom="44dp"
-                android:text="@string/price2"
+                android:layout_marginEnd="177dp"
+                android:layout_marginRight="177dp"
+                android:layout_marginBottom="41dp"
+                android:text="@string/LkrHeader"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="20sp" />
 
@@ -413,10 +399,10 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="141dp"
-                android:layout_marginLeft="141dp"
-                android:layout_marginBottom="43dp"
-                android:text="@string/priceLKR"
+                android:layout_marginStart="182dp"
+                android:layout_marginLeft="182dp"
+                android:layout_marginBottom="41dp"
+                android:text="@string/foodprice"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="20sp" />
 
@@ -444,7 +430,7 @@
                 android:layout_marginEnd="11dp"
                 android:layout_marginRight="11dp"
                 android:layout_marginBottom="45dp"
-                android:text="@string/Rating"
+                android:text="@string/Ratings"
                 android:textColor="@color/ThemeBlack" />
 
         </RelativeLayout>

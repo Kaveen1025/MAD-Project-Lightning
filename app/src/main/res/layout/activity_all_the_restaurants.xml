@@ -138,7 +138,7 @@
                 android:layout_marginTop="188dp"
                 android:layout_marginEnd="71dp"
                 android:layout_marginRight="71dp"
-                android:text="@string/RestaurantName"
+                android:text="@string/restaurantName1"
                 android:textColor="@color/ThemeBlack"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -166,7 +166,7 @@
                 android:layout_marginStart="131dp"
                 android:layout_marginLeft="131dp"
                 android:layout_marginTop="239dp"
-                android:text="@string/Location"
+                android:text="@string/Location1"
                 android:textColor="@color/ThemeBlack" />
 
             <ImageButton
@@ -207,7 +207,7 @@
                 android:layout_marginEnd="7dp"
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="5dp"
-                android:text="@string/Rating" />
+                android:text="@string/Ratings" />
 
         </RelativeLayout>
 
@@ -218,7 +218,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="@string/AllTheRestaurantHeader"
+        android:text="@string/RestaurantHeader"
         android:textColor="@color/ThemeBlack"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -291,7 +291,7 @@
                 android:layout_marginStart="130dp"
                 android:layout_marginLeft="130dp"
                 android:layout_marginBottom="41dp"
-                android:text="@string/CuisineType2"
+                android:text="@string/cuisineType2"
                 android:textColor="@color/ThemeBlack" />
 
             <TextView
@@ -345,7 +345,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="6dp"
-                android:text="@string/Rating" />
+                android:text="@string/Ratings" />
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

@@ -91,7 +91,7 @@
         android:id="@+id/textView53"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/cardDetails"
+        android:text="@string/CardDetailsHeader"
         android:textColor="@color/ThemeBlack"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -150,7 +150,7 @@
                     android:layout_marginStart="308dp"
                     android:layout_marginLeft="308dp"
                     android:layout_marginTop="159dp"
-                    android:text="@string/cardTypes"
+                    android:text="@string/CardType"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -178,7 +178,7 @@
                     android:layout_marginStart="23dp"
                     android:layout_marginLeft="23dp"
                     android:layout_marginTop="12dp"
-                    android:text="@string/BankNAme"
+                    android:text="@string/BankName"
                     android:textColor="@color/white"
                     android:textSize="24sp" />
 
@@ -192,7 +192,7 @@
                     android:layout_marginStart="81dp"
                     android:layout_marginLeft="81dp"
                     android:layout_marginTop="143dp"
-                    android:text="@string/cardHolderHeader"
+                    android:text="@string/CardHolderHeader"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -205,7 +205,7 @@
                     android:layout_marginStart="59dp"
                     android:layout_marginLeft="59dp"
                     android:layout_marginTop="117dp"
-                    android:text="@string/CardHolderName"
+                    android:text="@string/CardHoldername"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -218,7 +218,7 @@
                     android:layout_marginTop="145dp"
                     android:layout_marginEnd="81dp"
                     android:layout_marginRight="81dp"
-                    android:text="@string/cardExpirationDateHeader"
+                    android:text="@string/ExpirationDateHeader"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -231,7 +231,7 @@
                     android:layout_marginTop="118dp"
                     android:layout_marginEnd="85dp"
                     android:layout_marginRight="85dp"
-                    android:text="@string/cardExpirationDate"
+                    android:text="@string/carExpirationDate"
                     android:textColor="@color/white" />
 
                 <ImageView
@@ -255,7 +255,7 @@
         android:id="@+id/button22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Edit"
+        android:text="@string/editBtn"
         app:backgroundTint="@color/ThemeBlack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -268,7 +268,7 @@
         android:id="@+id/button27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Edit"
+        android:text="@string/editBtn"
         app:backgroundTint="@color/ThemeBlack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -284,7 +284,7 @@
         android:id="@+id/button26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/delete"
+        android:text="@string/deleteBtn"
         app:backgroundTint="@color/RedDelete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -297,7 +297,7 @@
         android:id="@+id/button28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/delete"
+        android:text="@string/deleteBtn"
         app:backgroundTint="@color/RedDelete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -340,7 +340,7 @@
                     android:layout_marginStart="308dp"
                     android:layout_marginLeft="308dp"
                     android:layout_marginTop="159dp"
-                    android:text="@string/cardTypes"
+                    android:text="@string/CardType"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -354,7 +354,7 @@
                     android:layout_marginStart="59dp"
                     android:layout_marginLeft="59dp"
                     android:layout_marginTop="67dp"
-                    android:text="@string/cardNo2"
+                    android:text="@string/cardNo"
                     android:textColor="@color/white"
                     android:textSize="24sp" />
 
@@ -368,7 +368,7 @@
                     android:layout_marginStart="23dp"
                     android:layout_marginLeft="23dp"
                     android:layout_marginTop="12dp"
-                    android:text="@string/BankNAme"
+                    android:text="@string/BankName"
                     android:textColor="@color/white"
                     android:textSize="24sp" />
 
@@ -382,7 +382,7 @@
                     android:layout_marginStart="81dp"
                     android:layout_marginLeft="81dp"
                     android:layout_marginTop="143dp"
-                    android:text="@string/cardHolderHeader"
+                    android:text="@string/CardHolderHeader"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -395,7 +395,7 @@
                     android:layout_marginStart="59dp"
                     android:layout_marginLeft="59dp"
                     android:layout_marginTop="117dp"
-                    android:text="@string/CardHolderName"
+                    android:text="@string/CardHoldername"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -408,7 +408,7 @@
                     android:layout_marginTop="145dp"
                     android:layout_marginEnd="81dp"
                     android:layout_marginRight="81dp"
-                    android:text="@string/cardExpirationDateHeader"
+                    android:text="@string/ExpirationDateHeader"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -421,7 +421,7 @@
                     android:layout_marginTop="118dp"
                     android:layout_marginEnd="85dp"
                     android:layout_marginRight="85dp"
-                    android:text="@string/cardExpirationDate"
+                    android:text="@string/carExpirationDate"
                     android:textColor="@color/white" />
 
                 <ImageView

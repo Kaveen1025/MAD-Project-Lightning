@@ -154,7 +154,7 @@
                 android:layout_marginStart="86dp"
                 android:layout_marginLeft="86dp"
                 android:layout_marginBottom="344dp"
-                android:text="@string/RestaurantName"
+                android:text="@string/restaurantName1"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -256,7 +256,7 @@
                 android:layout_marginStart="135dp"
                 android:layout_marginLeft="135dp"
                 android:layout_marginBottom="209dp"
-                android:text="@string/feedback"
+                android:text="@string/Hederfeedback"
                 android:textColor="@color/ThemeBlack"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />

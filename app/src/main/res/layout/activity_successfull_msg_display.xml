@@ -128,7 +128,7 @@
                 android:layout_marginEnd="-20dp"
                 android:layout_marginRight="-20dp"
                 android:layout_marginBottom="62dp"
-                android:text="@string/successfulMsg"
+                android:text="@string/reviewsuccessfullyMessage"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="24sp" />
 

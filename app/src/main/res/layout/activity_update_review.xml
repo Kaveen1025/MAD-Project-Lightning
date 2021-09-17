@@ -127,7 +127,7 @@
                 android:layout_marginStart="179dp"
                 android:layout_marginLeft="179dp"
                 android:layout_marginTop="35dp"
-                android:text="@string/Edit"
+                android:text="@string/editBtn"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="20sp" />
 
@@ -155,7 +155,7 @@
                 android:layout_marginStart="86dp"
                 android:layout_marginLeft="86dp"
                 android:layout_marginBottom="344dp"
-                android:text="@string/RestaurantName"
+                android:text="@string/restaurantName1"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -241,7 +241,7 @@
                 android:layout_marginStart="135dp"
                 android:layout_marginLeft="135dp"
                 android:layout_marginBottom="249dp"
-                android:text="@string/feedback"
+                android:text="@string/Hederfeedback"
                 android:textColor="@color/ThemeBlack"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -270,7 +270,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginBottom="56dp"
-                android:text="@string/update"
+                android:text="@string/updateBtn"
                 app:backgroundTint="@color/ThemeGreen" />
 
             <Button
@@ -283,7 +283,7 @@
                 android:layout_marginStart="227dp"
                 android:layout_marginLeft="227dp"
                 android:layout_marginBottom="57dp"
-                android:text="@string/delete"
+                android:text="@string/deleteBtn"
                 app:backgroundTint="@color/RedDelete" />
 
         </RelativeLayout>

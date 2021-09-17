@@ -99,7 +99,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white">
+            android:background="@color/ThemeGreen">
 
             <ImageButton
                 android:id="@+id/imageButton13"
@@ -129,7 +129,7 @@
                 android:layout_marginEnd="18dp"
                 android:layout_marginRight="18dp"
                 android:layout_marginBottom="87dp"
-                android:text="@string/confirmationDeleteMsg"
+                android:text="@string/deleteConfirmHeader"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="24sp" />
 
@@ -163,7 +163,7 @@
                 android:layout_marginStart="39dp"
                 android:layout_marginLeft="35dp"
                 android:layout_marginBottom="22dp"
-                android:text="@string/yes"
+                android:text="@string/yesBtn"
                 app:backgroundTint="@color/ThemeBlack" />
 
             <Button
@@ -176,7 +176,7 @@
                 android:layout_marginEnd="39dp"
                 android:layout_marginRight="39dp"
                 android:layout_marginBottom="22dp"
-                android:text="@string/no"
+                android:text="@string/noBtn"
                 app:backgroundTint="@color/ThemeBlack" />
 
         </RelativeLayout>

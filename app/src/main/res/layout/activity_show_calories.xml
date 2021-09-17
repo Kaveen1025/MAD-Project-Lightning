@@ -131,7 +131,7 @@
                 android:layout_marginStart="80dp"
                 android:layout_marginLeft="82dp"
                 android:layout_marginBottom="370dp"
-                android:text="@string/ingredientTxt1"
+                android:text="@string/ingredientxt1"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="24sp" />
 
@@ -159,7 +159,7 @@
                 android:layout_marginTop="49dp"
                 android:layout_marginEnd="30dp"
                 android:layout_marginRight="30dp"
-                android:text="@string/caloriesCalculateHeader"
+                android:text="@string/caloriesFoodName"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="29sp" />
 
@@ -189,7 +189,7 @@
                 android:layout_marginStart="70dp"
                 android:layout_marginLeft="104dp"
                 android:layout_marginBottom="139dp"
-                android:text="@string/totalCalories"
+                android:text="@string/TotalCaloriesHeader"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="24sp" />
 
@@ -203,7 +203,7 @@
                 android:layout_marginStart="80dp"
                 android:layout_marginLeft="80dp"
                 android:layout_marginBottom="220dp"
-                android:text="@string/ingredientTxt4"
+                android:text="@string/ingredientxt5"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="24sp" />
 
@@ -217,7 +217,7 @@
                 android:layout_marginStart="80dp"
                 android:layout_marginLeft="84dp"
                 android:layout_marginBottom="270dp"
-                android:text="@string/ingredientTxt3"
+                android:text="@string/ingredientxt3"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="24sp" />
 
@@ -231,7 +231,7 @@
                 android:layout_marginStart="80dp"
                 android:layout_marginLeft="83dp"
                 android:layout_marginBottom="320dp"
-                android:text="@string/ingredientTxt2"
+                android:text="@string/ingredientxt2"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="24sp" />
 
@@ -245,7 +245,7 @@
                 android:layout_marginEnd="62dp"
                 android:layout_marginRight="60dp"
                 android:layout_marginBottom="373dp"
-                android:text="@string/noOfCalories1"
+                android:text="@string/calories1"
                 android:textColor="@color/ThemeGreen"
                 android:textSize="24sp" />
 
@@ -259,7 +259,7 @@
                 android:layout_marginEnd="62dp"
                 android:layout_marginRight="61dp"
                 android:layout_marginBottom="318dp"
-                android:text="@string/noOfCalories2"
+                android:text="@string/calories2"
                 android:textColor="@color/ThemeGreen"
                 android:textSize="24sp" />
 
@@ -273,7 +273,7 @@
                 android:layout_marginEnd="62dp"
                 android:layout_marginRight="62dp"
                 android:layout_marginBottom="218dp"
-                android:text="@string/noOfCalories4"
+                android:text="@string/calories4"
                 android:textColor="@color/ThemeGreen"
                 android:textSize="24sp" />
 
@@ -287,7 +287,7 @@
                 android:layout_marginEnd="62dp"
                 android:layout_marginRight="62dp"
                 android:layout_marginBottom="268dp"
-                android:text="@string/noOfCalories3"
+                android:text="@string/calories3"
                 android:textColor="@color/ThemeGreen"
                 android:textSize="24sp" />
 
@@ -301,7 +301,7 @@
                 android:layout_marginEnd="62dp"
                 android:layout_marginRight="62dp"
                 android:layout_marginBottom="136dp"
-                android:text="@string/noTotalCalories"
+                android:text="@string/totalCaloriesNo"
                 android:textColor="@color/ThemeGreen"
                 android:textSize="24sp" />
         </RelativeLayout>
