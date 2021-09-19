@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "369525707312",
+    "project_id": "foodshades-bc767",
+    "storage_bucket": "foodshades-bc767.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369525707312:android:7ef8d498bd75907a1cd3f5",
+        "android_client_info": {
+          "package_name": "com.example.mad_project_design_phase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369525707312-v6bcj767pdd6tkhcu1odni78c1n3h9ka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYc5GNkeCmrR3ut8AOe5y0lxdiKV4KZGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "369525707312-v6bcj767pdd6tkhcu1odni78c1n3h9ka.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

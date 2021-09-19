@@ -272,7 +272,7 @@
                 android:layout_marginLeft="99dp"
                 android:layout_marginTop="450dp"
                 android:gravity="top"
-                android:hint="@string/txtAreaHint"
+                android:hint="@string/textHint"
                 android:inputType="text|textMultiLine" />
 
             <Button

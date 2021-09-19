@@ -9,21 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MADProjectDesignphase">
-        <!--<activity android:name=".home_page"></activity> -->
-        <!-- <activity android:name=".edit_cart"></activity> -->
-        <!-- <activity android:name=".view_orders"></activity> -->
-        <!-- <activity android:name=".view_address"></activity> -->
-        <!-- <activity android:name=".edit_profile"></activity> -->
-        <!-- <activity android:name=".add_new_address"></activity> -->
-        <!-- <activity android:name=".test"></activity> -->
-        <!-- <activity android:name=".user_profile" /> -->
-        <!-- <activity android:name=".sign_up_page" /> -->
-        <!-- <activity android:name=".Side_bar_viewed"></activity> -->
-        <!-- <activity android:name=".login_page_2" android:parentActivityName=".login_page"></activity> -->
-        <!-- <activity android:name=".login_page"  android:parentActivityName=".login_page"/> -->
+
         <activity
-            android:name=".edit_profile"
-            android:parentActivityName=".login_page">
+            android:name=".login_page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
