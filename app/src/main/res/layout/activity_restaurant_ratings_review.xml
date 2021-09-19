@@ -359,7 +359,7 @@
         app:layout_constraintVertical_bias="0.63" />
 
     <TextView
-        android:id="@+id/textView48"
+        android:id="@+id/txtAddaCard"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/restaurantReview"
