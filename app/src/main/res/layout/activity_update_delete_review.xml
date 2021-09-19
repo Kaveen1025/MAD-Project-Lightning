@@ -198,7 +198,7 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:text="@string/update_delete_review_review"
+        android:text=" Received with good condition and on time. My friend liked it so much and taste good 👍"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
