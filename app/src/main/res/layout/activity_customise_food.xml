@@ -107,7 +107,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/customizeFood_foodTitle"
                 android:layout_width="234dp"
                 android:layout_height="33dp"
                 android:layout_alignParentStart="true"
@@ -120,7 +120,7 @@
                 android:layout_marginEnd="163dp"
                 android:layout_marginRight="163dp"
                 android:layout_marginBottom="50dp"
-                android:text="@string/customize_foodName"
+                android:text="Chicken burger with fries"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="18sp" />
 
@@ -133,7 +133,6 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:background="?android:attr/selectableItemBackground"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="0dp"
                 android:layout_marginLeft="0dp"
@@ -141,10 +140,11 @@
                 android:layout_marginEnd="-2dp"
                 android:layout_marginRight="-2dp"
                 android:layout_marginBottom="-5dp"
+                android:background="?android:attr/selectableItemBackground"
                 app:srcCompat="@drawable/food4" />
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/customizeFood_foodDes"
                 android:layout_width="393dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -153,7 +153,7 @@
                 android:layout_marginEnd="4dp"
                 android:layout_marginRight="4dp"
                 android:layout_marginBottom="8dp"
-                android:text="@string/customize_foodDescription"
+                android:text="crumbed chicken burger with freshly cooked fries and sweet chilli mayo."
                 android:textColor="@color/ThemeBlack"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -181,7 +181,7 @@
     </androidx.cardview.widget.CardView>
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/customizeFood_addItem"
         android:layout_width="134dp"
         android:layout_height="40dp"
         android:layout_marginStart="32dp"
@@ -189,9 +189,9 @@
         android:layout_marginTop="84dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
-        android:text="@string/customize_item1"
+        android:text="Potato fries"
         app:layout_constraintBottom_toTopOf="@+id/checkBox2"
-        app:layout_constraintEnd_toStartOf="@+id/textView20"
+        app:layout_constraintEnd_toStartOf="@+id/customizeFood_price"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView7"
@@ -263,7 +263,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.018"
         app:layout_constraintStart_toEndOf="@+id/checkBox2"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        app:layout_constraintTop_toBottomOf="@+id/customizeFood_price" />
 
     <TextView
         android:id="@+id/textView23"
@@ -296,18 +296,18 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/customizeFood_price"
         android:layout_width="142dp"
         android:layout_height="29dp"
         android:layout_marginTop="96dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:text="@string/customize_price1"
+        android:text="LKR. 100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView7" />
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/customizeFood_Total"
         android:layout_width="82dp"
         android:layout_height="28dp"
         android:layout_marginStart="138dp"
@@ -324,10 +324,10 @@
         app:layout_constraintVertical_bias="0.881" />
 
     <TextView
-        android:id="@+id/textView25"
+        android:id="@+id/customizeFood_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/customize_theTotal"
+        android:text="LKR. 650.00"
         android:textColor="@color/ThemeBlack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -337,7 +337,7 @@
         app:layout_constraintVertical_bias="0.872" />
 
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/customizeFood_showCalbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/customize_btn_showCal"
@@ -350,7 +350,7 @@
         app:layout_constraintVertical_bias="0.956" />
 
     <Button
-        android:id="@+id/button15"
+        android:id="@+id/customizeFood_btnAddtocart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/customize_btn_AddToCart"

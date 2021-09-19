@@ -131,19 +131,21 @@
                 app:srcCompat="@drawable/food8" />
 
             <TextView
-                android:id="@+id/textView35"
+                android:id="@+id/myReviews_foodDes"
                 android:layout_width="219dp"
                 android:layout_height="53dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
                 android:layout_marginTop="66dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
-                android:text="@string/myReviews_foodDes1" />
+                android:layout_marginBottom="31dp"
+                android:text="Fresh Lime mojito with white rum,lime, sugar and soda." />
 
             <Button
-                android:id="@+id/button17"
+                android:id="@+id/myReviews_foodName"
                 android:layout_width="178dp"
                 android:layout_height="45dp"
                 android:layout_alignParentStart="true"
@@ -158,7 +160,7 @@
                 android:layout_marginEnd="51dp"
                 android:layout_marginRight="51dp"
                 android:layout_marginBottom="94dp"
-                android:text="@string/myReviews_food1"
+                android:text="Lime Mojito"
                 app:backgroundTint="@color/ThemeGreen"
                 tools:ignore="TouchTargetSizeCheck" />
         </RelativeLayout>
@@ -198,7 +200,6 @@
                 app:srcCompat="@drawable/food9" />
 
             <Button
-                android:id="@+id/button18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -213,7 +214,7 @@
                 android:layout_marginEnd="43dp"
                 android:layout_marginRight="43dp"
                 android:layout_marginBottom="91dp"
-                android:text="@string/myReviews_food2"
+                android:text="Strawberry Cake"
                 app:backgroundTint="@color/ThemeGreen" />
 
             <TextView
@@ -226,7 +227,7 @@
                 android:layout_marginTop="68dp"
                 android:layout_marginEnd="17dp"
                 android:layout_marginRight="17dp"
-                android:text="@string/myReviews_foodDes2" />
+                android:text="Delicious, Freshly bake strawberry cake with cream cheese frosting." />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -264,7 +265,6 @@
                 app:srcCompat="@drawable/food10" />
 
             <Button
-                android:id="@+id/button19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -273,7 +273,7 @@
                 android:layout_marginEnd="40dp"
                 android:layout_marginRight="40dp"
                 android:layout_marginBottom="85dp"
-                android:text="@string/myReviews_food3"
+                android:text="Chinese Fried Rice"
                 app:backgroundTint="@color/ThemeGreen" />
 
             <TextView
@@ -286,7 +286,7 @@
                 android:layout_marginEnd="28dp"
                 android:layout_marginRight="28dp"
                 android:layout_marginBottom="15dp"
-                android:text="@string/myReviews_foodDes3" />
+                android:text="Chinese styled fried rice with seafood." />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 

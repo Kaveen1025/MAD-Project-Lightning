@@ -134,7 +134,7 @@ app:layout_constraintTop_toTopOf="parent">
                 android:layout_marginStart="34dp"
                 android:layout_marginLeft="34dp"
                 android:layout_marginBottom="50dp"
-                android:text="@string/ratings_foodName"
+                android:text="Vegetable Salad"
                 android:textSize="20sp" />
 
             <TextView
@@ -159,7 +159,7 @@ app:layout_constraintTop_toTopOf="parent">
                 android:layout_marginStart="34dp"
                 android:layout_marginLeft="34dp"
                 android:layout_marginBottom="9dp"
-                android:text="@string/ratings_foodDescription"
+                android:text="This delicious salad includes  avacado, spinach, crispy cabage with our special seasoning."
                 android:textSize="16sp" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -206,7 +206,7 @@ app:layout_constraintTop_toTopOf="parent">
                 android:layout_marginStart="156dp"
                 android:layout_marginLeft="156dp"
                 android:layout_marginBottom="73dp"
-                android:text="@string/ratings_user1" />
+                android:text="Emily West" />
 
             <TextView
                 android:id="@+id/textView26"
@@ -218,7 +218,7 @@ app:layout_constraintTop_toTopOf="parent">
                 android:layout_marginEnd="147dp"
                 android:layout_marginRight="147dp"
                 android:layout_marginBottom="74dp"
-                android:text="@string/ratings_rate1" />
+                android:text="3.0" />
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -269,18 +269,6 @@ app:layout_constraintTop_toTopOf="parent">
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/textView28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="159dp"
-                android:layout_marginLeft="159dp"
-                android:layout_marginBottom="343dp"
-                android:text="TextView" />
-
-            <TextView
                 android:id="@+id/textView29"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -290,7 +278,7 @@ app:layout_constraintTop_toTopOf="parent">
                 android:layout_marginStart="154dp"
                 android:layout_marginLeft="154dp"
                 android:layout_marginBottom="22dp"
-                android:text="@string/ratings_review1" />
+                android:text="very delicious but should be more time concious" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -331,7 +319,7 @@ app:layout_constraintTop_toTopOf="parent">
                 android:layout_marginStart="170dp"
                 android:layout_marginLeft="170dp"
                 android:layout_marginBottom="69dp"
-                android:text="@string/ratings_user2"
+                android:text="Ben Parker"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -345,7 +333,7 @@ app:layout_constraintTop_toTopOf="parent">
                 android:layout_marginEnd="135dp"
                 android:layout_marginRight="135dp"
                 android:layout_marginBottom="68dp"
-                android:text="@string/ratings_rate2" />
+                android:text="5.0" />
 
             <ImageView
                 android:id="@+id/imageView11"
@@ -417,7 +405,7 @@ app:layout_constraintTop_toTopOf="parent">
                 android:layout_marginEnd="0dp"
                 android:layout_marginRight="0dp"
                 android:layout_marginBottom="0dp"
-                android:text="@string/ratings_review2"
+                android:text="its taste was so amazing.. the quality was good too. Highly recommended."
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
         </RelativeLayout>

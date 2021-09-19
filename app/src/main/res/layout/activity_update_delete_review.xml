@@ -134,7 +134,7 @@
                 android:layout_marginEnd="220dp"
                 android:layout_marginRight="220dp"
                 android:layout_marginBottom="55dp"
-                android:text="@string/myReviews_food2"
+                android:text="Strawberry Cake"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="16sp" />
 
@@ -148,7 +148,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginBottom="14dp"
-                android:text="@string/myReviews_foodDes2" />
+                android:text="Delicious strawberry cake with fresh strawberries and cream cheese" />
 
             <ImageView
                 android:id="@+id/imageView22"
