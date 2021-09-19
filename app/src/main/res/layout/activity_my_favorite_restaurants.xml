@@ -89,7 +89,7 @@
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/headerFav"
+        android:text="@string/headerfavs"
         android:textColor="@color/ThemeBlack"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

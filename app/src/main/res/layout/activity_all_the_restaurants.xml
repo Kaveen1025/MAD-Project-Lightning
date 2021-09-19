@@ -180,7 +180,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="70dp"
                 android:background="?android:attr/selectableItemBackground"
-                app:srcCompat="@drawable/ic_favourite"
+                app:srcCompat="@drawable/ic_favvv"
                 tools:ignore="VectorDrawableCompat" />
 
             <ImageButton
@@ -318,7 +318,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="65dp"
                 android:background="?android:attr/selectableItemBackground"
-                app:srcCompat="@drawable/ic_favourite"
+                app:srcCompat="@drawable/ic_favvv"
                 tools:ignore="VectorDrawableCompat" />
 
             <ImageButton
