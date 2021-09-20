@@ -6,6 +6,13 @@ public class HAddCard {
     private String CardHolder;
     private String CardDate;
 
+    public HAddCard(String cardType, String cardNumber, String cardHolder, String cardDate) {
+        CardType = cardType;
+        CardNumber = cardNumber;
+        CardHolder = cardHolder;
+        CardDate = cardDate;
+    }
+
     public HAddCard() {
     }
 

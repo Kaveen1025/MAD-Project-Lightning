@@ -141,7 +141,7 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
-                    android:id="@+id/textView55"
+                    android:id="@+id/txtCardTyp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -155,7 +155,7 @@
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/textView56"
+                    android:id="@+id/txtCardNum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
