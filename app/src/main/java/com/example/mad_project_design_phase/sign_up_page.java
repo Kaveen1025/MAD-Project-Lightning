@@ -23,7 +23,7 @@ public class sign_up_page extends AppCompatActivity {
     Button button_signup;
     Customer CusObj;
     DatabaseReference dbRef;
-    FirebaseDatabase database;
+//    FirebaseDatabase database;
     FirebaseAuth auth;
     FirebaseUser firebaseUser;
 
@@ -69,14 +69,55 @@ public class sign_up_page extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String FirstName = firstname.getText().toString();
-                String LastName = lastname.getText().toString();
-                String Email = input_email.getText().toString();
-                String Address = postal_address.getText().toString();
-                String Password = password.getText().toString();
-                Integer PhoneNumber = Integer.valueOf(phone_number.getText().toString().trim());
+                String FirstName = firstname.getText().toString().trim();
+                String LastName = lastname.getText().toString().trim();
+                String Email = input_email.getText().toString().trim();
+                String Address = postal_address.getText().toString().trim();
+                Integer PhoneNumber = Integer.parseInt(phone_number.getText().toString().trim());
+                String Password = password.getText().toString().trim();
+
                 //phone number
                 String ConfirmPassword = et_confirm_password.getText().toString();
+
+//                if(TextUtils.isEmpty(FirstName)){
+//                    firstname.setError("First Name is Required");
+//                        return;
+//                }
+//
+//                if(TextUtils.isEmpty(LastName)){
+//                    lastname.setError("Last Name is Required");
+//                   return;
+//                }
+//
+//                if(TextUtils.isEmpty(Email)){
+//                   input_email.setError("Email is Required");
+//                  return;
+//                }
+//                if(TextUtils.isEmpty(Address)){
+//                   postal_address.setError("Address is Required");
+//                    return;
+//                }
+////               if (!TextUtils.isEmpty(PhoneNumber)) {
+////
+////                   phone_number.setError("Phone Number is Required");
+//                       return;
+////                }
+//                if(TextUtils.isEmpty(Password)){
+//                    password.setError("Password is Required");
+//                   return;
+//                }
+//                if(Password.length()<8){
+//                    password.setError("Password must be >= 8 characters");
+//                   return;
+//                }
+//                if(TextUtils.isEmpty(ConfirmPassword)){
+//                    et_confirm_password.setError("Please Confirm Your Password");
+//                   return;
+//                }
+
+//                register the user in firebase.
+
+
 
                 auth.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -87,12 +128,27 @@ public class sign_up_page extends AppCompatActivity {
 
                             CusObj = new Customer(FirstName,LastName,Email,Address,PhoneNumber,Password);
 
-                            dbRef.child(firebaseUser.getUid()).setValue(CusObj);
-                            Toast.makeText(sign_up_page.this, "Customer Added Successfully", Toast.LENGTH_SHORT).show();
+                            dbRef.child(firebaseUser.getUid()).setValue(CusObj).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if(task.isSuccessful()){
+
+                                        Toast.makeText(sign_up_page.this, "Customer Added Successfully", Toast.LENGTH_SHORT).show();
+
+                                    }else{
+
+                                        Toast.makeText(sign_up_page.this, "Customer Added Failed", Toast.LENGTH_SHORT).show();
+                                        ClearControls();
+
+                                    }
+                                }
+                            });
+
 
                         }else{
-                            Toast.makeText(sign_up_page.this, "Customer Added Failed", Toast.LENGTH_SHORT).show();
-                            ClearControls();
+
+                            Toast.makeText(sign_up_page.this, "User Create failed", Toast.LENGTH_SHORT).show();
+
                         }
 
                     }

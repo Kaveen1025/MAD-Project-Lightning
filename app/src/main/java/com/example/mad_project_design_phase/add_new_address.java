@@ -39,6 +39,9 @@ public class add_new_address extends AppCompatActivity {
         et_address = findViewById(R.id.et_address);
         save_address = findViewById(R.id.save_address);
         //CusAdd = new CustomerAddress();
+
+        dbRef = FirebaseDatabase.getInstance().getReference().child("CustomerAddress");
+        auth = FirebaseAuth.getInstance();
     }
 
 //    protected void onResume(){
