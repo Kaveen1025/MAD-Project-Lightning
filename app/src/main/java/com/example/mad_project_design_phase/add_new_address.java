@@ -40,7 +40,7 @@ public class add_new_address extends AppCompatActivity {
         save_address = findViewById(R.id.save_address);
         //CusAdd = new CustomerAddress();
 
-        dbRef = FirebaseDatabase.getInstance().getReference().child("CustomerAddress");
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer Address");
         auth = FirebaseAuth.getInstance();
     }
 
@@ -74,7 +74,7 @@ public class add_new_address extends AppCompatActivity {
 
                 CusAdd = new CustomerAddress(Province,City,Address);
 
-                dbRef.child(firebaseUser.getUid()).setValue(CusAdd);
+                dbRef.child(firebaseUser.getUid()).push().setValue(CusAdd);
                 Toast.makeText(add_new_address.this, "Address Added Successfully", Toast.LENGTH_SHORT).show();
 
 

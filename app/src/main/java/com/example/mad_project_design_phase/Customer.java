@@ -11,7 +11,7 @@ public class Customer{
     private String Password;
 
 
-//    public Customer() {}
+     //Customer() {}
 
     public Customer(String firstName, String lastName, String email, String address, Integer phoneNumber, String password) {
         FirstName = firstName;
