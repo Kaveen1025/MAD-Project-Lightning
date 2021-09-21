@@ -87,7 +87,7 @@
     </androidx.cardview.widget.CardView>
 
     <ImageView
-        android:id="@+id/imageView24"
+        android:id="@+id/FoodImage"
         android:layout_width="473dp"
         android:layout_height="232dp"
         android:layout_marginTop="50dp"
@@ -122,7 +122,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView39"
+                android:id="@+id/option1Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -131,12 +131,11 @@
                 android:layout_marginStart="80dp"
                 android:layout_marginLeft="82dp"
                 android:layout_marginBottom="370dp"
-                android:text="@string/ingredientxt1"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="24sp" />
 
             <ImageButton
-                android:id="@+id/imageButton22"
+                android:id="@+id/closeBtn22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -150,7 +149,7 @@
                 tools:ignore="VectorDrawableCompat" />
 
             <TextView
-                android:id="@+id/textView32"
+                android:id="@+id/foodName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -194,7 +193,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView36"
+                android:id="@+id/option4Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -203,12 +202,11 @@
                 android:layout_marginStart="80dp"
                 android:layout_marginLeft="80dp"
                 android:layout_marginBottom="220dp"
-                android:text="@string/ingredientxt5"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView37"
+                android:id="@+id/option3Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -217,12 +215,11 @@
                 android:layout_marginStart="80dp"
                 android:layout_marginLeft="84dp"
                 android:layout_marginBottom="270dp"
-                android:text="@string/ingredientxt3"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView38"
+                android:id="@+id/option2Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -231,12 +228,11 @@
                 android:layout_marginStart="80dp"
                 android:layout_marginLeft="83dp"
                 android:layout_marginBottom="320dp"
-                android:text="@string/ingredientxt2"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView40"
+                android:id="@+id/option1Cal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -245,12 +241,11 @@
                 android:layout_marginEnd="62dp"
                 android:layout_marginRight="60dp"
                 android:layout_marginBottom="373dp"
-                android:text="@string/calories1"
                 android:textColor="@color/ThemeGreen"
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView41"
+                android:id="@+id/option2Cal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -259,12 +254,11 @@
                 android:layout_marginEnd="62dp"
                 android:layout_marginRight="61dp"
                 android:layout_marginBottom="318dp"
-                android:text="@string/calories2"
                 android:textColor="@color/ThemeGreen"
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView43"
+                android:id="@+id/option4cal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -273,12 +267,11 @@
                 android:layout_marginEnd="62dp"
                 android:layout_marginRight="62dp"
                 android:layout_marginBottom="218dp"
-                android:text="@string/calories4"
                 android:textColor="@color/ThemeGreen"
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView42"
+                android:id="@+id/option3Cal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -287,12 +280,11 @@
                 android:layout_marginEnd="62dp"
                 android:layout_marginRight="62dp"
                 android:layout_marginBottom="268dp"
-                android:text="@string/calories3"
                 android:textColor="@color/ThemeGreen"
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView44"
+                android:id="@+id/TotalCalories"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"

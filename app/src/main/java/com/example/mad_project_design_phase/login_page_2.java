@@ -28,6 +28,8 @@ public class login_page_2 extends AppCompatActivity {
     FirebaseDatabase database;
     FirebaseAuth auth;
     FirebaseUser firebaseUser;
+    String customerPassword;
+    String customerEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +52,30 @@ public class login_page_2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String customerEmail = CustomerEmail.getText().toString().trim();
-                String customerPassword = CustomerPassword.getText().toString().trim();
-//                Log.i("check", customerEmail + customerPassword);
-                loginCustomer(customerEmail, customerPassword);
+//
+//                if (cu.isEmpty(CustomerEmail.getText().toString()))
+//                {
+//                    Toast.makeText(MainActivity.this,
+//                            "Empty field not allowed!",
+//                            Toast.LENGTH_SHORT).show();
+//                }
+//                else
+//                {
+//                    Toast.makeText(MainActivity.this,
+//                            "Proceed..",
+//                            Toast.LENGTH_SHORT).show();
+//                }
+
+                try{
+
+                     customerEmail = CustomerEmail.getText().toString();
+                     customerPassword = CustomerPassword.getText().toString();
+                     loginCustomer(customerEmail, customerPassword);
+                }catch (Exception e){
+                    Toast.makeText(login_page_2.this, "Please Enter your Email and Password", Toast.LENGTH_SHORT).show();
+                }
+
+
 
             }
 

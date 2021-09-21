@@ -15,27 +15,27 @@ public class FavoriteRestaurant {
         Name = name;
     }
 
-    public String getAddresss() {
+    public String getAddress() {
         return Address;
     }
 
-    public void setAddresss(String addresss) {
-        Address = addresss;
+    public void setAddress(String address) {
+        Address = address;
     }
 
-    public String getCuisineTypes() {
+    public String getCuisineType() {
         return CuisineType;
     }
 
-    public void setCuisineTypes(String cuisineTypee) {
-        CuisineType = cuisineTypee;
+    public void setCuisineType(String cuisineType) {
+        CuisineType = cuisineType;
     }
 
-    public String getNames() {
+    public String getName() {
         return Name;
     }
 
-    public void setNames(String namee) {
-        Name = namee;
+    public void setName(String name) {
+        Name = name;
     }
 }

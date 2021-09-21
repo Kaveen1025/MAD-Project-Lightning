@@ -31,9 +31,9 @@ public class FRMainAdapter extends FirebaseRecyclerAdapter<FavoriteRestaurant,FR
     @Override
     protected void onBindViewHolder(@NonNull @NotNull myViewHolder holder, int position, @NonNull @NotNull FavoriteRestaurant model) {
 
-        holder.name.setText(model.getNames());
-        holder.cuisineType.setText(model.getCuisineTypes());
-        holder.address.setText(model.getAddresss());
+        holder.name.setText(model.getName());
+        holder.cuisineType.setText(model.getCuisineType());
+        holder.address.setText(model.getAddress());
 
 
         /*Glide.with(holder.img.getContext())
