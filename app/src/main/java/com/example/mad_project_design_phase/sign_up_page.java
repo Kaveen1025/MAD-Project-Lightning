@@ -73,7 +73,10 @@ public class sign_up_page extends AppCompatActivity {
                 String LastName = lastname.getText().toString().trim();
                 String Email = input_email.getText().toString().trim();
                 String Address = postal_address.getText().toString().trim();
-                Integer PhoneNumber = Integer.parseInt(phone_number.getText().toString().trim());
+
+                /////// input only string value don't input integer values///////////////
+                String PhoneNumber = phone_number.getText().toString().trim();
+                /////////////////////////////////
                 String Password = password.getText().toString().trim();
 
                 //phone number

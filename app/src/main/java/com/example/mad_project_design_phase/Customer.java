@@ -7,13 +7,13 @@ public class Customer{
     private String LastName;
     private String Email;
     private String Address;
-    private Integer PhoneNumber;
+    private String PhoneNumber;
     private String Password;
 
 
      //Customer() {}
 
-    public Customer(String firstName, String lastName, String email, String address, Integer phoneNumber, String password) {
+    public Customer(String firstName, String lastName, String email, String address, String phoneNumber, String password) {
         FirstName = firstName;
         LastName = lastName;
         Email = email;
@@ -55,11 +55,11 @@ public class Customer{
         Address = address;
     }
 
-    public Integer getPhoneNumber() {
+    public String getPhoneNumber() {
         return PhoneNumber;
     }
 
-    public void setPhoneNumber(Integer phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         PhoneNumber = phoneNumber;
     }
 
