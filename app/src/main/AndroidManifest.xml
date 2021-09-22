@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MADProjectDesignphase">
 
         <activity
-            android:name=".login_page">
+            android:name=".update_review">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
