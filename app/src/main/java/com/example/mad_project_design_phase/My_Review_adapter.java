@@ -1,10 +1,12 @@
 package com.example.mad_project_design_phase;
 
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -23,6 +25,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import org.jetbrains.annotations.NotNull;
+
+import java.util.HashMap;
 
 public class My_Review_adapter extends FirebaseRecyclerAdapter<RCustomerReview,My_Review_adapter.myViewHolder> {
 
@@ -61,22 +65,45 @@ public class My_Review_adapter extends FirebaseRecyclerAdapter<RCustomerReview,M
                 BottomSheetDialog bottomSheet = new BottomSheetDialog(holder.rName.getContext());
                 bottomSheet.setContentView(R.layout.update_my_restaurant);
                 bottomSheet.setCanceledOnTouchOutside(false);
-                bottomSheet.show();
+
 
                 Button updateButton,DeleteButton;
+
                 EditText Review;
                 RatingBar RatingBars;
-
+               // ImageView
                 updateButton = bottomSheet.findViewById(R.id.updateReview);
                 DeleteButton = bottomSheet.findViewById(R.id.deleteReview);
                 Review = bottomSheet.findViewById(R.id.updateReviewsss);
                 RatingBars = bottomSheet.findViewById(R.id.updateRatings);
+                TextView restName= bottomSheet.findViewById(R.id.UprestName);
+
+                restName.setText("Matara");
+
+                //restName.setText(model.getRestName());
+                //Review.setText(model.getReview());
+                //RatingBars.setRating(Float.parseFloat(model.getNoOfStars()));
+                Review.setText("good");
+                RatingBars.setRating(4.0f);
+                bottomSheet.show();
+
+                ImageButton closeDialog = bottomSheet.findViewById(R.id.closeDialog);
+                closeDialog.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        bottomSheet.cancel();
+                    }
+                });
 
                 DeleteButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         // need confirmation
+
+                        // learn position deletion
                        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("CustomerReviews").child("C1").child("R1");
+                       DatabaseReference ref2 = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Reviews").child("Customers").child("C1");
+
                         ref.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull @NotNull Task<Void> task) {
@@ -98,6 +125,38 @@ public class My_Review_adapter extends FirebaseRecyclerAdapter<RCustomerReview,M
                     @Override
                     public void onClick(View v) {
 
+                        EditText Review = bottomSheet.findViewById(R.id.updateReviewsss);
+                        RatingBar RatingBars = bottomSheet.findViewById(R.id.updateRatings);
+
+                        String reviewDes = Review.getText().toString().trim();
+                        String rating = String.valueOf(RatingBars.getRating());
+
+
+                        HashMap RCustomers = new HashMap();
+                        RCustomers.put("noOfStars",rating);
+                        RCustomers.put("review",reviewDes);
+
+                        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("CustomerReviews").child("C1").child("R1");
+                        ref.updateChildren(RCustomers).addOnCompleteListener(new OnCompleteListener() {
+                            @Override
+                            public void onComplete(@NonNull @NotNull Task task) {
+                                if(task.isSuccessful()){
+                                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Reviews").child("Customers").child("C1");
+                                        ref.updateChildren(RCustomers).addOnCompleteListener(new OnCompleteListener() {
+                                            @Override
+                                            public void onComplete(@NonNull @NotNull Task task) {
+                                                if(task.isSuccessful()){
+                                                    Toast.makeText(holder.rName.getContext(), "Review Updated Successfully!", Toast.LENGTH_SHORT).show();
+                                                }else{
+                                                    Toast.makeText(holder.rName.getContext(), "Update Failed Please try again!", Toast.LENGTH_SHORT).show();
+                                                }
+                                            }
+                                        });
+                                }else{
+                                    Toast.makeText(holder.rName.getContext(), "Update Failed Please try again!", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
 
 
                     }

@@ -74,10 +74,11 @@ public class restaurant_ratings_review extends AppCompatActivity {
                 bottomSheet.setCanceledOnTouchOutside(false);
                 bottomSheet.show();
 
-                ImageButton closeDialog;
+                Button closeDialog;
                 Button submitReviewsss;
                 RatingBar SubRatings;
                 EditText subReview;
+
 
                 closeDialog = bottomSheet.findViewById(R.id.closeDialog);
                 submitReviewsss = bottomSheet.findViewById(R.id.submitReview);
