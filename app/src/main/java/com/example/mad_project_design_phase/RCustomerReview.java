@@ -4,17 +4,17 @@ public class RCustomerReview {
 
     private String noOfStars;
     private String review;
-    private String restName;
-    private String restaurantLogo;
+    private String name;
+    private String logo;
 
     public RCustomerReview() {
     }
 
-    public RCustomerReview(String noOfStars, String review, String restName, String restaurantLogo) {
+    public RCustomerReview(String noOfStars, String review, String name, String logo) {
         this.noOfStars = noOfStars;
         this.review = review;
-        this.restName = restName;
-        this.restaurantLogo = restaurantLogo;
+        this.name = name;
+        this.logo = logo;
     }
 
     public String getNoOfStars() {
@@ -33,19 +33,19 @@ public class RCustomerReview {
         this.review = review;
     }
 
-    public String getRestName() {
-        return restName;
+    public String getName() {
+        return name;
     }
 
-    public void setRestName(String restName) {
-        this.restName = restName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getRestaurantLogo() {
-        return restaurantLogo;
+    public String getLogo() {
+        return logo;
     }
 
-    public void setRestaurantLogo(String restaurantLogo) {
-        this.restaurantLogo = restaurantLogo;
+    public void setLogo(String logo) {
+        this.logo = logo;
     }
 }

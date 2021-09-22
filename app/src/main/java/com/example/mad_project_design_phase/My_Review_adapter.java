@@ -45,14 +45,13 @@ public class My_Review_adapter extends FirebaseRecyclerAdapter<RCustomerReview,M
     @Override
     protected void onBindViewHolder(@NonNull @NotNull myViewHolder holder, int position, @NonNull @NotNull RCustomerReview model) {
 
-        holder.rName.setText(model.getRestName());
+        holder.rName.setText(model.getName());
         holder.Review.setText(model.getReview());
-        holder.ratingBar.setRating(Float.parseFloat("4"));
-//        holder.ratingBar.setRating(Float.parseFloat(model.getNoOfStars()));
+        //holder.ratingBar.setRating(Float.parseFloat(model.getNoOfStars().trim()));
 
 
         Glide.with(holder.logo.getContext())
-                .load(model.getRestaurantLogo())
+                .load(model.getLogo())
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
                 //.circleCrop()
 
