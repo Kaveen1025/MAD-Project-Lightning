@@ -11,13 +11,18 @@
         android:theme="@style/Theme.MADProjectDesignphase">
 
         <activity
-            android:name=".update_review">
+            android:name=".update_delete_review">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".Rate_restaurant"/>
+        <activity android:name=".update_review"/>
+
+
     </application>
 
 </manifest>
