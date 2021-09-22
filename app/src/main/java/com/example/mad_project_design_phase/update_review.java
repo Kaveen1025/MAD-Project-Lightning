@@ -24,6 +24,7 @@ public class update_review extends AppCompatActivity {
     FoodReviews foodReviews;
 
     DatabaseReference ref;
+    DatabaseReference reff;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
