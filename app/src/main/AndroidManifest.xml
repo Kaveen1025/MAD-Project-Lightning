@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MADProjectDesignphase">
 
         <activity
-            android:name=".edit_card">
+            android:name=".addAcard">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
