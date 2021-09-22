@@ -201,7 +201,7 @@
                 app:srcCompat="@drawable/cupcake" />
 
             <Button
-                android:id="@+id/button18"
+                android:id="@+id/editBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"

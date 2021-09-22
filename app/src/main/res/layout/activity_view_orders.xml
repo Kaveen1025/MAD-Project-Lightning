@@ -428,7 +428,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView27"
+                android:id="@+id/Review"
                 android:layout_width="117dp"
                 android:layout_height="40dp"
                 android:layout_alignParentEnd="true"

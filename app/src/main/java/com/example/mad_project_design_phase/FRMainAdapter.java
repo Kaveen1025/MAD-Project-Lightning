@@ -1,10 +1,15 @@
 package com.example.mad_project_design_phase;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -44,6 +49,31 @@ public class FRMainAdapter extends FirebaseRecyclerAdapter<FavoriteRestaurant,FR
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);*/
 
+        holder.DeleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final AlertDialog.Builder builder = new AlertDialog.Builder(holder.name.getContext());
+                builder.setCancelable(false);
+
+
+                builder.setMessage("Are you sure?");
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                        
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                       dialogInterface.dismiss();
+                    }
+                });
+               // final AlertDialog dialog = builder.create();
+                builder.show();
+            }
+        });
 
 
     }
@@ -62,6 +92,7 @@ public class FRMainAdapter extends FirebaseRecyclerAdapter<FavoriteRestaurant,FR
 
         //ImageView ;
         TextView name,address,cuisineType;
+        ImageButton DeleteBtn;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -75,6 +106,7 @@ public class FRMainAdapter extends FirebaseRecyclerAdapter<FavoriteRestaurant,FR
             name = (TextView)itemView.findViewById(R.id.RestaurantName);
             address = (TextView)itemView.findViewById(R.id.Address);
             cuisineType = (TextView)itemView.findViewById(R.id.CusinieType);
+            DeleteBtn = (ImageButton) itemView.findViewById(R.id.DeleteBtn);
 
         }
     }

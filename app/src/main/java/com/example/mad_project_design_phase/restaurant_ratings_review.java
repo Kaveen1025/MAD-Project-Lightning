@@ -1,11 +1,9 @@
 package com.example.mad_project_design_phase;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,14 +14,9 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -89,7 +82,7 @@ public class restaurant_ratings_review extends AppCompatActivity {
                 closeDialog = bottomSheet.findViewById(R.id.closeDialog);
                 submitReviewsss = bottomSheet.findViewById(R.id.submitReview);
                 SubRatings = bottomSheet.findViewById(R.id.SubRatings);
-                subReview = bottomSheet.findViewById(R.id.subReview);
+                subReview = bottomSheet.findViewById(R.id.updateReviewsss);
 
                 closeDialog.setOnClickListener(new View.OnClickListener() {
                     @Override

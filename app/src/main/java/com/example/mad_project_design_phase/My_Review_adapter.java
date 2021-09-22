@@ -1,0 +1,143 @@
+package com.example.mad_project_design_phase;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RatingBar;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import org.jetbrains.annotations.NotNull;
+
+public class My_Review_adapter extends FirebaseRecyclerAdapter<RCustomerReview,My_Review_adapter.myViewHolder> {
+
+
+    /**
+     * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
+     * {@link FirebaseRecyclerOptions} for configuration options.
+     *
+     * @param options
+     */
+    public My_Review_adapter(@NonNull @NotNull FirebaseRecyclerOptions<RCustomerReview> options) {
+        super(options);
+    }
+
+
+    @Override
+    protected void onBindViewHolder(@NonNull @NotNull myViewHolder holder, int position, @NonNull @NotNull RCustomerReview model) {
+
+        holder.rName.setText(model.getRestName());
+        holder.Review.setText(model.getReview());
+        holder.ratingBar.setRating(Float.parseFloat("4"));
+//        holder.ratingBar.setRating(Float.parseFloat(model.getNoOfStars()));
+
+
+        Glide.with(holder.logo.getContext())
+                .load(model.getRestaurantLogo())
+                .placeholder(R.drawable.common_google_signin_btn_icon_dark)
+                //.circleCrop()
+
+                .error(R.drawable.common_google_signin_btn_icon_dark_normal)
+                .into(holder.logo);
+
+        holder.editBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BottomSheetDialog bottomSheet = new BottomSheetDialog(holder.rName.getContext());
+                bottomSheet.setContentView(R.layout.update_my_restaurant);
+                bottomSheet.setCanceledOnTouchOutside(false);
+                bottomSheet.show();
+
+                Button updateButton,DeleteButton;
+                EditText Review;
+                RatingBar RatingBars;
+
+                updateButton = bottomSheet.findViewById(R.id.updateReview);
+                DeleteButton = bottomSheet.findViewById(R.id.deleteReview);
+                Review = bottomSheet.findViewById(R.id.updateReviewsss);
+                RatingBars = bottomSheet.findViewById(R.id.updateRatings);
+
+                DeleteButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // need confirmation
+                       DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("CustomerReviews").child("C1").child("R1");
+                        ref.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull @NotNull Task<Void> task) {
+                                if(task.isSuccessful()){
+
+                                    bottomSheet.cancel();
+                                    Toast.makeText(holder.rName.getContext(), "Review Deleted Successfully!", Toast.LENGTH_SHORT).show();
+                                }else{
+                                    Toast.makeText(holder.rName.getContext(), "Failed!", Toast.LENGTH_SHORT).show();
+                                }
+                                }
+
+                        });
+                    }
+                });
+
+
+                updateButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+
+
+                    }
+                });
+
+            }
+        });
+
+
+
+    }
+
+    @NonNull
+    @NotNull
+    @Override
+    public myViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
+
+        //Bind myViewHolder & return it
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_review_card, parent, false);
+        return new myViewHolder(view);
+    }
+
+    class myViewHolder extends RecyclerView.ViewHolder{
+
+        ImageView logo;
+        TextView rName,Review;
+        RatingBar ratingBar;
+        Button editBtn;
+
+        public myViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+
+            logo = itemView.findViewById(R.id.logo12);
+            rName = itemView.findViewById(R.id.rName);
+            Review = itemView.findViewById(R.id.Review);
+            ratingBar = itemView.findViewById(R.id.ratings22);
+            editBtn = itemView.findViewById(R.id.editBtn);
+
+
+        }
+    }
+}

@@ -261,7 +261,7 @@ app:layout_constraintTop_toTopOf="parent">
                 tools:ignore="VectorDrawableCompat" />
 
             <TextView
-                android:id="@+id/textView27"
+                android:id="@+id/Review"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -273,7 +273,7 @@ app:layout_constraintTop_toTopOf="parent">
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/rName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -371,7 +371,7 @@ app:layout_constraintTop_toTopOf="parent">
                 tools:ignore="VectorDrawableCompat" />
 
             <ImageView
-                android:id="@+id/imageView12"
+                android:id="@+id/logo12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
