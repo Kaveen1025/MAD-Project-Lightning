@@ -26,7 +26,7 @@ public class my_favorite_restaurants extends AppCompatActivity {
 
         FirebaseRecyclerOptions<FavoriteRestaurant> options =
                 new FirebaseRecyclerOptions.Builder<FavoriteRestaurant>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("FavoriteRestaurants").child("C1"), FavoriteRestaurant.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("FavoriteRestaurant").child("C1"), FavoriteRestaurant.class)
                         .build();
 
 

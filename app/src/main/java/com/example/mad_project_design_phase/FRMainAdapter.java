@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -34,20 +35,20 @@ public class FRMainAdapter extends FirebaseRecyclerAdapter<FavoriteRestaurant,FR
 
 
     @Override
-    protected void onBindViewHolder(@NonNull @NotNull myViewHolder holder, int position, @NonNull @NotNull FavoriteRestaurant model) {
+    protected void onBindViewHolder(@NonNull @NotNull myViewHolder holder, final int position, @NonNull @NotNull FavoriteRestaurant model) {
 
         holder.name.setText(model.getName());
         holder.cuisineType.setText(model.getCuisineType());
         holder.address.setText(model.getAddress());
 
 
-        /*Glide.with(holder.img.getContext())
-                .load(model.getTurl())
+        Glide.with(holder.img.getContext())
+                .load(model.getRestImage())
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
                 //.circleCrop()
 
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
-                .into(holder.img);*/
+                .into(holder.img);
 
         holder.DeleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +61,8 @@ public class FRMainAdapter extends FirebaseRecyclerAdapter<FavoriteRestaurant,FR
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
+                        FirebaseDatabase.getInstance().getReference().child("FavoriteRestaurant").child("C1")
+                                .child(getRef(position).getKey()).removeValue();
                         
                     }
                 });
@@ -90,7 +92,7 @@ public class FRMainAdapter extends FirebaseRecyclerAdapter<FavoriteRestaurant,FR
 
     class myViewHolder extends RecyclerView.ViewHolder{
 
-        //ImageView ;
+        ImageView img;
         TextView name,address,cuisineType;
         ImageButton DeleteBtn;
 
@@ -102,7 +104,7 @@ public class FRMainAdapter extends FirebaseRecyclerAdapter<FavoriteRestaurant,FR
 
             //img = (CircleImageView)itemView.findViewById(R.id.img1);
 
-            //img = (ImageView)itemView.findViewById(R.id.img1);
+            img = (ImageView)itemView.findViewById(R.id.imageView2);
             name = (TextView)itemView.findViewById(R.id.RestaurantName);
             address = (TextView)itemView.findViewById(R.id.Address);
             cuisineType = (TextView)itemView.findViewById(R.id.CusinieType);

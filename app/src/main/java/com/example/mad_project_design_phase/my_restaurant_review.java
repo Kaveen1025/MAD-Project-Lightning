@@ -33,7 +33,7 @@ public class my_restaurant_review extends AppCompatActivity {
 
         FirebaseRecyclerOptions<RCustomerReview> options =
                 new FirebaseRecyclerOptions.Builder<RCustomerReview>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("CustomerReviews").child("C1"), RCustomerReview.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("CustomerRestaurantReviews").child("C1"), RCustomerReview.class)
                         .build();
 
 

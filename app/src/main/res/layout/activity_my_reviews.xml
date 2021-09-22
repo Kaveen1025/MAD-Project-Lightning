@@ -221,7 +221,7 @@
                 app:backgroundTint="@color/white" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/RestName"
                 android:layout_width="210dp"
                 android:layout_height="70dp"
                 android:layout_alignParentTop="true"

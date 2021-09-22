@@ -5,16 +5,20 @@ public class FavoriteRestaurant {
     private String Address;
     private String CuisineType;
     private String Name;
+    private String restImage;
 
     public FavoriteRestaurant() {
     }
 
-    public FavoriteRestaurant(String address, String cuisineType, String name) {
+    public FavoriteRestaurant(String address, String cuisineType, String name, String restImage) {
         Address = address;
         CuisineType = cuisineType;
         Name = name;
+        this.restImage = restImage;
     }
 
+    public String getRestImage(){ return  restImage;};
+    public void setRestImage(String restImage){this.restImage = restImage;};
     public String getAddress() {
         return Address;
     }
