@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RatingBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -17,6 +19,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 
 public class create_review extends AppCompatActivity {
@@ -24,23 +27,27 @@ public class create_review extends AppCompatActivity {
     RatingBar rtbar;
     EditText txt_writeReview;
     Button btnSubmit;
+    TextView foodName,url;
+    ImageView food;
     DatabaseReference reff;
+    DatabaseReference ref;
 
     FoodReviews reviews;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_review);
 
-        rtbar = findViewById(R.id.ratingbar);
-        txt_writeReview = findViewById(R.id.txt_writeReview);
-        btnSubmit = findViewById(R.id.btnSubmitReview);
+        rtbar = (RatingBar) findViewById(R.id.ratingbar);
+        txt_writeReview = (EditText) findViewById(R.id.txt_writeReview);
+        btnSubmit = (Button) findViewById(R.id.btnSubmitReview);
+        foodName = (TextView) findViewById(R.id.txt_foodname);
+        food = (ImageView) findViewById(R.id.img_food);
+        url = (TextView) findViewById(R.id.img_url);
 
         reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodReviews").child("Customers");
-
+        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodDetails");
 
         btnSubmit.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
@@ -60,6 +67,25 @@ public class create_review extends AppCompatActivity {
                         }
                     }
                 });
+
+
+            }
+        });
+
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String foodname = dataSnapshot.child("name").getValue().toString();
+                String link = dataSnapshot.child("foodImage").getValue(String.class);
+                url.setText(link);
+                Picasso.get()
+                        .load(link)
+                        .into(food);
+                foodName.setText(foodname);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });

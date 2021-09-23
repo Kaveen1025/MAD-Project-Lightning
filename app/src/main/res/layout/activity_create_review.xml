@@ -104,7 +104,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView26"
+                android:id="@+id/img_food"
                 android:layout_width="match_parent"
                 android:layout_height="155dp"
                 android:layout_alignParentTop="true"
@@ -118,7 +118,7 @@
                 app:srcCompat="@drawable/food11" />
 
             <TextView
-                android:id="@+id/textView43"
+                android:id="@+id/txt_foodname"
                 android:layout_width="213dp"
                 android:layout_height="34dp"
                 android:layout_alignParentStart="true"
@@ -127,9 +127,19 @@
                 android:layout_marginStart="47dp"
                 android:layout_marginLeft="47dp"
                 android:layout_marginTop="160dp"
-                android:text="@string/create_review_food"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/img_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="51dp" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
