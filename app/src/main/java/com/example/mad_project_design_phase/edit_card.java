@@ -32,17 +32,16 @@ public class edit_card extends AppCompatActivity {
         edtCardHolder=(EditText) findViewById(R.id.edtCardHolder);
         edtCardDate=(EditText) findViewById(R.id.edtCardDate);
 
-    }
 
-    public void ViewData(View view){
 
-        db = FirebaseDatabase.getInstance().getReference().child("Payment").child("DgaCUSQDSOOgGnoFmv3ojR3vpH73").child("Mk0YdanohfmETqVsphJ");
+
+
+        db = FirebaseDatabase.getInstance().getReference().child("Payment").child("DgaCUSQDSOOgGnoFmv3ojR3vpH73").child("-Mk7haS5W8jykucINyIO");
         db.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.hasChildren()) {
-//                    Log.i("D", snapshot.child("cardType").getValue().toString());
-//                    edtCardType.setText("Sonal");
+//
                     edtCardType.setText(snapshot.child("cardType").getValue().toString());
                     edtCardNumber.setText(snapshot.child("cardNumber").getValue().toString());
                     edtCardHolder.setText(snapshot.child("cardHolder").getValue().toString());
