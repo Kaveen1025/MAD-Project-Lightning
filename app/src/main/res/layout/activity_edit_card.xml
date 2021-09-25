@@ -90,11 +90,12 @@
 
     <TextView
         android:id="@+id/textView46"
-        android:layout_width="98dp"
-        android:layout_height="32dp"
+        android:layout_width="101dp"
+        android:layout_height="41dp"
         android:text="@string/edit_card_topic"
         android:textColor="@color/ThemeBlack"
-        android:textSize="20sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.527"
@@ -106,8 +107,9 @@
         android:id="@+id/btnReset"
         android:layout_width="101dp"
         android:layout_height="45dp"
-        android:text="@string/edit_card_btn_reset"
+        android:text="back"
         app:backgroundTint="@color/ThemeGreen"
+        app:cornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.212"
@@ -121,6 +123,7 @@
         android:layout_height="wrap_content"
         android:text="@string/edit_card_btn_update"
         app:backgroundTint="@color/ThemeGreen"
+        app:cornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.858"
@@ -252,27 +255,11 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="7dp"
+                android:editable="false"
                 android:ems="10"
                 android:inputType="textPersonName"
                 tools:ignore="TouchTargetSizeCheck" />
 
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="247dp"
-                android:layout_marginLeft="247dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="29dp"
-                android:layout_marginRight="29dp"
-                android:layout_marginBottom="18dp"
-                app:srcCompat="@drawable/ic_delete_without_border" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 

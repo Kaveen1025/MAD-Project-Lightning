@@ -8,31 +8,31 @@
 
     <TextView
         android:id="@+id/textView69"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/phoneHeader"
+        android:layout_width="105dp"
+        android:layout_height="37dp"
+        android:text="Phone No  :"
         android:textColor="@color/ThemeBlack"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.511" />
+        app:layout_constraintVertical_bias="0.498" />
 
     <TextView
         android:id="@+id/textView70"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/orderheader"
+        android:layout_width="106dp"
+        android:layout_height="33dp"
+        android:text="Email         :"
         android:textColor="@color/ThemeBlack"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.574" />
+        app:layout_constraintVertical_bias="0.548" />
 
     <TextView
         android:id="@+id/textView72"
@@ -48,11 +48,11 @@
 
     <TextView
         android:id="@+id/textView67"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/TitleHeader"
+        android:layout_width="105dp"
+        android:layout_height="35dp"
+        android:text="Title            :"
         android:textColor="@color/ThemeBlack"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.07"
@@ -77,7 +77,7 @@
             <ImageButton
                 android:id="@+id/imageButton3"
                 android:layout_width="90dp"
-                android:layout_height="40dp"
+                android:layout_height="48dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
@@ -93,7 +93,7 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:contentDescription="@string/reorderDes"
                 app:srcCompat="@drawable/ic_reorder"
-                tools:ignore="VectorDrawableCompat" />
+                tools:ignore="VectorDrawableCompat,TouchTargetSizeCheck" />
 
             <ImageButton
                 android:id="@+id/imageButton4"
@@ -121,7 +121,7 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:contentDescription="@string/profileDes"
                 app:srcCompat="@drawable/ic_profile"
-                tools:ignore="VectorDrawableCompat" />
+                tools:ignore="VectorDrawableCompat,TouchTargetSizeCheck" />
 
             <ImageButton
                 android:id="@+id/imageButton6"
@@ -136,7 +136,7 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:contentDescription="@string/cartDes"
                 app:srcCompat="@drawable/ic_cart"
-                tools:ignore="VectorDrawableCompat" />
+                tools:ignore="VectorDrawableCompat,TouchTargetSizeCheck" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -147,6 +147,7 @@
         android:text="@string/CheckoutHeader"
         android:textColor="@color/ThemeBlack"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -156,11 +157,11 @@
 
     <TextView
         android:id="@+id/textView63"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="127dp"
+        android:layout_height="31dp"
         android:text="@string/DeliveryHeaderTo"
         android:textColor="@color/ThemeBlack"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
@@ -169,12 +170,79 @@
         app:layout_constraintVertical_bias="0.191" />
 
     <TextView
+        android:id="@+id/txtAddress"
+        android:layout_width="218dp"
+        android:layout_height="70dp"
+        android:textColor="@color/ThemeBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.834"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.202" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="237dp"
+        android:layout_height="37dp"
+        android:text="Rev / Dr / Mr / Mrs"
+        android:textColor="@color/ThemeBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.393" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="236dp"
+        android:layout_height="35dp"
+        android:textColor="@color/ThemeBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.445" />
+
+    <TextView
+        android:id="@+id/txtPhone"
+        android:layout_width="237dp"
+        android:layout_height="38dp"
+        android:textColor="@color/ThemeBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="239dp"
+        android:layout_height="36dp"
+        android:textColor="@color/ThemeBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.813"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.552" />
+
+    <TextView
         android:id="@+id/textView64"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/RecipientHeader"
         android:textColor="@color/ThemeBlack"
         android:textSize="24sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -189,6 +257,7 @@
         android:text="@string/orderPaymentHeader"
         android:textColor="@color/ThemeBlack"
         android:textSize="24sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -197,29 +266,15 @@
         app:layout_constraintVertical_bias="0.642" />
 
     <TextView
-        android:id="@+id/textView66"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/orderheader"
-        android:textColor="@color/ThemeBlack"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.24" />
-
-    <TextView
         android:id="@+id/textView68"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/nameHeader"
+        android:layout_width="105dp"
+        android:layout_height="39dp"
+        android:text="Name         :"
         android:textColor="@color/ThemeBlack"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.444" />
@@ -251,11 +306,12 @@
         app:layout_constraintVertical_bias="0.738" />
 
     <Button
-        android:id="@+id/button29"
+        android:id="@+id/btnNext"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/nextBtn"
         app:backgroundTint="@color/ThemeGreen"
+        app:cornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

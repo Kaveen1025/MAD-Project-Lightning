@@ -69,7 +69,7 @@ public class CardDetailsAdapter extends FirebaseRecyclerAdapter<CardDetailsModel
                 Builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(holder.itemView.getContext(),"Cancel.",Toast.LENGTH_SHORT ).show();
+                        Toast.makeText(holder.itemView.getContext(),"Cancel",Toast.LENGTH_SHORT ).show();
                     }
                 });
                 Builder.show();

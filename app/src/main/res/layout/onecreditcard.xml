@@ -33,17 +33,19 @@
 
                 <TextView
                     android:id="@+id/selCardType"
-                    android:layout_width="wrap_content"
+                    android:layout_width="87dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="308dp"
-                    android:layout_marginLeft="308dp"
+                    android:layout_marginStart="275dp"
+                    android:layout_marginLeft="275dp"
                     android:layout_marginTop="159dp"
                     android:text="@string/CardType"
+                    android:textAlignment="viewEnd"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:gravity="end" />
 
                 <TextView
                     android:id="@+id/selCardNumber"
@@ -159,6 +161,7 @@
             android:layout_marginBottom="18dp"
             android:text="@string/deleteBtn"
             app:backgroundTint="@color/RedDelete"
+            app:cornerRadius="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.782"
             app:layout_constraintVertical_bias="0.979" />
@@ -175,6 +178,7 @@
             android:layout_marginBottom="18dp"
             android:text="@string/editBtn"
             app:backgroundTint="@color/ThemeBlack"
+            app:cornerRadius="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.238"

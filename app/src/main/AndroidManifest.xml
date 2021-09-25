@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MADProjectDesignphase">
 
         <activity
-            android:name=".card_details">
+            android:name=".checkout">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
