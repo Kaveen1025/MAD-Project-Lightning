@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MADProjectDesignphase">
 
         <activity
-            android:name=".Rate_restaurant">
+            android:name=".all_the_restaurants">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

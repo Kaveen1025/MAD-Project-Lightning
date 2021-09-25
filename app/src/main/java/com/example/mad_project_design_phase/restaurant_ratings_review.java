@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,8 +16,11 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -25,40 +29,71 @@ public class restaurant_ratings_review extends AppCompatActivity {
     Button SubmitReview;
     TextView RestaurantName,ratingTxt;
     RatingBar Ratings;
-    DatabaseReference ref;
+    DatabaseReference ref,ref2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurant_ratings_review);
-        SubmitReview = findViewById(R.id.SubmitReview);
+        SubmitReview = (Button)findViewById(R.id.SubmitNewReview);
         RestaurantName = findViewById(R.id.SRestaurantName);
         ratingTxt = findViewById(R.id.ratingValue);
         Ratings = findViewById(R.id.ratings);
 
-//        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Customers");
-//
-//       ref.addValueEventListener(new ValueEventListener() {
-//           @Override
-//           public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-//               for(DataSnapshot snapshot1 : snapshot.getChildren()) {
-//                   Log.i("d", "onDataChange: dd");
-//               }
-//           }
-//
-//           @Override
-//           public void onCancelled(@NonNull @NotNull DatabaseError error) {
-//
-//           }
-//       });
+       ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1");
+
+       ref.addValueEventListener(new ValueEventListener() {
+           @Override
+           public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+
+               RestaurantName.setText(snapshot.child("name").getValue().toString());
+           }
+
+           @Override
+           public void onCancelled(@NonNull @NotNull DatabaseError error) {
+
+           }
+       });
+
+      //  ref2 = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1");
+
+        FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Reviews").child("Customers")
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+                        int noOfStars = 0;
+                        int customerCount = 0;
+
+                        for (DataSnapshot childSnap : snapshot.getChildren()) {
+
+                            int num = Integer.parseInt(childSnap.child("noOfStars").getValue().toString());
+                            noOfStars = noOfStars + num;
+                            customerCount++;
+                            Log.i("dd", String.valueOf(noOfStars));
+                        }
+
+                        int totalStars = customerCount * 5;
+
+                        float rating = (noOfStars / totalStars) * 5;
+
+
+                        Ratings.setRating(rating);
+                        Ratings.setNumStars(5);
+                        ratingTxt.setText("4.0 / 5.0");
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull @NotNull DatabaseError error) {
+
+                    }
+                });
 
 
 
 
 
-        RestaurantName.setText("Matara Food");
-        ratingTxt.setText("4.0 / 5.0");
-        Ratings.setRating(4);
-        Ratings.setNumStars(5);
+
+
+
 
     }
 
@@ -74,13 +109,13 @@ public class restaurant_ratings_review extends AppCompatActivity {
                 bottomSheet.setCanceledOnTouchOutside(false);
                 bottomSheet.show();
 
-                Button closeDialog;
+                ImageButton closeDialog;
                 Button submitReviewsss;
                 RatingBar SubRatings;
                 EditText subReview;
 
 
-                closeDialog = bottomSheet.findViewById(R.id.closeDialog);
+                closeDialog = (ImageButton) bottomSheet.findViewById(R.id.closeDialog44);
                 submitReviewsss = bottomSheet.findViewById(R.id.submitReview);
                 SubRatings = bottomSheet.findViewById(R.id.SubRatings);
                 subReview = bottomSheet.findViewById(R.id.updateReviewsss);

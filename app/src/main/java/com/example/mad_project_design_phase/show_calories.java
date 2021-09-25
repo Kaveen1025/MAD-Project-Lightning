@@ -39,6 +39,15 @@ public class show_calories extends AppCompatActivity {
         closeBtn = findViewById(R.id.closeBtn22);
 
         HashMap<String,Integer> j = new HashMap<>();
+      /*  Intent intent = getIntent();
+
+      j.put(intent.getStringExtra("Opt1Value"),intent.getStringExtra("calories1"));
+      j.put(intent.getStringExtra("Opt2Value"),intent.getStringExtra("calories2"));
+      j.put(intent.getStringExtra("Opt3Value"),intent.getStringExtra("calories3"));
+      j.put(intent.getStringExtra("Opt4Value"),intent.getStringExtra("calories4"));
+
+       */
+
         j.put("Spaghetti",129);
         j.put("Chicken",160);
         j.put("Cheese",189);

@@ -1,6 +1,5 @@
 package com.example.mad_project_design_phase;
 
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -86,7 +85,7 @@ public class My_Review_adapter extends FirebaseRecyclerAdapter<RCustomerReview,M
                 RatingBars.setRating(4.0f);
                 bottomSheet.show();
 
-                ImageButton closeDialog = bottomSheet.findViewById(R.id.closeDialog);
+                ImageButton closeDialog = bottomSheet.findViewById(R.id.closeDialog44);
                 closeDialog.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

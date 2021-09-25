@@ -40,7 +40,7 @@ public class login_page_2 extends AppCompatActivity {
         CustomerPassword = findViewById(R.id.CustomerPassword);
         SignUp = findViewById(R.id.SignUp);
         SignIn = findViewById(R.id.SignIn);
-        auth = FirebaseAuth.getInstance();  // very important
+        auth = FirebaseAuth.getInstance();
 
     }
 
@@ -51,21 +51,6 @@ public class login_page_2 extends AppCompatActivity {
         SignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-//
-//                if (cu.isEmpty(CustomerEmail.getText().toString()))
-//                {
-//                    Toast.makeText(MainActivity.this,
-//                            "Empty field not allowed!",
-//                            Toast.LENGTH_SHORT).show();
-//                }
-//                else
-//                {
-//                    Toast.makeText(MainActivity.this,
-//                            "Proceed..",
-//                            Toast.LENGTH_SHORT).show();
-//                }
-
                 try{
 
                      customerEmail = CustomerEmail.getText().toString();
@@ -74,14 +59,8 @@ public class login_page_2 extends AppCompatActivity {
                 }catch (Exception e){
                     Toast.makeText(login_page_2.this, "Please Enter your Email and Password", Toast.LENGTH_SHORT).show();
                 }
-
-
-
             }
-
-
         });
-
 
         SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,10 +77,13 @@ public class login_page_2 extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Log.i("UserID",auth.getCurrentUser().getUid());
                     Toast.makeText(login_page_2.this, "Login Success!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(login_page_2.this,home_page.class);
+                    intent.putExtra("UserID",auth.getCurrentUser().getUid());
+                    startActivity(intent);
+
                 }else{
-                    Toast.makeText(login_page_2.this, "Failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(login_page_2.this, "Failed try again!", Toast.LENGTH_SHORT).show();
                 }
             }
         });

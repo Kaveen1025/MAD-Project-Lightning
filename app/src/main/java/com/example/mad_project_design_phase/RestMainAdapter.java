@@ -23,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 import org.jetbrains.annotations.NotNull;
 
 public class RestMainAdapter extends FirebaseRecyclerAdapter<AllRestaurant, RestMainAdapter.myViewHolder> {
-
+public String userID; 
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
      * {@link FirebaseRecyclerOptions} for configuration options.
@@ -36,11 +36,12 @@ public class RestMainAdapter extends FirebaseRecyclerAdapter<AllRestaurant, Rest
 
 
     @Override
-    protected void onBindViewHolder(@NonNull @NotNull myViewHolder holder, int position, @NonNull @NotNull AllRestaurant model) {
+    protected void onBindViewHolder(@NonNull @NotNull myViewHolder holder, final int position, @NonNull @NotNull AllRestaurant model) {
 
         holder.name.setText(model.getName());
         holder.cuisineType.setText(model.getCuisineType());
         holder.address.setText(model.getAddress());
+
 
 
 
@@ -54,7 +55,7 @@ public class RestMainAdapter extends FirebaseRecyclerAdapter<AllRestaurant, Rest
         Glide.with(holder.logoImg.getContext())
                 .load(model.getLogo())
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
-                //.circleCrop()
+
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.logoImg);
 
@@ -73,12 +74,12 @@ public class RestMainAdapter extends FirebaseRecyclerAdapter<AllRestaurant, Rest
                              Log.i("dd",String.valueOf(noOfStars));
                         }
 
-                        // There is an a problem. float
+
 
                         int totalStars = customerCount * 5;
-                        Log.i("d", String.valueOf(totalStars));
+
                         float rating = ( noOfStars / totalStars ) * 5;
-                        Log.i("ds", String.valueOf(rating));
+
                         holder.rating.setText(String.valueOf(rating) + " / 5.0");
 
                     }
@@ -88,6 +89,15 @@ public class RestMainAdapter extends FirebaseRecyclerAdapter<AllRestaurant, Rest
 
                     }
                 });
+
+        holder.favButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AFavoriteRestaurant FA = new AFavoriteRestaurant(model.getAddress(), model.getCuisineType(),model.getName(), model.getLogo());
+                FirebaseDatabase.getInstance().getReference().child("FavoriteRestaurant").child(userID).child(getRef(position.getKey())).setValue(FA);
+
+            }
+        });
 
 
 
