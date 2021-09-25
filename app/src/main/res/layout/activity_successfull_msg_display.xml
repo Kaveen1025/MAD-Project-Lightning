@@ -115,7 +115,7 @@
                 tools:ignore="VectorDrawableCompat" />
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/tv_p2"
                 android:layout_width="238dp"
                 android:layout_height="55dp"
                 android:layout_alignParentStart="true"

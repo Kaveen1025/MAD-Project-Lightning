@@ -144,7 +144,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/foodRating_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -257,7 +257,7 @@
                 app:srcCompat="@drawable/rest2image" />
 
             <ImageView
-                android:id="@+id/imageView9"
+                android:id="@+id/foodImage"
                 android:layout_width="140dp"
                 android:layout_height="251dp"
                 android:layout_alignParentEnd="true"
@@ -295,7 +295,7 @@
                 android:textColor="@color/ThemeBlack" />
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/favourite_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -336,7 +336,7 @@
                 tools:ignore="VectorDrawableCompat" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/favourite_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"

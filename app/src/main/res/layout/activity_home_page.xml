@@ -140,7 +140,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/foodRating_img"
                 android:layout_width="368dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentStart="true"
@@ -176,7 +176,7 @@
                 tools:ignore="VectorDrawableCompat" />
 
             <ImageView
-                android:id="@+id/imageView15"
+                android:id="@+id/delete_icon"
                 android:layout_width="25dp"
                 android:layout_height="38dp"
                 android:layout_alignParentTop="true"
@@ -266,7 +266,7 @@
                 android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/favourite_cal"
                 android:layout_width="111dp"
                 android:layout_height="18dp"
                 android:layout_alignParentStart="true"
@@ -301,7 +301,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView13"
+                android:id="@+id/favourite_img"
                 android:layout_width="match_parent"
                 android:layout_height="88dp"
                 android:scaleType="centerCrop"
@@ -399,7 +399,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView14"
+                android:id="@+id/favourite_icon"
                 android:layout_width="match_parent"
                 android:layout_height="128dp"
                 android:layout_alignParentEnd="true"

@@ -116,7 +116,7 @@
                 tools:ignore="VectorDrawableCompat" />
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/tv_p2"
                 android:layout_width="260dp"
                 android:layout_height="55dp"
                 android:layout_alignParentStart="true"
@@ -154,7 +154,7 @@
                 app:srcCompat="@drawable/ic_remove" />
 
             <Button
-                android:id="@+id/button14"
+                android:id="@+id/btn_showCal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -167,7 +167,7 @@
                 app:backgroundTint="@color/ThemeBlack" />
 
             <Button
-                android:id="@+id/button15"
+                android:id="@+id/btn_addtocart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"

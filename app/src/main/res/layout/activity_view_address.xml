@@ -365,7 +365,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/textView23"
+        android:id="@+id/tv_p4"
         android:layout_width="281dp"
         android:layout_height="72dp"
         android:layout_marginTop="120dp"

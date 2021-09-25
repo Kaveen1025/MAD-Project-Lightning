@@ -86,7 +86,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/favourite_cal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/headerfavs"
@@ -133,7 +133,7 @@
                 app:srcCompat="@drawable/restlog222" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/txt_cuzName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -147,7 +147,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/txt_cuzDes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -161,7 +161,7 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/foodRating_des"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"

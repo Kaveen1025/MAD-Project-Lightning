@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myReviews_rv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".My_reviews">
@@ -98,202 +99,15 @@
         app:layout_constraintTop_toTopOf="@+id/cardView2"
         app:layout_constraintVertical_bias="0.092" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView8"
-        android:layout_width="409dp"
-        android:layout_height="150dp"
-        app:cardElevation="20dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_Reviews_rv"
+        android:layout_width="401dp"
+        android:layout_height="558dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.189">
+        app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView30"
-                android:layout_width="wrap_content"
-                android:layout_height="150dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="-40dp"
-                android:layout_marginLeft="-40dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="219dp"
-                android:layout_marginRight="219dp"
-                android:layout_marginBottom="0dp"
-                app:srcCompat="@drawable/lime_moto" />
-
-            <TextView
-                android:id="@+id/textView35"
-                android:layout_width="219dp"
-                android:layout_height="53dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="63dp"
-                android:layout_marginEnd="-3dp"
-                android:layout_marginRight="-3dp"
-                android:text="@string/myReviews_foodDes1" />
-
-            <Button
-                android:id="@+id/button17"
-                android:layout_width="178dp"
-                android:layout_height="45dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="192dp"
-                android:layout_marginLeft="192dp"
-                android:layout_marginTop="11dp"
-                android:layout_marginEnd="39dp"
-                android:layout_marginRight="39dp"
-                android:layout_marginBottom="94dp"
-                android:text="@string/myReviews_food1"
-                android:textColor="@color/ThemeBlack"
-                app:backgroundTint="@color/white"
-                tools:ignore="TouchTargetSizeCheck" />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView6"
-        android:layout_width="409dp"
-        android:layout_height="150dp"
-        app:cardElevation="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cardView2"
-        app:layout_constraintVertical_bias="0.457">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="149dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="-37dp"
-                android:layout_marginLeft="-37dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginEnd="224dp"
-                android:layout_marginRight="224dp"
-                android:layout_marginBottom="0dp"
-                app:srcCompat="@drawable/cupcake" />
-
-            <Button
-                android:id="@+id/button18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="194dp"
-                android:layout_marginLeft="194dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="35dp"
-                android:layout_marginRight="35dp"
-                android:layout_marginBottom="97dp"
-                android:text="@string/cup"
-                android:textColor="@color/ThemeBlack"
-                app:backgroundTint="@color/white" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="210dp"
-                android:layout_height="70dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="69dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
-                />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView9"
-        android:layout_width="409dp"
-        android:layout_height="150dp"
-        app:cardElevation="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.735">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="wrap_content"
-                android:layout_height="149dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="1dp"
-                android:layout_marginLeft="1dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginEnd="223dp"
-                android:layout_marginRight="223dp"
-                android:layout_marginBottom="0dp"
-                app:srcCompat="@drawable/fried_rice" />
-
-            <Button
-                android:id="@+id/button19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="28dp"
-                android:layout_marginRight="28dp"
-                android:layout_marginBottom="88dp"
-                android:text="@string/myReviews_food3"
-                android:textColor="@color/ThemeBlack"
-                app:backgroundTint="@color/white" />
-
-            <TextView
-                android:id="@+id/textView34"
-                android:layout_width="193dp"
-                android:layout_height="58dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="21dp"
-                android:layout_marginRight="21dp"
-                android:layout_marginBottom="17dp"
-                android:text="@string/myReviews_foodDes3" />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

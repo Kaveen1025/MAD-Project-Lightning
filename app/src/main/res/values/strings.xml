@@ -174,7 +174,7 @@
     <string name="cuisine_typ"><b>Cusine Type:</b> Italian</string>
     <string name="location"><b>Location:</b> Kalutara</string>
     <string name="RestaurantName2">MAKI SUSHI</string>
-    <string name="yourFavourites"><b>Your Favourites</b></string>
+    <string name="yourFavourites"><b>My Favourites</b></string>
     <string name="customize_TotalPrice">Total Price</string>
     <string name="ratingsAndReviews"><b>Ratings And Reviews</b></string>
     <string name="ratings_btn_customize">Customize food</string>
@@ -227,7 +227,7 @@
     <string name="favourite_price1">LKR. 650.00</string>
     <string name="favourite_calories1">146 Calories</string>
     <string name="favourite_nameOfTheFood2">Chicken Pizza</string>
-    <string name="favourite_price2">LKR. 1000.00</string>
+    <string name="favourite_price2">LKR. 1000</string>
     <string name="favourite_calories2">494 Calories</string>
     <string name="favourite_nameOfTheFood3">Hamburger</string>
     <string name="favourite_price3">LKR. 500.00</string>
@@ -252,7 +252,7 @@
     <string name="ratings_rate2">5.0</string>
     <string name="ratings_review2"> its taste was so amazing.. the quality was good too. Highly recommended.</string>
     <string name="myReviews_food1">Lime Mojito</string>
-    <string name="myReviews_foodDes1">Fresh Lime mojito with white rum,lime, sugar and soda.</string>
+
 
 
     <string name="myReviews_food3">Chinese Fried Rice</string>

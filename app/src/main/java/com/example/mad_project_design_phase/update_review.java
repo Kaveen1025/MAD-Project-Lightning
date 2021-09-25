@@ -56,10 +56,10 @@ public class update_review extends AppCompatActivity {
                 String foodname = dataSnapshot.child("name").getValue().toString();
                 String Price = dataSnapshot.child("price").getValue().toString();
                 String link = dataSnapshot.child("foodImage").getValue(String.class);
-                url.setText(link);
+                   url.setText(link);
                 Picasso.get()
-                        .load(link)
-                        .into(food);
+                       .load(link)
+                       .into(food);
 
                 name.setText(foodname);
                 des.setText(foodDes);

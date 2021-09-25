@@ -87,7 +87,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/tv_p3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -154,7 +154,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView26"
+                android:id="@+id/rate_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -180,7 +180,7 @@
                 android:text="@string/restaurantReview" />
 
             <ImageView
-                android:id="@+id/imageView13"
+                android:id="@+id/favourite_img"
                 android:layout_width="42dp"
                 android:layout_height="35dp"
                 android:layout_alignParentEnd="true"
@@ -193,7 +193,7 @@
                 tools:ignore="VectorDrawableCompat" />
 
             <ImageView
-                android:id="@+id/imageView14"
+                android:id="@+id/favourite_icon"
                 android:layout_width="42dp"
                 android:layout_height="35dp"
                 android:layout_alignParentEnd="true"
@@ -206,7 +206,7 @@
                 tools:ignore="VectorDrawableCompat" />
 
             <ImageView
-                android:id="@+id/imageView15"
+                android:id="@+id/delete_icon"
                 android:layout_width="42dp"
                 android:layout_height="35dp"
                 android:layout_alignParentEnd="true"
@@ -263,7 +263,7 @@
                 app:srcCompat="@drawable/restlogo" />
 
             <Button
-                android:id="@+id/button19"
+                android:id="@+id/btn_foodName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -276,7 +276,7 @@
                 app:backgroundTint="@color/ThemeGreen" />
 
             <TextView
-                android:id="@+id/textView29"
+                android:id="@+id/rateItem_review"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
