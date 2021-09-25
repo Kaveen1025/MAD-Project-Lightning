@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MADProjectDesignphase">
 
         <activity
-            android:name=".my_restaurant_review">
+            android:name=".Rate_restaurant">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Rate_restaurant"/>
+
         <activity android:name=".update_review"/>
 
 
