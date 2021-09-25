@@ -2,39 +2,39 @@ package com.example.mad_project_design_phase;
 
 public class CustomerAddress {
 
-    private String Province;
-    private String City;
-    private String Address;
+    private String province;
+    private String city;
+    private String address;
 
+    CustomerAddress(){}
 
     public CustomerAddress(String province, String city, String address) {
-        Province = province;
-        City = city;
-        Address = address;
+        this.province = province;
+        this.city = city;
+        this.address = address;
     }
 
-//    c
     public String getProvince() {
-        return Province;
+        return province;
     }
 
     public void setProvince(String province) {
-        Province = province;
+        this.province = province;
     }
 
     public String getCity() {
-        return City;
+        return city;
     }
 
     public void setCity(String city) {
-        City = city;
+        this.city = city;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 }

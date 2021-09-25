@@ -25,31 +25,50 @@ public class add_new_address extends AppCompatActivity {
     CustomerAddress CusAdd;
     DatabaseReference dbRef;
     FirebaseDatabase database;
-    FirebaseAuth auth;
     FirebaseUser firebaseUser;
+    FirebaseAuth auth;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_address);
-        Toast.makeText(this, "FireBase Connection Success", Toast.LENGTH_SHORT).show();
 
-        et_province = findViewById(R.id.et_province);
-        et_city = findViewById(R.id.et_city);
-        et_address = findViewById(R.id.et_address);
-        save_address = findViewById(R.id.save_address);
-        //CusAdd = new CustomerAddress();
 
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer Address");
+        et_province = (EditText) findViewById(R.id.et_province);
+        et_city = (EditText) findViewById(R.id.et_city);
+        et_address =(EditText) findViewById(R.id.et_address);
+        save_address = (Button) findViewById(R.id.save_address);
+        CusAdd = new CustomerAddress();
+
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer Address").child("DgaCUSQDSOOgGnoFmv3ojR3vpH73");
         auth = FirebaseAuth.getInstance();
+
+        save_address.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String Province = et_province.getText().toString().trim();
+                String City = et_city.getText().toString().trim();
+                String Address = et_address.getText().toString().trim();
+
+                CusAdd.setProvince(Province);
+                CusAdd.setCity(City);
+                CusAdd.setAddress(Address);
+
+                dbRef.push().setValue(CusAdd);  //firebaseUser.getUid()).
+                Toast.makeText(add_new_address.this, "Address Added Successfully", Toast.LENGTH_SHORT).show();
+
+
+//                Toast.makeText(add_new_address.this, "Address Add Failed", Toast.LENGTH_SHORT).show();
+                ClearControls();
+            }
+
+
+        });
+
     }
-
-//    protected void onResume(){
-//
-//        save_address.setOnClickListner(new View.View.OnClickListener())
-//    }
-
-    //method to clear all user inputs
 
     public void ClearControls() {
 
@@ -60,30 +79,6 @@ public class add_new_address extends AppCompatActivity {
 
     }
 
-    protected void onResume() {
-
-        super.onResume();
-        save_address.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                String Province = et_province.getText().toString();
-                String City = et_city.getText().toString();
-                String Address = et_address.getText().toString();
-
-
-                CusAdd = new CustomerAddress(Province,City,Address);
-
-                dbRef.child(firebaseUser.getUid()).push().setValue(CusAdd);
-                Toast.makeText(add_new_address.this, "Address Added Successfully", Toast.LENGTH_SHORT).show();
-
-
-                Toast.makeText(add_new_address.this, "Address Add Failed", Toast.LENGTH_SHORT).show();
-                ClearControls();
-            }
-
-
-        });
 
 
     }
@@ -123,4 +118,4 @@ public class add_new_address extends AppCompatActivity {
 //
 //    }
 
-}
+

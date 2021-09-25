@@ -1,10 +1,69 @@
 {
   "project_info": {
     "project_number": "369525707312",
+    "firebase_url": "https://foodshades-bc767-default-rtdb.firebaseio.com",
     "project_id": "foodshades-bc767",
     "storage_bucket": "foodshades-bc767.appspot.com"
   },
   "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369525707312:android:a9685307353c79641cd3f5",
+        "android_client_info": {
+          "package_name": "com.example.fbasevideo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369525707312-v6bcj767pdd6tkhcu1odni78c1n3h9ka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYc5GNkeCmrR3ut8AOe5y0lxdiKV4KZGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "369525707312-v6bcj767pdd6tkhcu1odni78c1n3h9ka.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369525707312:android:acdca09a602e461b1cd3f5",
+        "android_client_info": {
+          "package_name": "com.example.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369525707312-v6bcj767pdd6tkhcu1odni78c1n3h9ka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYc5GNkeCmrR3ut8AOe5y0lxdiKV4KZGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "369525707312-v6bcj767pdd6tkhcu1odni78c1n3h9ka.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
     {
       "client_info": {
         "mobilesdk_app_id": "1:369525707312:android:7ef8d498bd75907a1cd3f5",

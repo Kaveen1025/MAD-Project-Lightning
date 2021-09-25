@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/drawable-mdpi/add_new.xml" value="0.1707236842105263" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/drawable/box.xml" value="0.1707236842105263" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_add_new_address.xml" value="0.15895765472312703" />
+        <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_card_details.xml" value="0.15625" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_confirmation_delete_msg.xml" value="0.1" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_customise_food.xml" value="0.1" />
+        <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_edit_cart.xml" value="0.264" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_edit_profile.xml" value="0.16" />
+        <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_home_page.xml" value="0.1" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_rate_food.xml" value="0.16052631578947368" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_rate_restaurant.xml" value="0.16052631578947368" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_restaurant.xml" value="0.16052631578947368" />
@@ -16,9 +20,13 @@
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_show_calories.xml" value="0.16052631578947368" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_sign_up_page.xml" value="0.16052631578947368" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_successful_msg.xml" value="0.16052631578947368" />
+        <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_successfull_msg_display.xml" value="0.15164473684210528" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_user_profile.xml" value="0.16052631578947368" />
-        <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_view_address.xml" value="0.15822368421052632" />
+        <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_view_address.xml" value="0.4" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_view_orders.xml" value="0.176" />
+        <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/cus_address_main.xml" value="0.4" />
+        <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/edit_cart_main.xml" value="0.2" />
+        <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/menu/search.xml" value="0.13782894736842105" />
       </map>
     </option>
   </component>
@@ -27,5 +35,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2" />
+      </ProjectState>
+    </option>
   </component>
 </project>
