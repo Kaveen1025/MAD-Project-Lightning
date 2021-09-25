@@ -133,9 +133,9 @@
                 android:layout_marginLeft="7dp"
                 android:layout_marginTop="6dp"
                 android:ems="10"
+                android:hint="Card Type"
                 android:inputType="textPersonName"
-                android:text="@string/add_details_cardType"
-                android:textColor="#5C5858"
+                android:textColor="#5E5B5B"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <ImageButton
@@ -188,8 +188,8 @@
                 android:layout_marginTop="11dp"
                 android:layout_marginBottom="4dp"
                 android:ems="10"
+                android:hint="Card Number"
                 android:inputType="textPersonName"
-                android:text="@string/add_details_cardNo"
                 android:textColor="#5C5858"
                 tools:ignore="TouchTargetSizeCheck" />
         </RelativeLayout>
@@ -227,8 +227,8 @@
                 android:layout_marginRight="3dp"
                 android:layout_marginBottom="7dp"
                 android:ems="10"
+                android:hint="Card Holder's Name"
                 android:inputType="textPersonName"
-                android:text="@string/add_details_name"
                 android:textColor="#5C5858"
                 tools:ignore="TouchTargetSizeCheck" />
         </RelativeLayout>
@@ -260,8 +260,8 @@
                 android:layout_marginLeft="11dp"
                 android:layout_marginBottom="0dp"
                 android:ems="10"
+                android:hint="Expiration Date MM/YY"
                 android:inputType="date"
-                android:text="@string/add_details_date"
                 android:textColor="#5E5B5B" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -293,8 +293,8 @@
                 android:layout_marginTop="9dp"
                 android:layout_marginBottom="6dp"
                 android:ems="10"
+                android:hint="CVV / CVC"
                 android:inputType="textPersonName"
-                android:text="@string/add_details_cvv"
                 android:textColor="#8A8888"
                 tools:ignore="TouchTargetSizeCheck" />
         </RelativeLayout>
