@@ -94,6 +94,7 @@
         android:text="@string/selectCardHeader"
         android:textColor="@color/ThemeBlack"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -141,7 +142,7 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
-                    android:id="@+id/textView55"
+                    android:id="@+id/txtCardTyp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -155,7 +156,7 @@
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/textView56"
+                    android:id="@+id/txtCardNum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -230,7 +231,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:id="@+id/button24"
+                android:id="@+id/btnReset"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -243,7 +244,7 @@
                 app:backgroundTint="@color/ThemeBlack" />
 
             <Button
-                android:id="@+id/button25"
+                android:id="@+id/btnUpdate"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
