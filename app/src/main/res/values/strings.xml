@@ -253,13 +253,12 @@
     <string name="ratings_review2"> its taste was so amazing.. the quality was good too. Highly recommended.</string>
     <string name="myReviews_food1">Lime Mojito</string>
     <string name="myReviews_foodDes1">Fresh Lime mojito with white rum,lime, sugar and soda.</string>
-    <string name="myReviews_food2">Strawberry Cake</string>
-    <string name="myReviews_foodDes2">Delicious, Freshly bake strawberry cake with cream cheese frosting. </string>
+
+
     <string name="myReviews_food3">Chinese Fried Rice</string>
     <string name="myReviews_foodDes3">Chinese styled fried rice with seafood.</string>
     <string name="create_review_food">Seafood Spagettti</string>
     <string name="update_delete_review_des">Spagetti together with Shrimp and our special sause.</string>
-    <string name="update_delete_review_review"> Received with good condition and on time. My friend liked it so much and taste good 👍</string>
     <string name="update_delete_review_Updatebtn">Update Review</string>
     <string name="update_delete_review_Deletebtn">Delete Review</string>
     <string name="hintText">Type here...</string>
@@ -288,12 +287,7 @@
     <string name="textHint">Tell us what you like about it...</string>
     <string name="foodRatings">view ratings</string>
     <string name="selectCardHeader">SELECT A CARD</string>
-    <string name="textview">TextView</string>
-    <string name="invalid_name">This field cannot be Empty!</string>
-    <string name="invalid_type">This field cannot be Empty!</string>
-    <string name="invalid_date">This field cannot be Empty!</string>
-    <string name="invalid_number">Please Enter a valid Card Number!</string>
-    <string name="invalid_cvc">Please enter the 3 digit value!!</string>
+    <string name="Typehere">Type here</string>
 
 
 </resources>
