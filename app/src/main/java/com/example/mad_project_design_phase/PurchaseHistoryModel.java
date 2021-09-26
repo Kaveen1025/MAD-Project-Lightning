@@ -5,6 +5,7 @@ public class PurchaseHistoryModel {
     private String dateAndTime;
     private String price;
 
+
     public PurchaseHistoryModel() {
     }
 
@@ -37,4 +38,6 @@ public class PurchaseHistoryModel {
     public void setPrice(String price) {
         this.price = price;
     }
+
+
 }

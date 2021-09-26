@@ -23,7 +23,6 @@ public class notification extends AppCompatActivity {
 
         //Assigning recycler view
         ryvNotification = (RecyclerView) findViewById(R.id.ryvNotification);
-
         ryvNotification.setLayoutManager(new LinearLayoutManager(this));
 
 

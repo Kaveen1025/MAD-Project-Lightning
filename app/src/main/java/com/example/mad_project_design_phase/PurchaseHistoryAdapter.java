@@ -2,6 +2,7 @@ package com.example.mad_project_design_phase;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +22,7 @@ import com.google.firebase.database.annotations.NotNull;
 
 public class PurchaseHistoryAdapter extends FirebaseRecyclerAdapter<PurchaseHistoryModel, PurchaseHistoryAdapter.myViewHolder> {
 
-
+    private  Float totalPrice = 0.0f;
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
      * {@link FirebaseRecyclerOptions} for configuration options.
@@ -39,6 +40,11 @@ public class PurchaseHistoryAdapter extends FirebaseRecyclerAdapter<PurchaseHist
         holder.id.setText(model.getId());
         holder.dateAndTime.setText(model.getDateAndTime());
         holder.price.setText(model.getPrice());
+
+        totalPrice = totalPrice + Float.parseFloat(model.getPrice());
+        Log.i("a", String.valueOf(totalPrice));
+
+        holder.totalPrice.setText(String.valueOf(totalPrice));
     }
 
 
@@ -55,7 +61,7 @@ public class PurchaseHistoryAdapter extends FirebaseRecyclerAdapter<PurchaseHist
     class myViewHolder extends RecyclerView.ViewHolder{
 
 
-        TextView id,dateAndTime,price;
+        TextView id,dateAndTime,price,totalPrice;
 
 
         public myViewHolder(@NonNull View itemView) {
@@ -64,7 +70,7 @@ public class PurchaseHistoryAdapter extends FirebaseRecyclerAdapter<PurchaseHist
             id = (TextView)itemView.findViewById(R.id.txtID);
             dateAndTime = (TextView)itemView.findViewById(R.id.txtDate);
             price = (TextView)itemView.findViewById(R.id.txtPrice);
-
+            totalPrice = (TextView) itemView.findViewById(R.id.txtTotal);
 
         }
     }

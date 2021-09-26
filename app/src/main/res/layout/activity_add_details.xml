@@ -139,25 +139,6 @@
                 android:textColor="#5E5B5B"
                 tools:ignore="TouchTargetSizeCheck" />
 
-            <ImageButton
-                android:id="@+id/imageButton7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/TextCardType"
-                android:layout_alignLeft="@+id/TextCardType"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="241dp"
-                android:layout_marginLeft="241dp"
-                android:layout_marginTop="19dp"
-                android:layout_marginEnd="28dp"
-                android:layout_marginRight="28dp"
-                android:layout_marginBottom="17dp"
-                android:background="?android:attr/selectableItemBackground"
-                app:srcCompat="@drawable/ic_delete_without_border"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,VectorDrawableCompat" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -190,7 +171,8 @@
                 android:layout_marginBottom="4dp"
                 android:ems="10"
                 android:hint="Card Number"
-                android:inputType="textPersonName"
+                android:inputType="phone"
+                android:maxLength="19"
                 android:textColor="#5C5858"
                 tools:ignore="TouchTargetSizeCheck" />
         </RelativeLayout>
@@ -262,7 +244,7 @@
                 android:layout_marginBottom="0dp"
                 android:ems="10"
                 android:hint="Expiration Date MM/YY"
-                android:inputType="date"
+                android:inputType="phone"
                 android:textColor="#5E5B5B" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -295,7 +277,7 @@
                 android:layout_marginBottom="6dp"
                 android:ems="10"
                 android:hint="CVV / CVC"
-                android:inputType="textPersonName"
+                android:inputType="date"
                 android:textColor="#8A8888"
                 tools:ignore="TouchTargetSizeCheck" />
         </RelativeLayout>

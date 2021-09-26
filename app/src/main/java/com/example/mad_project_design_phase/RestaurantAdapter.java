@@ -48,20 +48,14 @@ public class RestaurantAdapter extends FirebaseRecyclerAdapter<RestaurantModel, 
                 //.circleCrop()
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.imgMenu);
-
     }
-
-
-    @NonNull
-    @NotNull
-    @Override
+    @NonNull @NotNull @Override
     public myViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
 
         //Bind myViewHolder & return it
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_restaurant_menu, parent, false);
         return new myViewHolder(view);
     }
-
     class myViewHolder extends RecyclerView.ViewHolder{
 
 

@@ -289,6 +289,11 @@
     <string name="foodRatings">view ratings</string>
     <string name="selectCardHeader">SELECT A CARD</string>
     <string name="textview">TextView</string>
+    <string name="invalid_name">This field cannot be Empty!</string>
+    <string name="invalid_type">This field cannot be Empty!</string>
+    <string name="invalid_date">This field cannot be Empty!</string>
+    <string name="invalid_number">Please Enter a valid Card Number!</string>
+    <string name="invalid_cvc">Please enter the 3 digit value!!</string>
 
 
 </resources>

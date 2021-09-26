@@ -20,6 +20,10 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.annotations.NotNull;
 
+import java.util.Objects;
+
+//import ru.embersoft.expandabletextview.ExpandableTextView;
+
 //import org.jetbrains.annotations.NotNull;
 
 public class NotificationAdapter extends FirebaseRecyclerAdapter<NotificationModel, NotificationAdapter.myViewHolder> {
@@ -42,33 +46,6 @@ public class NotificationAdapter extends FirebaseRecyclerAdapter<NotificationMod
         holder.title.setText(model.getTitle());
         holder.description.setText(model.getDescription());
 
-
-//        holder.BTN_REMOVE.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                AlertDialog.Builder Builder = new AlertDialog.Builder(holder.itemView.getContext());
-//                Builder.setTitle("are You sure");
-//                Builder.setMessage("Deleted data can't be Undo");
-//
-//                Builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialogInterface, int i) {
-//                        FirebaseDatabase.getInstance().getReference().child("Card Details")
-//                                .child(getRef(position).getKey()).removeValue();
-//                    }
-//                });
-//                Builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialogInterface, int i) {
-//                        Toast.makeText(holder.itemView.getContext(),"cancel.",Toast.LENGTH_SHORT ).show();
-//                    }
-//                });
-//                Builder.show();
-//            }
-//        });
-
-
-
     }
 
 
@@ -86,17 +63,15 @@ public class NotificationAdapter extends FirebaseRecyclerAdapter<NotificationMod
 
 
         TextView title,description;
+
         Button btnNotShow;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
 
-
-
-
-
             title = (TextView)itemView.findViewById(R.id.txtNotTitle);
             description = (TextView)itemView.findViewById(R.id.txtNotDescription);
+
 
 
             btnNotShow =itemView.findViewById(R.id.btnNotShow);
