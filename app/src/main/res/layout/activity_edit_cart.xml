@@ -82,30 +82,42 @@
             android:textSize="15sp"
             android:textStyle="bold" />
 
-        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
-            android:id="@+id/txt_amount"
+        <Button
+            android:id="@+id/decrement"
             android:layout_width="wrap_content"
-            android:layout_height="46dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="163dp"
+            android:layout_marginLeft="163dp"
+            android:layout_marginBottom="16dp"
+            android:text="Button" />
 
-
-            android:layout_alignParentTop="true"
+        <Button
+            android:id="@+id/increment"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="198dp"
-            android:layout_marginTop="121dp"
-            android:layout_marginRight="3dp"
-            android:layout_marginBottom="0dp"
-            android:layout_weight="1"
-            android:background="#00FF00 "
-            android:backgroundTint="#ffff"
-            app:finalNumber="20"
-            app:initialNumber="1"
-            app:textSize="5sp">
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="15dp"
+            android:text="Button" />
 
-        </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+        <TextView
+            android:id="@+id/quantitys"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="273dp"
+            android:layout_marginLeft="273dp"
+            android:layout_marginBottom="27dp"
+            android:text="TextView" />
+
 
     </RelativeLayout>
 

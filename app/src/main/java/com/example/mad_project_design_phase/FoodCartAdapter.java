@@ -3,6 +3,7 @@ package com.example.mad_project_design_phase;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.bumptech.glide.Glide;
+import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
@@ -47,6 +49,33 @@ public class FoodCartAdapter extends FirebaseRecyclerAdapter<FoodCart, FoodCartA
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.food_image);
 
+        holder.quantitys.setText("1");
+      holder.increment.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+              Integer number = Integer.parseInt(holder.quantitys.getText().toString());
+              number  += 1;
+              Integer newPrice = Integer.parseInt(model.getPrice())  * number;
+              holder.quantitys.setText(String.valueOf(number));
+                holder.price.setText(String.valueOf(newPrice));
+          }
+      });
+
+    holder.decrement.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Integer number = Integer.parseInt(holder.quantitys.getText().toString());
+        number  -= 1;
+        if(number == 0){
+            holder.quantitys.setText("1");
+        }
+        Integer newPrice = Integer.parseInt(model.getPrice())  * number;
+        holder.quantitys.setText(String.valueOf(number));
+        holder.price.setText(String.valueOf(newPrice));
+
+
+    }
+});
 
     }
 
@@ -62,8 +91,10 @@ public class FoodCartAdapter extends FirebaseRecyclerAdapter<FoodCart, FoodCartA
     public class myViewHolder extends RecyclerView.ViewHolder{
 
 
-        TextView name, description, price;
+        TextView name, description, price,total,quantitys;
         ImageView food_image;
+        //ElegantNumberButton number;
+        Button increment,decrement;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -72,9 +103,12 @@ public class FoodCartAdapter extends FirebaseRecyclerAdapter<FoodCart, FoodCartA
             name = (TextView) itemView.findViewById(R.id.foodNtext);
             description = (TextView) itemView.findViewById(R.id.foodDtext);
             price = (TextView) itemView.findViewById(R.id.foodPtext);
-
-
+            //number = itemView.findViewById(R.id.txt_amount);
+            total = itemView.findViewById(R.id.total);
             food_image = (ImageView) itemView.findViewById(R.id.food_image);
+            increment = itemView.findViewById(R.id.increment);
+            decrement = itemView.findViewById(R.id.decrement);
+            quantitys = itemView.findViewById(R.id.quantitys);
 
 
         }
