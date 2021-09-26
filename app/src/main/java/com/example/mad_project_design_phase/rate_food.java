@@ -25,6 +25,7 @@ public class rate_food extends AppCompatActivity {
     TextView name, des, url;
     ImageView img;
     Button customize;
+    String FoodID, RestaurantID;
 
     DatabaseReference ref;
 
@@ -44,7 +45,8 @@ public class rate_food extends AppCompatActivity {
 
         FirebaseRecyclerOptions<rate_Model> options=
                 new FirebaseRecyclerOptions.Builder<rate_Model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodReviews").child("Customers"), rate_Model.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodReviews")
+                                .child("Customers"), rate_Model.class)
                         .build();
 
         adapter = new rate_Adapter(options);
@@ -55,15 +57,15 @@ public class rate_food extends AppCompatActivity {
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String Ratename =  snapshot.child("name").getValue().toString();
-                String Ratedes =  snapshot.child("description").getValue().toString();
+                String rateName =  snapshot.child("name").getValue().toString();
+                String rateDes =  snapshot.child("description").getValue().toString();
                 String link = snapshot.child("foodImage").getValue(String.class);
                 url.setText(link);
                 Picasso.get()
                         .load(link)
                         .into(img);
-                name.setText(Ratename);
-                des.setText(Ratedes);
+                name.setText(rateName);
+                des.setText(rateDes);
             }
 
             @Override

@@ -140,10 +140,10 @@ public class customise_food extends AppCompatActivity {
                 String foodDes = dataSnapshot.child("description").getValue().toString();
                 String foodname = dataSnapshot.child("name").getValue().toString();
                 String link = dataSnapshot.child("foodImage").getValue(String.class);
-//                url.setText(link);
-//                Picasso.get()
-//                        .load(link)
-//                        .into(food);
+                url.setText(link);
+                Picasso.get()
+                        .load(link)
+                        .into(food);
                     name.setText(foodname);
                des.setText(foodDes);
 
@@ -159,19 +159,18 @@ public class customise_food extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-      ///String totalPriceCal = 0.0f;
+
         op1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
 
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-              //  Log.i("GG", "onCheckedChanged: GG");
-                Float newtotal;
+
+                Float newtotal = 0.00f;
                 if(b){
                      newtotal = Float.parseFloat(p1.getText().toString()) + Float.parseFloat(totalPrice.getText().toString());
                 }else{
                     newtotal = Float.parseFloat(totalPrice.getText().toString())  - Float.parseFloat(p1.getText().toString()) ;
                 }
-
 
                 totalPrice.setText(String.valueOf(newtotal));
 
@@ -182,7 +181,7 @@ public class customise_food extends AppCompatActivity {
             @Override
 
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                //  Log.i("GG", "onCheckedChanged: GG");
+
                 Float newtotal;
                 if(b){
                     newtotal = Float.parseFloat(p2.getText().toString()) + Float.parseFloat(totalPrice.getText().toString());
@@ -200,7 +199,7 @@ public class customise_food extends AppCompatActivity {
             @Override
 
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                //  Log.i("GG", "onCheckedChanged: GG");
+
                 Float newtotal;
                 if(b){
                     newtotal = Float.parseFloat(p3.getText().toString()) + Float.parseFloat(totalPrice.getText().toString());
@@ -218,7 +217,7 @@ public class customise_food extends AppCompatActivity {
             @Override
 
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                //  Log.i("GG", "onCheckedChanged: GG");
+
                 Float newtotal;
                 if(b){
                     newtotal = Float.parseFloat(p4.getText().toString()) + Float.parseFloat(totalPrice.getText().toString());
@@ -237,22 +236,18 @@ public class customise_food extends AppCompatActivity {
                 Intent calCalories = new Intent(customise_food.this,show_calories.class);
                 HashMap<String,Integer> selectFoodList = new HashMap();
                 if(op1.isChecked()){
-                //    selectFoodList.put(op1.getText().toString(),Integer.parseInt(p1.getText().toString()));
                     calCalories.putExtra("op1",op1.getText().toString());
                     calCalories.putExtra("op1Price",p1.getText().toString());
                 }
                 if(op2.isChecked()){
-                //    selectFoodList.put(op2.getText().toString(),Integer.parseInt(p2.getText().toString()));
                     calCalories.putExtra("op2",op2.getText().toString());
                     calCalories.putExtra("op2Price",p2.getText().toString());
                 }
                 if(op3.isChecked()){
-                 //   selectFoodList.put(op3.getText().toString(),Integer.parseInt(p3.getText().toString()));
                     calCalories.putExtra("op3",op3.getText().toString());
                     calCalories.putExtra("op3Price",p3.getText().toString());
                 }
                 if(op4.isChecked()){
-                //    selectFoodList.put(op4.getText().toString(),Integer.parseInt(p4.getText().toString()));
                     calCalories.putExtra("op4",op4.getText().toString());
                     calCalories.putExtra("op4Price",p4.getText().toString());
                 }

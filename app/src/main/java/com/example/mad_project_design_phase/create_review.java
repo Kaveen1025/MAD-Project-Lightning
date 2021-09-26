@@ -31,7 +31,7 @@ public class create_review extends AppCompatActivity {
     ImageView food;
     DatabaseReference reff;
     DatabaseReference ref;
-
+    String UserID,FoodID, RestaurantID;
     FoodReviews reviews;
 
     @Override
@@ -46,29 +46,25 @@ public class create_review extends AppCompatActivity {
         food = (ImageView) findViewById(R.id.img_food);
         url = (TextView) findViewById(R.id.img_url);
 
-        reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodReviews").child("Customers");
-        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodDetails");
-
+        reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Food").child(FoodID).child("FoodReviews").child("Customers");
+        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Food").child(FoodID).child("FoodDetails");
         btnSubmit.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 String s = String.valueOf(rtbar.getRating());
                 String r = txt_writeReview.getText().toString().trim();
 
                 reviews = new FoodReviews(s,r);
-                //Toast.makeText(getApplicationContext(),s +" Stars",Toast.LENGTH_SHORT).show();
-
-                reff.child("C2").setValue(reviews).addOnCompleteListener(new OnCompleteListener<Void>() {
+                reff.child(UserID).setValue(reviews).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(), "Review added Successfully", Toast.LENGTH_LONG).show();
                         }else{
+        
                             Toast.makeText(getApplicationContext(),"Review adding failed!", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
-
-
             }
         });
 

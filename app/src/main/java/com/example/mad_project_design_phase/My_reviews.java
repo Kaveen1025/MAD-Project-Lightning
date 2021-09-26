@@ -14,21 +14,19 @@ public class My_reviews extends AppCompatActivity {
 
     RecyclerView recyclerview;
     myReviews_Adapter adapter;
+    String UserID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_reviews);
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
-        myRef.setValue("hello world");
 
         recyclerview = (RecyclerView) findViewById(R.id.my_Reviews_rv);
         recyclerview.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<ReviewsModel> options =
                 new FirebaseRecyclerOptions.Builder<ReviewsModel>()
-                .setQuery(FirebaseDatabase.getInstance().getReference().child("CustomerFoodReviewDetails").child("C1"), ReviewsModel.class)
+                .setQuery(FirebaseDatabase.getInstance().getReference().child("CustomerFoodReviewDetails").child(UserID), ReviewsModel.class)
                 .build();
 
         adapter = new myReviews_Adapter(options);
