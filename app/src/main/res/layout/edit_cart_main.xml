@@ -155,7 +155,7 @@
             android:layout_marginRight="134dp"
             android:layout_marginBottom="15dp"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/chicken"></ImageView>
+            app:srcCompat="@drawable/pizza_l"></ImageView>
 
 
     </RelativeLayout>
@@ -245,7 +245,7 @@
             android:layout_marginRight="11dp"
             android:layout_marginBottom="78dp"
             android:layout_toRightOf="@+id/total_a"
-            android:text="Total"
+            android:text="Price"
             android:textColor="@color/ThemeBlack"
             android:textSize="25dp"
             android:textStyle="bold"

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -94,7 +95,7 @@ public class FoodCartAdapter extends FirebaseRecyclerAdapter<FoodCart, FoodCartA
         TextView name, description, price,total,quantitys;
         ImageView food_image;
         //ElegantNumberButton number;
-        Button increment,decrement;
+        ImageButton increment,decrement;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -106,8 +107,8 @@ public class FoodCartAdapter extends FirebaseRecyclerAdapter<FoodCart, FoodCartA
             //number = itemView.findViewById(R.id.txt_amount);
             total = itemView.findViewById(R.id.total);
             food_image = (ImageView) itemView.findViewById(R.id.food_image);
-            increment = itemView.findViewById(R.id.increment);
-            decrement = itemView.findViewById(R.id.decrement);
+            increment = (ImageButton) itemView.findViewById(R.id.increment);
+            decrement =(ImageButton)  itemView.findViewById(R.id.decrement);
             quantitys = itemView.findViewById(R.id.quantitys);
 
 

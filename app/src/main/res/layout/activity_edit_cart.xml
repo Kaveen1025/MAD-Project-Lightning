@@ -82,41 +82,59 @@
             android:textSize="15sp"
             android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/decrement"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="163dp"
-            android:layout_marginLeft="163dp"
-            android:layout_marginBottom="16dp"
-            android:text="Button" />
 
-        <Button
-            android:id="@+id/increment"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginBottom="15dp"
-            android:text="Button" />
 
         <TextView
             android:id="@+id/quantitys"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="273dp"
-            android:layout_marginLeft="273dp"
-            android:layout_marginBottom="27dp"
+            android:layout_marginStart="285dp"
+            android:layout_marginLeft="285dp"
+            android:layout_marginEnd="73dp"
+            android:layout_marginRight="73dp"
+            android:layout_marginBottom="6dp"
             android:text="TextView" />
+
+        <ImageButton
+            android:id="@+id/increment"
+            android:layout_width="29dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="43dp"
+            android:layout_marginLeft="43dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="6dp"
+            android:layout_toEndOf="@+id/decrement"
+            android:layout_toRightOf="@+id/decrement"
+            android:backgroundTint="@color/ThemeGreen"
+            app:srcCompat="@drawable/add_i"
+            tools:ignore="VectorDrawableCompat,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/decrement"
+            android:layout_width="30dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="248dp"
+            android:layout_marginLeft="248dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginBottom="6dp"
+            android:backgroundTint="@color/ThemeGreen"
+            app:srcCompat="@drawable/i_remove"
+            tools:ignore="VectorDrawableCompat,SpeakableTextPresentCheck" />
 
 
     </RelativeLayout>

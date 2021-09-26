@@ -22,6 +22,8 @@ public class view_address extends AppCompatActivity {
 
     FloatingActionButton floatingActionButton;
 
+    String CustomerID;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +52,7 @@ public class view_address extends AppCompatActivity {
             }
         });
 
-
     }
-
     @Override
     protected void onStart() {
         super.onStart();

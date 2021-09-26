@@ -22,6 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class ViewAddressAdapter extends FirebaseRecyclerAdapter<CustomerAddress, ViewAddressAdapter.myViewHolder> {
 
+    String CustomerID;
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
      * {@link FirebaseRecyclerOptions} for configuration options.
@@ -38,8 +39,6 @@ public class ViewAddressAdapter extends FirebaseRecyclerAdapter<CustomerAddress,
         holder.Address.setText(model.getAddress());
         holder.Province.setText(model.getProvince());
         holder.City.setText(model.getCity());
-
-
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,7 +55,6 @@ public class ViewAddressAdapter extends FirebaseRecyclerAdapter<CustomerAddress,
                                 .child(getRef(position).getKey()).removeValue();
                     }
                 });
-
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int which){
@@ -67,8 +65,6 @@ public class ViewAddressAdapter extends FirebaseRecyclerAdapter<CustomerAddress,
                 builder.show();
             }
         });
-
-
     }
 
     @NonNull

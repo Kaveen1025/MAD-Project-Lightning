@@ -119,9 +119,6 @@ public class sign_up_page extends AppCompatActivity {
                     //phone number
                     String ConfirmPassword = et_confirm_password.getText().toString();
 
-
-
-
                     auth.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -131,44 +128,26 @@ public class sign_up_page extends AppCompatActivity {
 
                                 CusObj = new Customer(FirstName,LastName,Email,Address,PhoneNumber,Password);
 
-
-
-
                                 dbRef.child(firebaseUser.getUid()).setValue(CusObj).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if(task.isSuccessful()){
-
                                             Toast.makeText(sign_up_page.this, "Customer Added Successfully", Toast.LENGTH_SHORT).show();
 
                                         }else{
-
                                             Toast.makeText(sign_up_page.this, "Customer Added Failed", Toast.LENGTH_SHORT).show();
-                                            ClearControls();
-
-                                        }
+                                            ClearControls(); }
                                     }
                                 });
-
-
-
-                            }else{
-
-                                Toast.makeText(sign_up_page.this, "User Create failed", Toast.LENGTH_SHORT).show();
-
-                            }
-
+                            }else {
+                                Toast.makeText(sign_up_page.this, "User Create failed", Toast.LENGTH_SHORT).show(); }
                         }
                     });
-
 
                 }else{
 
                     Toast.makeText(sign_up_page.this, "You should agree with our terms and conditions", Toast.LENGTH_SHORT).show();
                 }
-
-
-
 
             }
         });
