@@ -17,7 +17,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import org.jetbrains.annotations.NotNull;
 
 
 public class ViewAddressAdapter extends FirebaseRecyclerAdapter<CustomerAddress, ViewAddressAdapter.myViewHolder> {
@@ -39,6 +44,17 @@ public class ViewAddressAdapter extends FirebaseRecyclerAdapter<CustomerAddress,
         holder.Address.setText(model.getAddress());
         holder.Province.setText(model.getProvince());
         holder.City.setText(model.getCity());
+
+        FirebaseDatabase.getInstance().getReference().child("Customer").child(getRef(position).getParent().getKey()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+                holder.customerName.setText(snapshot.child("firstName").getValue().toString() + " "+ snapshot.child("lastName").getValue().toString());
+            }
+            @Override
+            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+
+            }
+        });
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,7 +67,7 @@ public class ViewAddressAdapter extends FirebaseRecyclerAdapter<CustomerAddress,
                     @Override
                     public void onClick(DialogInterface dialogInterface, int which) {
 
-                        FirebaseDatabase.getInstance().getReference().child("Customer Address").child("DgaCUSQDSOOgGnoFmv3ojR3vpH73")
+                        FirebaseDatabase.getInstance().getReference().child("Customer Address").child(CustomerID)
                                 .child(getRef(position).getKey()).removeValue();
                     }
                 });
@@ -79,7 +95,7 @@ public class ViewAddressAdapter extends FirebaseRecyclerAdapter<CustomerAddress,
     public class myViewHolder extends RecyclerView.ViewHolder{
 
 
-        TextView Address, Province, City;
+        TextView Address, Province, City, customerName;
         Button btnDelete;
 
         public myViewHolder(@NonNull View itemView) {
@@ -89,7 +105,7 @@ public class ViewAddressAdapter extends FirebaseRecyclerAdapter<CustomerAddress,
             Address = (TextView) itemView.findViewById(R.id.addresstext);
             Province = (TextView) itemView.findViewById(R.id.provincetext);
             City = (TextView) itemView.findViewById(R.id.citytext);
-
+            customerName = (TextView) itemView.findViewById(R.id.customerAddressName);
             btnDelete = (Button) itemView.findViewById(R.id.btnDelete);
 
         }

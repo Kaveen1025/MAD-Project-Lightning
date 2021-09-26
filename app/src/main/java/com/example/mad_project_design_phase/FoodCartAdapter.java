@@ -14,11 +14,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.bumptech.glide.Glide;
-import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
+
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
@@ -62,6 +63,8 @@ public class FoodCartAdapter extends FirebaseRecyclerAdapter<FoodCart, FoodCartA
           }
       });
 
+
+
     holder.decrement.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
@@ -73,7 +76,6 @@ public class FoodCartAdapter extends FirebaseRecyclerAdapter<FoodCart, FoodCartA
         Integer newPrice = Integer.parseInt(model.getPrice())  * number;
         holder.quantitys.setText(String.valueOf(number));
         holder.price.setText(String.valueOf(newPrice));
-
 
     }
 });
@@ -99,8 +101,6 @@ public class FoodCartAdapter extends FirebaseRecyclerAdapter<FoodCart, FoodCartA
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
-
-
             name = (TextView) itemView.findViewById(R.id.foodNtext);
             description = (TextView) itemView.findViewById(R.id.foodDtext);
             price = (TextView) itemView.findViewById(R.id.foodPtext);
@@ -111,7 +111,7 @@ public class FoodCartAdapter extends FirebaseRecyclerAdapter<FoodCart, FoodCartA
             decrement =(ImageButton)  itemView.findViewById(R.id.decrement);
             quantitys = itemView.findViewById(R.id.quantitys);
 
-
+            //ConstraintLayout myCart = (ConstraintLayout)itemView.findViewById(R.id.my_cart);
         }
 
 
