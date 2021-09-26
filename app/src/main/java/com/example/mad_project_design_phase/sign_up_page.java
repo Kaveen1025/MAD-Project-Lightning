@@ -151,6 +151,7 @@ public class sign_up_page extends AppCompatActivity {
                                 });
 
 
+
                             }else{
 
                                 Toast.makeText(sign_up_page.this, "User Create failed", Toast.LENGTH_SHORT).show();
