@@ -39,7 +39,7 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:contentDescription="@string/reorderDes"
                 app:srcCompat="@drawable/ic_reorder"
-                tools:ignore="VectorDrawableCompat" />
+                tools:ignore="VectorDrawableCompat,TouchTargetSizeCheck" />
 
             <ImageButton
                 android:id="@+id/imageButton4"
@@ -67,7 +67,7 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:contentDescription="@string/profileDes"
                 app:srcCompat="@drawable/ic_profile"
-                tools:ignore="VectorDrawableCompat" />
+                tools:ignore="VectorDrawableCompat,TouchTargetSizeCheck" />
 
             <ImageButton
                 android:id="@+id/imageButton6"
@@ -82,7 +82,7 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:contentDescription="@string/cartDes"
                 app:srcCompat="@drawable/ic_cart"
-                tools:ignore="VectorDrawableCompat" />
+                tools:ignore="VectorDrawableCompat,TouchTargetSizeCheck" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -175,7 +175,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/save_address"
         android:layout_width="158dp"
         android:layout_height="61dp"
         android:layout_marginBottom="108dp"

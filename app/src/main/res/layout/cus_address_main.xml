@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".user_profile">
+    tools:context=".view_address">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
@@ -87,107 +87,71 @@
     </androidx.cardview.widget.CardView>
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image"
-        android:layout_width="158dp"
-        android:layout_height="128dp"
-        android:layout_marginTop="76dp"
-        android:src="@drawable/user"
-        app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
+
+    <TextView
+        android:id="@+id/my_address"
+        android:layout_width="199dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/my_address"
+        android:textColor="@color/ThemeBlack"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cardView2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/et_firstname"
-        android:layout_width="319dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="496dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/first_name"
-        android:textColorHighlight="@color/ThemeGreen"
-        android:textColorLink="@color/ThemeGreen"
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="281dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/address_add"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="144dp"
+        android:text="Add Address"
+        android:textColor="@color/ThemeBlack"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.662"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="411dp"
+        android:layout_height="539dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <EditText
-        android:id="@+id/et_last_name"
-        android:layout_width="319dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="408dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/et_last_name"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="53dp"
+        android:layout_height="57dp"
+        android:backgroundTint="#008000"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/rv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.196"
+        app:srcCompat="@drawable/add_new"
+        tools:ignore="SpeakableTextPresentCheck,VectorDrawableCompat" />
 
-    <EditText
-        android:id="@+id/et_email"
-        android:layout_width="319dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="320dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="@string/up_email"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/up_phone"
-        android:layout_width="319dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="228dp"
-        android:ems="10"
-        android:inputType="phone"
-        android:text="@string/up_phone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/up_address"
-        android:layout_width="319dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="136dp"
-        android:ems="10"
-        android:inputType="textPostalAddress"
-        android:text="@string/up_address"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/up_edit"
-        android:layout_width="122dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginBottom="36dp"
-        android:text="@string/up_edit"
-        app:backgroundTint="@color/ThemeGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btn_View_Address"
-        android:layout_width="122dp"
-        android:layout_height="52dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:layout_marginBottom="36dp"
-        android:text="@string/up_view_add"
-        app:backgroundTint="@color/ThemeGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
