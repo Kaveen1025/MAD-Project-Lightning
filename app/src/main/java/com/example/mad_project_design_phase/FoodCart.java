@@ -2,14 +2,13 @@ package com.example.mad_project_design_phase;
 
 public class FoodCart {
 
-       String name, description, foodImage, price;
+    String name, description, foodImage, price;
 
-       FoodCart(){
+    FoodCart() {
 
-       }
+    }
 
-       public FoodCart(String name, String description, String foodImage, String price) {
-
+    public FoodCart(String name, String description, String foodImage, String price) {
         this.name = name;
         this.description = description;
         this.foodImage = foodImage;

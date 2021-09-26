@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/drawable-anydpi/ic_plus.xml" value="0.13026315789473683" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/drawable-mdpi/add_new.xml" value="0.1707236842105263" />
+        <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/drawable/add_i.xml" value="0.13026315789473683" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/drawable/box.xml" value="0.1707236842105263" />
+        <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_add_details.xml" value="0.12269736842105264" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_add_new_address.xml" value="0.15895765472312703" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_card_details.xml" value="0.15625" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_confirmation_delete_msg.xml" value="0.1" />
@@ -18,7 +21,7 @@
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_restaurant_ratings_review.xml" value="0.16052631578947368" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_select_card.xml" value="0.16052631578947368" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_show_calories.xml" value="0.16052631578947368" />
-        <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_sign_up_page.xml" value="0.16052631578947368" />
+        <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_sign_up_page.xml" value="0.16" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_successful_msg.xml" value="0.16052631578947368" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_successfull_msg_display.xml" value="0.15164473684210528" />
         <entry key="..\:/Android Studio Projects/MAD-Project-Lightning/app/src/main/res/layout/activity_user_profile.xml" value="0.16052631578947368" />

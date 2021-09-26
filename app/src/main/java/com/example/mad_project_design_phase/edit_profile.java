@@ -30,7 +30,7 @@ public class edit_profile extends AppCompatActivity {
     //    FirebaseDatabase database;
     FirebaseAuth auth;
     FirebaseUser firebaseUser;
-
+    String  currentPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,10 +46,10 @@ public class edit_profile extends AppCompatActivity {
         new_password = findViewById(R.id.new_password);
         confirm_password = findViewById(R.id.confirm_password);
         update_btn = findViewById(R.id.update_btn);
-        delete_btn = findViewById(R.id.delete_btn);
+        delete_btn = findViewById(R.id.deletePbtn);
 
 
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("qbNPPUl4mMc3ghQc6Hpth2g3yhs1");// id **
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("FGEOGNmjF4Wg9B80L7NhFPx2pvd2");// id **
         dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -60,6 +60,7 @@ public class edit_profile extends AppCompatActivity {
                     edit_email.setText(dataSnapshot.child("email").getValue().toString());
                     edit_phone.setText(dataSnapshot.child("address").getValue().toString());
                     edit_add.setText(dataSnapshot.child("phoneNumber").getValue().toString());
+                    currentPassword = dataSnapshot.child("password").getValue().toString();
 
                 }else{
 
@@ -79,15 +80,49 @@ public class edit_profile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String firstName = edit_fn.getText().toString().trim();
-                String lastName  = edit_ln.getText().toString().trim();
-                String email     = edit_email.getText().toString().trim();
-                String address   = edit_add.getText().toString().trim();
-                String phoneNumber =edit_phone.getText().toString().trim();
 
-                UpdateUserProfile(firstName, lastName, email, address, phoneNumber);
+                if(!(current_password.getText().toString().isEmpty())){
+                    String enteredPassword = current_password.getText().toString();
+                    if(enteredPassword.equals(currentPassword)){
 
-                //change password????
+                        if(new_password.getText().toString().equals(confirm_password.getText().toString())){
+                            HashMap customer = new HashMap();
+                            customer.put("password",new_password.getText().toString().trim());
+                            dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("FGEOGNmjF4Wg9B80L7NhFPx2pvd2");
+
+                            dbRef.updateChildren(customer).addOnCompleteListener(new OnCompleteListener() {
+                                @Override
+                                public void onComplete(@NonNull Task task) {
+                                    if(task.isSuccessful()){
+                                        Toast.makeText(edit_profile.this, "Password Changed Success", Toast.LENGTH_SHORT).show();
+                                    }else{
+                                        Toast.makeText(edit_profile.this, "Password Changed Failed", Toast.LENGTH_SHORT).show();
+                                    }
+
+                                }
+                            });
+                        }else
+                        {
+                            Toast.makeText(edit_profile.this, "Password Mismatch", Toast.LENGTH_SHORT).show();
+                        }
+                    }else{
+
+                        Toast.makeText(edit_profile.this, "Invalid Current Password", Toast.LENGTH_SHORT).show();
+                    }
+
+                }else{
+
+                    String firstName = edit_fn.getText().toString().trim();
+                    String lastName  = edit_ln.getText().toString().trim();
+                    String email     = edit_email.getText().toString().trim();
+                    String address   = edit_add.getText().toString().trim();
+                    String phoneNumber =edit_phone.getText().toString().trim();
+
+                    UpdateUserProfile(firstName, lastName, email, address, phoneNumber);
+                }
+
+
+
 
             }
 
@@ -119,7 +154,7 @@ public class edit_profile extends AppCompatActivity {
 
         //** change password? ->
 
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("qbNPPUl4mMc3ghQc6Hpth2g3yhs1"); //*userID?
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("FGEOGNmjF4Wg9B80L7NhFPx2pvd2"); //*userID?
         dbRef.updateChildren(customer).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull Task task) {
@@ -145,9 +180,9 @@ public class edit_profile extends AppCompatActivity {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.hasChild("qbNPPUl4mMc3ghQc6Hpth2g3yhs1")){ // ** userId
+                if(dataSnapshot.hasChild("FGEOGNmjF4Wg9B80L7NhFPx2pvd2")){ // ** userId
 
-                    dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("qbNPPUl4mMc3ghQc6Hpth2g3yhs1"); // ** userId
+                    dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("FGEOGNmjF4Wg9B80L7NhFPx2pvd2"); // ** userId
                     dbRef.removeValue();
                     Toast.makeText(getApplicationContext(), "Profile deleted Successfully", Toast.LENGTH_SHORT).show();
                 }

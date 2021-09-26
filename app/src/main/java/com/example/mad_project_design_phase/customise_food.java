@@ -20,7 +20,7 @@ public class customise_food extends AppCompatActivity {
         setContentView(R.layout.activity_customise_food);
 
 
-        Check = findViewById(R.id.checkBox11);
+        Check = findViewById(R.id.terms);
        // btn1 = findViewById(R.id.btn1);
 
     }

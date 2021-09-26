@@ -6,4 +6,5 @@
         <item name="android:textColor">@color/ThemeBlack</item>
         <item name="android:textColorHint">@color/ThemeBlack</item>
     </style>
+
 </resources>

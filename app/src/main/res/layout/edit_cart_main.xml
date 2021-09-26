@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view_address">
+    tools:context=".edit_cart">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
@@ -117,6 +117,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
+
+
         <Button
             android:id="@+id/ClearCart"
             android:layout_width="137dp"
@@ -124,9 +127,9 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="19dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
             android:text="Clear Cart"
             android:textAllCaps="false"
             android:textColor="#ffffff"
@@ -137,7 +140,7 @@
             app:layout_constraintVertical_bias="0.102" />
 
         <ImageView
-            android:id="@+id/imageView31"
+            android:id="@+id/restImage"
             android:layout_width="138dp"
             android:layout_height="100dp"
             android:layout_alignParentStart="true"
@@ -152,16 +155,16 @@
             android:layout_marginRight="134dp"
             android:layout_marginBottom="15dp"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/burger2"></ImageView>
+            app:srcCompat="@drawable/chicken"></ImageView>
 
 
     </RelativeLayout>
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv"
+        android:id="@+id/CartRV"
         android:layout_width="410dp"
-        android:layout_height="466dp"
+        android:layout_height="405dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
@@ -183,7 +186,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv"
+        app:layout_constraintTop_toBottomOf="@+id/CartRV"
         app:layout_constraintVertical_bias="0.927">
 
         <Button
@@ -204,33 +207,61 @@
 
         <TextView
             android:id="@+id/total_a"
-            android:layout_width="386dp"
-            android:layout_height="43dp"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="13dp"
-            android:layout_marginLeft="13dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="11dp"
-            android:layout_marginRight="11dp"
-            android:layout_marginBottom="74dp"
-            android:text="@string/total_a"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="266dp"
+            android:layout_marginRight="266dp"
+            android:layout_marginBottom="82dp"
+            android:text="Total:LKR."
             android:textColor="@color/ThemeBlack"
             android:textSize="25dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/textView19" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="143dp"
+            android:layout_height="36dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+
+            android:layout_marginStart="256dp"
+            android:layout_marginLeft="256dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginBottom="78dp"
+            android:layout_toRightOf="@+id/total_a"
+            android:text="Total"
+            android:textColor="@color/ThemeBlack"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
         <TextView
             android:id="@+id/textView19"
             android:layout_width="match_parent"
-            android:layout_height="124dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="2dp"
-            android:background="@drawable/box" />
+            android:layout_height="138dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/box"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
 
     </RelativeLayout>
 
