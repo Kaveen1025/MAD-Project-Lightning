@@ -29,7 +29,7 @@ public class update_review extends AppCompatActivity {
     Button btnUpdate;
     ImageView food;
     FoodReviews foodReviews;
-
+    String FoodID, RestaurantID, UserID;
     DatabaseReference reff;
 
     @Override
@@ -47,7 +47,7 @@ public class update_review extends AppCompatActivity {
         foodReviews = new FoodReviews();
 
 
-        reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodDetails");
+        reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Food").child(FoodID).child("FoodDetails");
         
         reff.addValueEventListener(new ValueEventListener() {
             @Override
@@ -56,10 +56,10 @@ public class update_review extends AppCompatActivity {
                 String foodname = dataSnapshot.child("name").getValue().toString();
                 String Price = dataSnapshot.child("price").getValue().toString();
                 String link = dataSnapshot.child("foodImage").getValue(String.class);
-                url.setText(link);
+                   url.setText(link);
                 Picasso.get()
-                        .load(link)
-                        .into(food);
+                       .load(link)
+                       .into(food);
 
                 name.setText(foodname);
                 des.setText(foodDes);
@@ -90,7 +90,8 @@ public class update_review extends AppCompatActivity {
         HashMap Review = new HashMap();
         Review.put("review", review);
 
-        DatabaseReference upRef = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodReviews").child("Customers").child("C3");
+        DatabaseReference upRef = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Food").child(FoodID)
+                .child("FoodReviews").child("Customers").child(UserID);
 
         upRef.updateChildren(Review).addOnCompleteListener(new OnCompleteListener(){
 

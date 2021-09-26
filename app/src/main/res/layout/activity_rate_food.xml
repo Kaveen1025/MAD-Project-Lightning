@@ -99,15 +99,17 @@ app:layout_constraintTop_toTopOf="parent">
         app:layout_constraintVertical_bias="0.093" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/foodRating_img"
         android:layout_width="431dp"
         android:layout_height="198dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.183"
-        app:srcCompat="@drawable/food5" />
+        app:srcCompat="@drawable/food5"
+        android:scaleType="centerCrop"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
@@ -126,7 +128,7 @@ app:layout_constraintTop_toTopOf="parent">
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/cuisineType"
+                android:id="@+id/foodRating_name"
                 android:layout_width="146dp"
                 android:layout_height="31dp"
                 android:layout_alignParentStart="true"
@@ -140,7 +142,7 @@ app:layout_constraintTop_toTopOf="parent">
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/RestAddress"
+                android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -152,7 +154,7 @@ app:layout_constraintTop_toTopOf="parent">
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/Address"
+                android:id="@+id/foodRating_des"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -167,289 +169,36 @@ app:layout_constraintTop_toTopOf="parent">
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView4"
-        android:layout_width="409dp"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.607">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile_image"
-                android:layout_width="81dp"
-                android:layout_height="81dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="28dp"
-                android:layout_marginLeft="28dp"
-                android:layout_marginBottom="6dp"
-                android:src="@drawable/user1"
-                app:civ_border_color="#FF000000"
-                app:civ_border_width="0dp" />
-
-            <TextView
-                android:id="@+id/textView19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="156dp"
-                android:layout_marginLeft="156dp"
-                android:layout_marginBottom="73dp"
-                android:text="@string/ratings_user1"
-                android:textColor="@color/ThemeBlack" />
-
-            <TextView
-                android:id="@+id/textView26"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="129dp"
-                android:layout_marginRight="129dp"
-                android:layout_marginBottom="71dp"
-                android:text="@string/ratings_rate1"
-                android:textColor="@color/ThemeBlack" />
-
-            <ImageView
-                android:id="@+id/mainImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="99dp"
-                android:layout_marginRight="99dp"
-                android:layout_marginBottom="68dp"
-                app:srcCompat="@drawable/ic_action_name"
-                tools:ignore="VectorDrawableCompat" />
-
-            <ImageView
-                android:id="@+id/RestLogo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="76dp"
-                android:layout_marginRight="76dp"
-                android:layout_marginBottom="68dp"
-                app:srcCompat="@drawable/ic_action_name"
-                tools:ignore="VectorDrawableCompat" />
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="53dp"
-                android:layout_marginRight="53dp"
-                android:layout_marginBottom="68dp"
-                app:srcCompat="@drawable/ic_action_name"
-                tools:ignore="VectorDrawableCompat" />
-
-            <TextView
-                android:id="@+id/Review"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="163dp"
-                android:layout_marginLeft="163dp"
-                android:layout_marginBottom="343dp"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/rName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="159dp"
-                android:layout_marginLeft="159dp"
-                android:layout_marginBottom="343dp"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/textView29"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="154dp"
-                android:layout_marginLeft="154dp"
-                android:layout_marginBottom="22dp"
-                android:text="@string/ratings_review1"
-                android:textColor="@color/ThemeGreen" />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView5"
-        android:layout_width="409dp"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cardView2"
-        app:layout_constraintVertical_bias="0.771">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile_image324"
-                android:layout_width="81dp"
-                android:layout_height="81dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="26dp"
-                android:layout_marginLeft="26dp"
-                android:layout_marginBottom="8dp"
-                android:src="@drawable/user2"
-                app:civ_border_color="#FF000000"
-                app:civ_border_width="0dp" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="139dp"
-                android:layout_marginLeft="139dp"
-                android:layout_marginBottom="67dp"
-                android:text="@string/ratings_user2"
-                android:textColor="@color/ThemeBlack"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="126dp"
-                android:layout_marginRight="126dp"
-                android:layout_marginBottom="64dp"
-                android:text="@string/ratings_rate2"
-                android:textColor="@color/ThemeBlack" />
-
-            <ImageView
-                android:id="@+id/imageView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="95dp"
-                android:layout_marginRight="95dp"
-                android:layout_marginBottom="65dp"
-                app:srcCompat="@drawable/ic_action_name"
-                tools:ignore="VectorDrawableCompat" />
-
-            <ImageView
-                android:id="@+id/logo12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="73dp"
-                android:layout_marginRight="73dp"
-                android:layout_marginBottom="65dp"
-                app:srcCompat="@drawable/ic_action_name"
-                tools:ignore="VectorDrawableCompat" />
-
-            <ImageView
-                android:id="@+id/imageView16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="51dp"
-                android:layout_marginRight="51dp"
-                android:layout_marginBottom="65dp"
-                app:srcCompat="@drawable/ic_action_name"
-                tools:ignore="VectorDrawableCompat" />
-
-            <ImageView
-                android:id="@+id/imageView17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="29dp"
-                android:layout_marginRight="29dp"
-                android:layout_marginBottom="66dp"
-                app:srcCompat="@drawable/ic_action_name"
-                tools:ignore="VectorDrawableCompat" />
-
-            <ImageView
-                android:id="@+id/imageView18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="65dp"
-                app:srcCompat="@drawable/ic_action_name"
-                tools:ignore="VectorDrawableCompat" />
-
-            <TextView
-                android:id="@+id/foodName"
-                android:layout_width="261dp"
-                android:layout_height="50dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
-                android:text="@string/ratings_review2"
-                android:textColor="@color/ThemeGreen"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/submitReview"
+        android:id="@+id/btn_customize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ratings_btn_customize"
         app:backgroundTint="@color/ThemeGreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cardView2"
-        app:layout_constraintVertical_bias="0.889" />
+        app:layout_constraintVertical_bias="0.911" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/foodRating_rv"
+        android:layout_width="410dp"
+        android:layout_height="236dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+    <TextView
+        android:id="@+id/rateFood_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="240dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
