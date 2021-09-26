@@ -2,31 +2,30 @@ package com.example.mad_project_design_phase;
 
 public class FoodReviews {
 
-    private String NoOfStars;
-    private String Review;
-
+    private String noOfStars;
+    private  String review;
 
     public FoodReviews() {
     }
 
     public FoodReviews(String noOfStars, String review) {
-        NoOfStars = noOfStars;
-        Review = review;
+        this.noOfStars = noOfStars;
+        this.review = review;
     }
 
     public String getNoOfStars() {
-        return NoOfStars;
+        return noOfStars;
     }
 
     public void setNoOfStars(String noOfStars) {
-        NoOfStars = noOfStars;
+        this.noOfStars = noOfStars;
     }
 
     public String getReview() {
-        return Review;
+        return review;
     }
 
     public void setReview(String review) {
-        Review = review;
+        this.review = review;
     }
 }

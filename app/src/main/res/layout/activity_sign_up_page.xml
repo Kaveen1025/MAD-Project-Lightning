@@ -230,7 +230,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
-        android:id="@+id/terms"
+        android:id="@+id/checkBox"
         android:layout_width="29dp"
         android:layout_height="38dp"
         android:layout_marginStart="44dp"
@@ -246,7 +246,6 @@
         android:layout_marginBottom="64dp"
         android:text="@string/Sign_UP"
         app:backgroundTint="@color/ThemeGreen"
-        android:textColor="#ffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -266,7 +265,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/RestAddress"
         android:layout_width="57dp"
         android:layout_height="31dp"
         android:layout_marginEnd="72dp"
@@ -279,23 +278,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="54dp"
-        android:layout_height="53dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="212dp"
-        android:layout_marginLeft="212dp"
+    <ImageView
+        android:id="@+id/logo12"
+        android:layout_width="42dp"
+        android:layout_height="38dp"
         android:layout_marginTop="156dp"
-        android:backgroundTint="#0FFAFAFA"
-        android:clickable="true"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="144dp"
+        android:layout_marginRight="144dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/add_new"
-        tools:ignore="SpeakableTextPresentCheck,VectorDrawableCompat" />
+        app:srcCompat="@drawable/ic_camera"
+        tools:ignore="VectorDrawableCompat" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

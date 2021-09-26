@@ -60,7 +60,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:text="@string/edit_fn" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -89,7 +89,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textEmailAddress"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:text="@string/edit_email" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -118,7 +118,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="numberDecimal"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:text="@string/edit_phone" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -159,8 +159,7 @@
             android:layout_height="52dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPassword"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -188,8 +187,7 @@
             android:layout_height="52dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPassword"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -219,8 +217,7 @@
             android:ems="10"
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintStart_toStartOf="parent" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -231,21 +228,18 @@
         android:layout_marginLeft="44dp"
         android:layout_marginBottom="16dp"
         android:text="@string/Update_btn"
-        android:textColor="#ffff"
         app:backgroundTint="@color/ThemeGreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/deletePbtn"
+        android:id="@+id/delete_btn"
         android:layout_width="144dp"
         android:layout_height="55dp"
         android:layout_marginEnd="44dp"
         android:layout_marginRight="44dp"
         android:layout_marginBottom="16dp"
-        android:onClick="DeleteUserprofile"
-        android:text="Delete"
-        android:textColor="#ffff"
+        android:text="@string/Delete_btn"
         app:backgroundTint="@color/ThemeGreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -276,7 +270,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:text="@string/edit_ln" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -305,25 +299,20 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPostalAddress"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:text="@string/edit_address" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="54dp"
-        android:layout_height="53dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="208dp"
-        android:layout_marginLeft="208dp"
+    <ImageView
+        android:id="@+id/restLogo"
+        android:layout_width="42dp"
+        android:layout_height="38dp"
         android:layout_marginTop="116dp"
-        android:backgroundTint="#0FFAFAFA"
-        android:clickable="true"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="144dp"
+        android:layout_marginRight="144dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/add_new"
-        tools:ignore="SpeakableTextPresentCheck,VectorDrawableCompat" />
+        app:srcCompat="@drawable/ic_camera"
+        tools:ignore="VectorDrawableCompat" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

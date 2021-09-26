@@ -19,7 +19,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.squareup.picasso.Picasso;
+//import com.squareup.picasso.Picasso;
 
 
 public class create_review extends AppCompatActivity {
@@ -39,12 +39,12 @@ public class create_review extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_review);
 
-        rtbar = (RatingBar) findViewById(R.id.ratingbar);
-        txt_writeReview = (EditText) findViewById(R.id.txt_writeReview);
-        btnSubmit = (Button) findViewById(R.id.btnSubmitReview);
-        foodName = (TextView) findViewById(R.id.txt_foodname);
-        food = (ImageView) findViewById(R.id.img_food);
-        url = (TextView) findViewById(R.id.img_url);
+        //rtbar = (RatingBar) findViewById(R.id.ratingbar);
+        //txt_writeReview = (EditText) findViewById(R.id.txt_writeReview);
+        //btnSubmit = (Button) findViewById(R.id.btnSubmitReview);
+        //foodName = (TextView) findViewById(R.id.txt_foodname);
+        //food = (ImageView) findViewById(R.id.img_food);
+        //url = (TextView) findViewById(R.id.img_url);
 
         reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodReviews").child("Customers");
         ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodDetails");
@@ -77,10 +77,10 @@ public class create_review extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String foodname = dataSnapshot.child("name").getValue().toString();
                 String link = dataSnapshot.child("foodImage").getValue(String.class);
-                url.setText(link);
-                Picasso.get()
-                        .load(link)
-                        .into(food);
+//                url.setText(link);
+//                Picasso.get()
+//                        .load(link)
+//                        .into(food);
                 foodName.setText(foodname);
             }
 

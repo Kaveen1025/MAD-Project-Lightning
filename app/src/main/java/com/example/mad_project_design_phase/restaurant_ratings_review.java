@@ -30,7 +30,6 @@ public class restaurant_ratings_review extends AppCompatActivity {
     TextView RestaurantName,ratingTxt;
     RatingBar Ratings;
     DatabaseReference ref,ref2;
-    String RestaurantID,CustomerID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +54,7 @@ public class restaurant_ratings_review extends AppCompatActivity {
            }
        });
 
-
+      //  ref2 = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1");
 
         FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Reviews").child("Customers")
                 .addValueEventListener(new ValueEventListener() {
@@ -76,7 +75,8 @@ public class restaurant_ratings_review extends AppCompatActivity {
 
                         float rating = (noOfStars / totalStars) * 5;
 
-                        Ratings.setRating(4);
+
+                        Ratings.setRating(rating);
                         Ratings.setNumStars(5);
                         ratingTxt.setText("4.0 / 5.0");
                     }
@@ -87,42 +87,67 @@ public class restaurant_ratings_review extends AppCompatActivity {
                     }
                 });
 
+
+
+
+
+
+
+
+
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+
         SubmitReview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 BottomSheetDialog bottomSheet = new BottomSheetDialog(restaurant_ratings_review.this);
                 bottomSheet.setContentView(R.layout.activity_rate_restaurant);
                 bottomSheet.setCanceledOnTouchOutside(false);
-                bottomSheet.show();ImageButton closeDialog;Button submitReviews;RatingBar SubRatings;EditText subReview;
+                bottomSheet.show();
+
+                ImageButton closeDialog;
+                Button submitReviewsss;
+                RatingBar SubRatings;
+                EditText subReview;
+
+
                 closeDialog = (ImageButton) bottomSheet.findViewById(R.id.closeDialog44);
-                submitReviews = bottomSheet.findViewById(R.id.submitReview);SubRatings = bottomSheet.findViewById(R.id.SubRatings);
+                submitReviewsss = bottomSheet.findViewById(R.id.submitReview);
+                SubRatings = bottomSheet.findViewById(R.id.SubRatings);
                 subReview = bottomSheet.findViewById(R.id.updateReviewsss);
+
                 closeDialog.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         bottomSheet.cancel();
                     }
                 });
-                submitReviews.setOnClickListener(new View.OnClickListener() {
+
+
+                submitReviewsss.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String review = subReview.getText().toString().trim();String noOfStars = String.valueOf(SubRatings.getRating());
-                        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Reviews").child("Customers");
+                        String review = subReview.getText().toString().trim();
+                        String noOfStars = String.valueOf(SubRatings.getRating());
+                        // Restaurant needs to be select one , Customer needs to be logged one
+                        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Reviews").child("Customers");
                         RestaurantReview R1 = new RestaurantReview(review,noOfStars);
-                        ref.child(CustomerID).setValue(R1).addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override public void onComplete(@NonNull @NotNull Task<Void> task) {
+                        ref.child("C2").setValue(R1).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull @NotNull Task<Void> task) {
                                 if(task.isSuccessful()){
+                                    /// clear input fields
                                     Toast.makeText(restaurant_ratings_review.this, "Review Submitted Successfully!", Toast.LENGTH_SHORT).show();
                                 }else{
-                                    Toast.makeText(restaurant_ratings_review.this, "Review Submitted Failed!", Toast.LENGTH_SHORT).show();
+
                                 }
                             }
                         });
+                        //ref.child().setValue();
                     }
                 });
 

@@ -89,13 +89,12 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/textView46"
-        android:layout_width="101dp"
-        android:layout_height="41dp"
+        android:id="@+id/ratingValue"
+        android:layout_width="98dp"
+        android:layout_height="32dp"
         android:text="@string/edit_card_topic"
         android:textColor="@color/ThemeBlack"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.527"
@@ -104,12 +103,11 @@
         app:layout_constraintVertical_bias="0.139" />
 
     <Button
-        android:id="@+id/btnReset"
+        android:id="@+id/button24"
         android:layout_width="101dp"
         android:layout_height="45dp"
-        android:text="back"
+        android:text="@string/edit_card_btn_reset"
         app:backgroundTint="@color/ThemeGreen"
-        app:cornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.212"
@@ -118,12 +116,11 @@
         app:layout_constraintVertical_bias="0.838" />
 
     <Button
-        android:id="@+id/btnUpdate"
+        android:id="@+id/button25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/edit_card_btn_update"
         app:backgroundTint="@color/ThemeGreen"
-        app:cornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.858"
@@ -147,13 +144,14 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/edtCardDate"
+                android:id="@+id/editTextDate2"
                 android:layout_width="279dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:ems="10"
-                android:inputType="date" />
+                android:inputType="date"
+                android:text="@string/edit_card_date" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -172,7 +170,7 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/edtCardNumber"
+                android:id="@+id/editTextTextPersonName7"
                 android:layout_width="283dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -183,6 +181,7 @@
                 android:layout_marginTop="8dp"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:text="@string/edit_card_no"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
         </RelativeLayout>
@@ -213,7 +212,7 @@
                 android:layout_marginBottom="0dp">
 
                 <EditText
-                    android:id="@+id/edtCardHolder"
+                    android:id="@+id/editTextTextPersonName9"
                     android:layout_width="283dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -224,6 +223,7 @@
                     android:layout_marginTop="7dp"
                     android:ems="10"
                     android:inputType="textPersonName"
+                    android:text="@string/edit_card_name"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="TouchTargetSizeCheck" />
@@ -246,7 +246,7 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/edtCardType"
+                android:id="@+id/editTextTextPersonName6"
                 android:layout_width="283dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -255,11 +255,28 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="7dp"
-                android:editable="false"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:text="@string/edit_card_visa"
                 tools:ignore="TouchTargetSizeCheck" />
 
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="247dp"
+                android:layout_marginLeft="247dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="29dp"
+                android:layout_marginRight="29dp"
+                android:layout_marginBottom="18dp"
+                app:srcCompat="@drawable/ic_delete_without_border" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 

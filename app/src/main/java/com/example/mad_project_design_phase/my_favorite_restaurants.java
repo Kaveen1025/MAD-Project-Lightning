@@ -10,7 +10,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class my_favorite_restaurants extends AppCompatActivity {
-    String CustomerID;
+
     RecyclerView rv;
     FRMainAdapter mainAdapter;
     @Override
@@ -26,7 +26,7 @@ public class my_favorite_restaurants extends AppCompatActivity {
 
         FirebaseRecyclerOptions<FavoriteRestaurant> options =
                 new FirebaseRecyclerOptions.Builder<FavoriteRestaurant>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("FavoriteRestaurant").child(CustomerID), FavoriteRestaurant.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("FavoriteRestaurant").child("C1"), FavoriteRestaurant.class)
                         .build();
 
 

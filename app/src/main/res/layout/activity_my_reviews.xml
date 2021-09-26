@@ -201,7 +201,7 @@
                 app:srcCompat="@drawable/cupcake" />
 
             <Button
-                android:id="@+id/button18"
+                android:id="@+id/editBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -221,7 +221,7 @@
                 app:backgroundTint="@color/white" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/RestName"
                 android:layout_width="210dp"
                 android:layout_height="70dp"
                 android:layout_alignParentTop="true"
