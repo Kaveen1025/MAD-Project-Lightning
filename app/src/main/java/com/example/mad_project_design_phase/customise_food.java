@@ -256,5 +256,12 @@ public class customise_food extends AppCompatActivity {
             }
         });
 
+        addToCart.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
     }
 }

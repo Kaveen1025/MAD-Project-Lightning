@@ -11,14 +11,14 @@
         android:theme="@style/Theme.MADProjectDesignphase">
 
         <activity
-            android:name=".customise_food">
+            android:name=".MainSearch">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+<activity android:name=".all_the_restaurants"/>
 
     </application>
 
