@@ -27,6 +27,7 @@ public class add_new_address extends AppCompatActivity {
     FirebaseDatabase database;
     FirebaseUser firebaseUser;
     FirebaseAuth auth;
+    String CustomerID;
 
 
 
@@ -82,40 +83,5 @@ public class add_new_address extends AppCompatActivity {
 
 
     }
-
-//    public void CreateAddress(View view) {
-//
-//        dbRef = FirebaseDatabase.getInstance().getReference().child("CustomerAddress");
-//
-//
-//        if (TextUtils.isEmpty(et_province.getText().toString())) {
-//            Toast.makeText(getApplicationContext(), "Please Enter Your Province", Toast.LENGTH_LONG).show();
-//
-//        } else if (TextUtils.isEmpty(et_city.getText().toString())) {
-//            Toast.makeText(getApplicationContext(), "Please Enter Your City", Toast.LENGTH_LONG).show();
-//
-//        } else if (TextUtils.isEmpty(et_address.getText().toString())) {
-//            Toast.makeText(getApplicationContext(), "Please Enter an Address", Toast.LENGTH_LONG).show();
-//
-//        } else {
-////     take inputs from the user and assigning to this instance(stuObj)
-//
-//            CusAdd.setProvince(et_province.getText().toString().trim());
-//            CusAdd.setCity(et_city.getText().toString().trim());
-//            CusAdd.setAddress(et_address.getText().toString().trim());
-//
-//
-//            //insert into database
-//
-//            dbRef.push().setValue(CusAdd);
-//            //dbRef.child("NewAddress").setValue(CusAdd);
-//
-//            //feedback to the user via toast
-//
-//            Toast.makeText(getApplicationContext(), "New Address Added Successfully", Toast.LENGTH_SHORT).show();
-//            ClearControls();
-//        }
-//
-//    }
 
 

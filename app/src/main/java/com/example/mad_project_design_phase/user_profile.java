@@ -30,6 +30,7 @@ public class user_profile extends AppCompatActivity {
     //    FirebaseDatabase database;
     FirebaseAuth auth;
     FirebaseUser firebaseUser;
+    String CustomerID;
 
 
     @Override
@@ -44,11 +45,7 @@ public class user_profile extends AppCompatActivity {
         up_address = findViewById(R.id.up_address);
         up_edit = findViewById(R.id.up_edit);
         btn_View_Address = findViewById(R.id.btn_View_Address);
-
-
-
-
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("qbNPPUl4mMc3ghQc6Hpth2g3yhs1");// id **
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child(CustomerID);// id **
 
        dbRef.addValueEventListener(new ValueEventListener() {
            @Override
@@ -62,7 +59,6 @@ public class user_profile extends AppCompatActivity {
                    up_address.setText(snapshot.child("address").getValue().toString());
 
            }
-
            @Override
            public void onCancelled(@NonNull @NotNull DatabaseError error) {
                Log.i("d", String.valueOf(error));
