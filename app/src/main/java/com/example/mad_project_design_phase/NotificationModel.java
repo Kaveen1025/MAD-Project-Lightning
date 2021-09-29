@@ -3,7 +3,7 @@ package com.example.mad_project_design_phase;
 public class NotificationModel {
     private String title;
     private String description;
-    private boolean isShrink = true;
+
 
     public NotificationModel() {
     }
@@ -29,11 +29,4 @@ public class NotificationModel {
         this.description = description;
     }
 
-    public boolean isShrink() {
-        return isShrink;
-    }
-
-    public void setShrink(boolean shrink) {
-        isShrink = shrink;
-    }
 }

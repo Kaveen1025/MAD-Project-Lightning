@@ -44,7 +44,7 @@ public class PurchaseHistoryAdapter extends FirebaseRecyclerAdapter<PurchaseHist
         totalPrice = totalPrice + Float.parseFloat(model.getPrice());
         Log.i("a", String.valueOf(totalPrice));
 
-        holder.totalPrice.setText(String.valueOf(totalPrice));
+//        holder.totalPrice.setText(String.valueOf(totalPrice));
     }
 
 
