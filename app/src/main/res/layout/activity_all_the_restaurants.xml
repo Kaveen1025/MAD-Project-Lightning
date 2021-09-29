@@ -105,7 +105,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/restRecycler"
         android:layout_width="409dp"
-        android:layout_height="540dp"
+        android:layout_height="620dp"
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

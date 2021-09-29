@@ -115,7 +115,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/my_rest_review"
         android:layout_width="409dp"
-        android:layout_height="420dp"
+        android:layout_height="500dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

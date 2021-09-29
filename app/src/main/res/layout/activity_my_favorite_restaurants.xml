@@ -102,7 +102,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/FavRestaurants"
         android:layout_width="409dp"
-        android:layout_height="520dp"
+        android:layout_height="620dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="1dp"
         android:layout_marginEnd="1dp"
