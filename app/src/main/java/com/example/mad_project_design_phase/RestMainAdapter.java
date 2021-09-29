@@ -94,7 +94,7 @@ public String userID;
             @Override
             public void onClick(View v) {
                 AFavoriteRestaurant FA = new AFavoriteRestaurant(model.getAddress(), model.getCuisineType(),model.getName(), model.getLogo());
-                FirebaseDatabase.getInstance().getReference().child("FavoriteRestaurant").child(userID).child(getRef(position.getKey())).setValue(FA);
+               //FirebaseDatabase.getInstance().getReference().child("FavoriteRestaurant").child(userID).child(getRef(position.getKey())).setValue(FA);
 
             }
         });

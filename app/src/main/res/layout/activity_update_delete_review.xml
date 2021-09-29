@@ -170,7 +170,7 @@
                 android:layout_marginStart="13dp"
                 android:layout_marginLeft="13dp"
                 android:layout_marginTop="4dp"
-                android:text="@string/myReviews_food2"
+                android:text="Strawberry cake"
                 android:textColor="@color/ThemeBlack"
                 android:textSize="20sp" />
 
@@ -190,7 +190,7 @@
                 android:layout_marginEnd="109dp"
                 android:layout_marginRight="109dp"
                 android:layout_marginBottom="10dp"
-                android:text="@string/myReviews_foodDes2"
+                android:text="Delicious Cake"
                 android:textColor="@color/ThemeBlack" />
 
             <TextView
