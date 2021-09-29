@@ -114,7 +114,7 @@
     <string name="new_P">New Password</string>
     <string name="confirm_P">Confirm Password</string>
     <string name="Update_btn">Update</string>
-    <string name="Delete_btn">Clear Cart</string>
+    <string name="Delete_btn">Delete</string>
     <string name="my_address"><b>My Address</b></string>
     <string name="address1"><b>Address 1</b></string>
     <string name="address_l">Naveen Anushka</string>
@@ -174,7 +174,7 @@
     <string name="cuisine_typ"><b>Cusine Type:</b> Italian</string>
     <string name="location"><b>Location:</b> Kalutara</string>
     <string name="RestaurantName2">MAKI SUSHI</string>
-    <string name="yourFavourites"><b>My Favourites</b></string>
+    <string name="yourFavourites"><b>Your Favourites</b></string>
     <string name="customize_TotalPrice">Total Price</string>
     <string name="ratingsAndReviews"><b>Ratings And Reviews</b></string>
     <string name="ratings_btn_customize">Customize food</string>
@@ -227,7 +227,7 @@
     <string name="favourite_price1">LKR. 650.00</string>
     <string name="favourite_calories1">146 Calories</string>
     <string name="favourite_nameOfTheFood2">Chicken Pizza</string>
-    <string name="favourite_price2">LKR. 1000</string>
+    <string name="favourite_price2">LKR. 1000.00</string>
     <string name="favourite_calories2">494 Calories</string>
     <string name="favourite_nameOfTheFood3">Hamburger</string>
     <string name="favourite_price3">LKR. 500.00</string>
@@ -254,11 +254,11 @@
     <string name="myReviews_food1">Lime Mojito</string>
 
 
-
     <string name="myReviews_food3">Chinese Fried Rice</string>
     <string name="myReviews_foodDes3">Chinese styled fried rice with seafood.</string>
     <string name="create_review_food">Seafood Spagettti</string>
     <string name="update_delete_review_des">Spagetti together with Shrimp and our special sause.</string>
+    <string name="update_delete_review_review"> Received with good condition and on time. My friend liked it so much and taste good 👍</string>
     <string name="update_delete_review_Updatebtn">Update Review</string>
     <string name="update_delete_review_Deletebtn">Delete Review</string>
     <string name="hintText">Type here...</string>
@@ -287,7 +287,22 @@
     <string name="textHint">Tell us what you like about it...</string>
     <string name="foodRatings">view ratings</string>
     <string name="selectCardHeader">SELECT A CARD</string>
+
     <string name="Typehere">Type here</string>
+    <string name="myReviews_foodDes2">Delicious</string>
+    <string name="update_delete_review_review">Good!</string>
+    <string name="myReviews_food2">Cake</string>
+    <string name="title_activity_test_navigation">TestNavigation</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
 
 
 </resources>
