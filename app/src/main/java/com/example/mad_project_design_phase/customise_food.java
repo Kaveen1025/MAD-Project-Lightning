@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -46,9 +47,10 @@ public class customise_food extends AppCompatActivity {
         p2 = findViewById(R.id.tv_p2);
         p3 = findViewById(R.id.tv_p3);
         p4 = findViewById(R.id.tv_p4);
+        food = findViewById(R.id.imgfood);
         name = findViewById(R.id.txt_cuzName);
         des = findViewById(R.id.txt_cuzDes);
-        url = findViewById(R.id.customize_url);
+        //url = findViewById(R.id.customize_url);
         totalPrice = findViewById(R.id.txt_TotalPrice);
         addToCart = findViewById(R.id.btn_addtocart);
         showCal = findViewById(R.id.btn_showCal);
@@ -140,11 +142,16 @@ public class customise_food extends AppCompatActivity {
                 String foodDes = dataSnapshot.child("description").getValue().toString();
                 String foodname = dataSnapshot.child("name").getValue().toString();
                 String link = dataSnapshot.child("foodImage").getValue(String.class);
-                url.setText(link);
-                Picasso.get()
-                        .load(link)
-                        .into(food);
+//                url.setText(link);
+//                Picasso.get()
+//                        .load(link)
+//                        .into(food);
                     name.setText(foodname);
+                Glide.with(food.getContext())
+                        .load(link)
+                        .placeholder(R.drawable.common_google_signin_btn_icon_dark)
+                        .error(R.drawable.common_google_signin_btn_icon_dark_normal)
+                        .into(food);
                des.setText(foodDes);
 
             }

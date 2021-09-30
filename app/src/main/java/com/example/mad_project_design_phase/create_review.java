@@ -12,6 +12,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -42,7 +43,7 @@ public class create_review extends AppCompatActivity {
         rtbar = (RatingBar) findViewById(R.id.ratingbar);
         txt_writeReview = (EditText) findViewById(R.id.txt_writeReview);
         btnSubmit = (Button) findViewById(R.id.btnSubmitReview);
-        foodName = (TextView) findViewById(R.id.txt_foodname);
+        foodName = (TextView) findViewById(R.id.txtfoodname);
         food = (ImageView) findViewById(R.id.img_food);
         url = (TextView) findViewById(R.id.img_url);
 
@@ -73,11 +74,17 @@ public class create_review extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String foodname = dataSnapshot.child("name").getValue().toString();
                 String link = dataSnapshot.child("foodImage").getValue(String.class);
-                url.setText(link);
-                Picasso.get()
-                        .load(link)
-                        .into(food);
+//                url.setText(link);
+//                Picasso.get()
+//                        .load(link)
+//                        .into(food);
                 foodName.setText(foodname);
+
+                Glide.with(food.getContext())
+                        .load(link)
+                        .placeholder(R.drawable.common_google_signin_btn_icon_dark)
+                        .error(R.drawable.common_google_signin_btn_icon_dark_normal)
+                        .into(food);
             }
 
             @Override

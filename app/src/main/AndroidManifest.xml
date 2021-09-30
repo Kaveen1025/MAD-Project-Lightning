@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MADProjectDesignphase">
 
         <activity
-            android:name=".MainSearch">
+            android:name=".update_delete_review">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

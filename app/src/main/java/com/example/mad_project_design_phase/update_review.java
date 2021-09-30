@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -55,10 +56,16 @@ public class update_review extends AppCompatActivity {
                 String foodname = dataSnapshot.child("name").getValue().toString();
                 String Price = dataSnapshot.child("price").getValue().toString();
                 String link = dataSnapshot.child("foodImage").getValue(String.class);
-                   url.setText(link);
-                Picasso.get()
-                       .load(link)
-                       .into(food);
+//                   url.setText(link);
+//                Picasso.get()
+//                       .load(link)
+//                       .into(food);
+
+                Glide.with(food.getContext())
+                        .load(link)
+                        .placeholder(R.drawable.common_google_signin_btn_icon_dark)
+                        .error(R.drawable.common_google_signin_btn_icon_dark_normal)
+                        .into(food);
 
                 name.setText(foodname);
                 des.setText(foodDes);
