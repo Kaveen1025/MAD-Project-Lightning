@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/myFavRestaurants"
+            android:icon="@drawable/ic_restaurant"
+            android:title="MY FAVORITE RESTAURANTS" />
+        <item
+            android:id="@+id/myFavFoods"
+            android:icon="@drawable/ic_food"
+            android:title="MY FAVORITE FOODS" />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/ddd"
+            android:icon="@drawable/ic_review"
+            android:title="MY REVIEWS">
+
+            <menu>
+                <item
+                    android:id="@+id/myFoodReviewss"
+                    android:icon="@drawable/ic_food_review"
+                    android:title="FOOD REVIEWS"
+                    />
+                <item
+                    android:id="@+id/myRestaurantReviewss"
+                    android:icon="@drawable/ic_restaturant_review"
+                    android:title="RESTAURANT REVIEWS" />
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+
+
+        <menu>
+                <item
+                android:id="@+id/cards"
+                android:icon="@drawable/ic_cards"
+                android:title="CARDS" />
+            <item
+                android:id="@+id/orderss"
+                android:icon="@drawable/ic_orders"
+                android:title="ORDERS" />
+            <item
+                android:id="@+id/PH"
+                android:icon="@drawable/ic_purchase_history"
+                android:title="PURCHASE HISTROY" />
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/ic_baseline_reply_24"
+                android:title="LOGOUT" />
+        </menu>
+    </group>
+</menu>

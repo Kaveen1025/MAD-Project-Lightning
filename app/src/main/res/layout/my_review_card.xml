@@ -57,7 +57,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/Review"
+            android:id="@+id/price1"
             android:layout_width="200dp"
             android:layout_height="150dp"
             android:layout_alignParentTop="true"

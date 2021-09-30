@@ -252,9 +252,8 @@
     <string name="ratings_rate2">5.0</string>
     <string name="ratings_review2"> its taste was so amazing.. the quality was good too. Highly recommended.</string>
     <string name="myReviews_food1">Lime Mojito</string>
-    <string name="myReviews_foodDes1">Fresh Lime mojito with white rum,lime, sugar and soda.</string>
-    <string name="myReviews_food2">Strawberry Cake</string>
-    <string name="myReviews_foodDes2">Delicious, Freshly bake strawberry cake with cream cheese frosting. </string>
+
+
     <string name="myReviews_food3">Chinese Fried Rice</string>
     <string name="myReviews_foodDes3">Chinese styled fried rice with seafood.</string>
     <string name="create_review_food">Seafood Spagettti</string>
@@ -288,5 +287,20 @@
     <string name="textHint">Tell us what you like about it...</string>
     <string name="foodRatings">view ratings</string>
     <string name="selectCardHeader">SELECT A CARD</string>
-   
+
+    <string name="Typehere">Type here</string>
+    <string name="myReviews_foodDes2">Delicious</string>
+    <string name="myReviews_food2">Cake</string>
+    <string name="title_activity_test_navigation">TestNavigation</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
 </resources>
