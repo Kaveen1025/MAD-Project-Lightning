@@ -56,10 +56,6 @@ public class update_review extends AppCompatActivity {
                 String foodname = dataSnapshot.child("name").getValue().toString();
                 String Price = dataSnapshot.child("price").getValue().toString();
                 String link = dataSnapshot.child("foodImage").getValue(String.class);
-//                   url.setText(link);
-//                Picasso.get()
-//                       .load(link)
-//                       .into(food);
 
                 Glide.with(food.getContext())
                         .load(link)

@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MADProjectDesignphase">
 
         <activity
-            android:name=".update_delete_review">
+            android:name=".customise_food">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

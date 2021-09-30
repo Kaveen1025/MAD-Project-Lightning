@@ -139,12 +139,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.229"
-        app:srcCompat="@drawable/cake222" />
+        app:srcCompat="@drawable/cake222"
+        android:scaleType="centerCrop"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView11"
-        android:layout_width="409dp"
-        android:layout_height="80dp"
+        android:layout_width="415dp"
+        android:layout_height="86dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -198,24 +199,35 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="35dp"
-                android:text="@string/customize_price4"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="40dp"
+                android:text="200"
                 android:textColor="@color/ThemeGreen"
                 android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="69dp"
+                android:layout_marginRight="69dp"
+                android:layout_marginBottom="40dp"
+                android:text="LKR."
+                android:textColor="@color/ThemeGreen"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints">
+
+            </com.google.android.material.textfield.TextInputLayout>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp">
-
-    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView10"
@@ -254,7 +266,8 @@
                     android:id="@+id/txtReview"
                     android:layout_width="match_parent"
                     android:layout_height="43dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:textColor="@color/ThemeBlack" />
             </com.google.android.material.textfield.TextInputLayout>
         </RelativeLayout>
 
