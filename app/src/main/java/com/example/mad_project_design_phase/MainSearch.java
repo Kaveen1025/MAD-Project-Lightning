@@ -14,7 +14,6 @@ import android.widget.SearchView;
 public class MainSearch extends AppCompatActivity implements View.OnClickListener{
 
     public CardView itl, jap, ind, amr, vege, other;
-    public String extra = "type";
     SearchView search;
     Button submit;
     Intent i;
