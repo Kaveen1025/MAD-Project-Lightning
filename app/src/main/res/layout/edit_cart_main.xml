@@ -244,7 +244,7 @@
             android:layout_marginRight="11dp"
             android:layout_marginBottom="78dp"
             android:layout_toRightOf="@+id/total_a"
-            android:text="Price"
+            android:text="950.00"
             android:textColor="@color/ThemeBlack"
             android:textSize="25dp"
             android:textStyle="bold"

@@ -1,26 +1,25 @@
 package com.example.mad_project_design_phase;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class user_profile extends AppCompatActivity {
 
@@ -31,6 +30,8 @@ public class user_profile extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseUser firebaseUser;
     String CustomerID;
+    CircleImageView profile_image;
+
 
 
     @Override
@@ -45,7 +46,8 @@ public class user_profile extends AppCompatActivity {
         up_address = findViewById(R.id.up_address);
         up_edit = findViewById(R.id.up_edit);
         btn_View_Address = findViewById(R.id.btn_View_Address);
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child(CustomerID);// id **
+        profile_image = findViewById(R.id.profile_image);
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("Sheheni");// id **
 
        dbRef.addValueEventListener(new ValueEventListener() {
            @Override
@@ -57,6 +59,9 @@ public class user_profile extends AppCompatActivity {
                    et_email.setText(snapshot.child("email").getValue().toString());
                    up_phone.setText(snapshot.child("phoneNumber").getValue().toString());
                    up_address.setText(snapshot.child("address").getValue().toString());
+                   String link = snapshot.child("pimage").getValue(String.class);
+                   Picasso.get().load(link).into(profile_image);
+
 
            }
            @Override

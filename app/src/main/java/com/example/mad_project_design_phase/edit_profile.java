@@ -1,14 +1,14 @@
 package com.example.mad_project_design_phase;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -19,8 +19,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class edit_profile extends AppCompatActivity {
 
@@ -32,6 +35,7 @@ public class edit_profile extends AppCompatActivity {
     FirebaseUser firebaseUser;
     String  currentPassword;
     String CustomerID;
+    CircleImageView profile_image;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,11 +50,12 @@ public class edit_profile extends AppCompatActivity {
         current_password = findViewById(R.id.current_password);
         new_password = findViewById(R.id.new_password);
         confirm_password = findViewById(R.id.confirm_password);
+        profile_image = findViewById(R.id.profile_image);
         update_btn = findViewById(R.id.update_btn);
         delete_btn = findViewById(R.id.deletePbtn);
 
 
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child(CustomerID);// id **
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("Sheheni");// id **
         dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -62,6 +67,8 @@ public class edit_profile extends AppCompatActivity {
                     edit_phone.setText(dataSnapshot.child("address").getValue().toString());
                     edit_add.setText(dataSnapshot.child("phoneNumber").getValue().toString());
                     currentPassword = dataSnapshot.child("password").getValue().toString();
+                    String link = dataSnapshot.child("pimage").getValue(String.class);
+                    Picasso.get().load(link).into(profile_image);
 
                 }else{
 

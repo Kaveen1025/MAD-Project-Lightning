@@ -11,7 +11,7 @@
         android:id="@+id/profile_image"
         android:layout_width="157dp"
         android:layout_height="114dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="66dp"
         android:src="@drawable/user"
         app:civ_border_color="#FF000000"
         app:civ_border_width="2dp"
@@ -23,7 +23,7 @@
         android:id="@+id/sign_up"
         android:layout_width="119dp"
         android:layout_height="45dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="23dp"
         android:text="Sign Up"
         android:textColor="#171616"
         android:textSize="30sp"
@@ -37,8 +37,8 @@
         android:id="@+id/layout_firstname"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="319dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="535dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="540dp"
         android:hint="@string/First_Name"
         app:boxCornerRadiusBottomEnd="5dp"
         app:boxCornerRadiusBottomStart="5dp"
@@ -54,15 +54,15 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/firstname"
             android:layout_width="319dp"
-            android:layout_height="46dp" />
+            android:layout_height="52dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout_lastname"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="319dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="475dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="480dp"
         android:hint="@string/Last_Name"
         app:boxCornerRadiusBottomEnd="5dp"
         app:boxCornerRadiusBottomStart="5dp"
@@ -78,15 +78,15 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/lastname"
             android:layout_width="319dp"
-            android:layout_height="46dp" />
+            android:layout_height="52dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout_email"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="319dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="418dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="420dp"
         android:hint="@string/Email"
         app:boxCornerRadiusBottomEnd="5dp"
         app:boxCornerRadiusBottomStart="5dp"
@@ -102,7 +102,7 @@
         <EditText
             android:id="@+id/input_email"
             android:layout_width="319dp"
-            android:layout_height="48dp"
+            android:layout_height="52dp"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textEmailAddress" />
@@ -112,7 +112,7 @@
         android:id="@+id/layout_address"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="319dp"
-        android:layout_height="54dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="360dp"
         android:hint="@string/Address"
         app:boxCornerRadiusBottomEnd="5dp"
@@ -129,7 +129,7 @@
         <EditText
             android:id="@+id/postal_address"
             android:layout_width="319dp"
-            android:layout_height="48dp"
+            android:layout_height="52dp"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPostalAddress" />
@@ -139,7 +139,7 @@
         android:id="@+id/layout_phone"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="319dp"
-        android:layout_height="54dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="300dp"
         android:hint="@string/Phone_Number"
         app:boxCornerRadiusBottomEnd="5dp"
@@ -156,7 +156,7 @@
         <EditText
             android:id="@+id/phone_number"
             android:layout_width="319dp"
-            android:layout_height="48dp"
+            android:layout_height="52dp"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="numberDecimal" />
@@ -166,7 +166,7 @@
         android:id="@+id/layout_password"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="319dp"
-        android:layout_height="54dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="240dp"
         android:hint="@string/Password"
         app:boxCornerRadiusBottomEnd="5dp"
@@ -183,7 +183,7 @@
         <EditText
             android:id="@+id/password"
             android:layout_width="319dp"
-            android:layout_height="48dp"
+            android:layout_height="52dp"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPassword" />
@@ -193,7 +193,7 @@
         android:id="@+id/layout_confirm"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="319dp"
-        android:layout_height="54dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="180dp"
         android:hint="@string/confirm_password"
         app:boxCornerRadiusBottomEnd="5dp"
@@ -210,7 +210,7 @@
         <EditText
             android:id="@+id/et_confirm_password"
             android:layout_width="319dp"
-            android:layout_height="48dp"
+            android:layout_height="52dp"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPassword" />
@@ -279,23 +279,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="54dp"
-        android:layout_height="53dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="212dp"
-        android:layout_marginLeft="212dp"
-        android:layout_marginTop="156dp"
-        android:backgroundTint="#0FFAFAFA"
-        android:clickable="true"
-        app:layout_constraintStart_toStartOf="parent"
+    <ImageButton
+        android:id="@+id/Upload_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginRight="148dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/add_new"
-        tools:ignore="SpeakableTextPresentCheck,VectorDrawableCompat" />
+        app:srcCompat="@drawable/image_upload"
+        tools:ignore="VectorDrawableCompat" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
