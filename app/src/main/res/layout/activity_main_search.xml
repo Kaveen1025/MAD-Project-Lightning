@@ -107,20 +107,21 @@
     </SearchView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/japanese"
         android:layout_width="170dp"
         android:layout_height="150dp"
         android:layout_marginStart="220dp"
         android:layout_marginLeft="50dp"
         android:layout_marginEnd="150dp"
         android:layout_marginRight="140dp"
-        app:cardElevation="20dp"
         app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cardView2"
-        app:layout_constraintVertical_bias="0.326" >
+        app:layout_constraintVertical_bias="0.326">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -161,20 +162,21 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/italian"
         android:layout_width="170dp"
         android:layout_height="150dp"
         android:layout_marginStart="26dp"
         android:layout_marginLeft="26dp"
         android:layout_marginEnd="215dp"
         android:layout_marginRight="215dp"
-        app:cardElevation="20dp"
         app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cardView2"
-        app:layout_constraintVertical_bias="0.326" >
+        app:layout_constraintVertical_bias="0.326">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -219,21 +221,22 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/indian"
         android:layout_width="170dp"
         android:layout_height="150dp"
         android:layout_marginStart="220dp"
         android:layout_marginLeft="50dp"
+        android:layout_marginTop="250dp"
         android:layout_marginEnd="150dp"
         android:layout_marginRight="140dp"
-        android:layout_marginTop="250dp"
-        app:cardElevation="20dp"
         app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cardView2"
-        app:layout_constraintVertical_bias="0.326" >
+        app:layout_constraintVertical_bias="0.326">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -280,21 +283,22 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/american"
         android:layout_width="170dp"
         android:layout_height="150dp"
         android:layout_marginStart="26dp"
         android:layout_marginLeft="26dp"
+        android:layout_marginTop="250dp"
         android:layout_marginEnd="215dp"
         android:layout_marginRight="215dp"
-        android:layout_marginTop="250dp"
-        app:cardElevation="20dp"
         app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cardView2"
-        app:layout_constraintVertical_bias="0.326" >
+        app:layout_constraintVertical_bias="0.326">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -339,21 +343,22 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/others"
         android:layout_width="170dp"
         android:layout_height="150dp"
         android:layout_marginStart="220dp"
         android:layout_marginLeft="50dp"
+        android:layout_marginTop="500dp"
         android:layout_marginEnd="150dp"
         android:layout_marginRight="140dp"
-        android:layout_marginTop="500dp"
-        app:cardElevation="20dp"
         app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cardView2"
-        app:layout_constraintVertical_bias="0.326" >
+        app:layout_constraintVertical_bias="0.326">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -396,21 +401,22 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/vegetarian"
         android:layout_width="170dp"
         android:layout_height="150dp"
         android:layout_marginStart="26dp"
         android:layout_marginLeft="26dp"
+        android:layout_marginTop="500dp"
         android:layout_marginEnd="215dp"
         android:layout_marginRight="215dp"
-        android:layout_marginTop="500dp"
-        app:cardElevation="20dp"
         app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cardView2"
-        app:layout_constraintVertical_bias="0.326" >
+        app:layout_constraintVertical_bias="0.326">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -468,6 +474,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cardView2"
         app:layout_constraintVertical_bias="0.216" />
+
+    <Button
+        android:id="@+id/searchSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        app:backgroundTint="@color/ThemeGreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="137dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

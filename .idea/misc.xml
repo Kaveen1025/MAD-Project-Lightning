@@ -5,19 +5,72 @@
       <map>
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_add_acard.xml" value="0.2" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_add_details.xml" value="0.264" />
-        <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_create_review.xml" value="0.264" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_all_the_restaurants.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_create_review.xml" value="0.25" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_customise_food.xml" value="0.2" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_customize_food.xml" value="0.21235521235521235" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_edit_card.xml" value="0.264" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_edit_cart.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_favorits_food.xml" value="0.264" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_home_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_login_page.xml" value="0.16052631578947368" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_login_page2.xml" value="0.1" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_main.xml" value="0.1375" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_main_search.xml" value="0.25" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_my_reviews.xml" value="0.2" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_rate_food.xml" value="0.2" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_restaurant_ratings_review.xml" value="0.15738831615120275" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_side_bar_viewed.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_update_delete_review.xml" value="0.264" />
-        <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_update_review.xml" value="0.19856459330143542" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_update_review.xml" value="0.18799368088467613" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/favourite_food_item.xml" value="0.4" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/my_reviews_item.xml" value="0.128" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/menu/main_menu.xml" value="0.264" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_add_acard.xml" value="0.2" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_add_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_add_new_address.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_card_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_checkout.xml" value="0.4" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_confirmation_delete_msg.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_create_review.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_customise_food.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_edit_card.xml" value="0.264" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_edit_cart.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_edit_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_favorits_food.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_home_page.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_login_page.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_login_page2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_main_search.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_my_favorite_restaurants.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_my_restaurant_review.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_my_reviews.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_notification.xml" value="0.4" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_purchase_history.xml" value="0.264" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_restaurant.xml" value="0.264" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_restaurant_ratings_review.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_select_card.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_show_calories.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_side_bar_viewed.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_sign_up_page.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_successful_msg.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_successfull_msg_display.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_test.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_update_delete_review.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_update_review.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_user_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_view_address.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/activity_view_orders.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/onecreditcard.xml" value="0.264" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/onenotitficationcard.xml" value="0.264" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/template_add_card.xml" value="0.6" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/testcard.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/toolbar.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/view_card_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/view_notification.xml" value="0.152" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/view_payment_history.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Heshini Weerasinghe/AndroidStudioProjects/MAD-Project-Lightning/app/src/main/res/layout/view_restaurant_menu.xml" value="0.44101633393829404" />
       </map>
     </option>
   </component>
