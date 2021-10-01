@@ -28,7 +28,7 @@ public class all_the_restaurants extends AppCompatActivity {
 
         FirebaseRecyclerOptions<AllRestaurant> options =
                 new FirebaseRecyclerOptions.Builder<AllRestaurant>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("TestRestaurant"), AllRestaurant.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Restaurant").orderByChild("name").startAt("Western").endAt("Western~"), AllRestaurant.class)
                         .build();
 
 

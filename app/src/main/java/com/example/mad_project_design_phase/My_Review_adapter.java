@@ -46,7 +46,9 @@ public class My_Review_adapter extends FirebaseRecyclerAdapter<RCustomerReview,M
 
         holder.rName.setText(model.getName());
         holder.Review.setText(model.getReview());
-        //holder.ratingBar.setRating(Float.parseFloat(model.getNoOfStars().trim()));
+        holder.ratingBar.setNumStars(5);
+        //holder.ratingBar.setRating(Float.parseFloat(model.getNoOfStars()));
+        holder.ratingBar.setRating(3);
 
 
         Glide.with(holder.logo.getContext())
@@ -69,20 +71,19 @@ public class My_Review_adapter extends FirebaseRecyclerAdapter<RCustomerReview,M
 
                 EditText Review;
                 RatingBar RatingBars;
-               // ImageView
                 updateButton = bottomSheet.findViewById(R.id.updateReview);
                 DeleteButton = bottomSheet.findViewById(R.id.deleteReview);
                 Review = bottomSheet.findViewById(R.id.updateReviewsss);
                 RatingBars = bottomSheet.findViewById(R.id.updateRatings);
                 TextView restName= bottomSheet.findViewById(R.id.UprestName);
+                ImageView restLog = bottomSheet.findViewById(R.id.restLogo);
 
-                restName.setText("Matara");
+                restName.setText(model.getName());
+                Review.setText(model.getReview());
+                RatingBars.setRating(Float.parseFloat(model.getNoOfStars()));
 
-                //restName.setText(model.getRestName());
-                //Review.setText(model.getReview());
-                //RatingBars.setRating(Float.parseFloat(model.getNoOfStars()));
-                Review.setText("good");
-                RatingBars.setRating(4.0f);
+                Glide.with(restLog.getContext()).load(model.getLogo()).placeholder(R.drawable.common_google_signin_btn_icon_dark)
+                        .error(R.drawable.common_google_signin_btn_icon_dark_normal).into(restLog);
                 bottomSheet.show();
 
                 ImageButton closeDialog = bottomSheet.findViewById(R.id.closeDialog44);
@@ -190,7 +191,7 @@ public class My_Review_adapter extends FirebaseRecyclerAdapter<RCustomerReview,M
 
             logo = itemView.findViewById(R.id.logo12);
             rName = itemView.findViewById(R.id.rName);
-            Review = itemView.findViewById(R.id.Review);
+            Review = itemView.findViewById(R.id.price1);
             ratingBar = itemView.findViewById(R.id.ratings22);
             editBtn = itemView.findViewById(R.id.editBtn);
 
