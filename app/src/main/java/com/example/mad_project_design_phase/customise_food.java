@@ -14,6 +14,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,10 +29,11 @@ import java.util.HashMap;
 public class customise_food extends AppCompatActivity {
 
     CheckBox op1,op2,op3,op4;
-    TextView p1,p2,p3,p4,totalPrice,name, des,url;
+    TextView p1,p2,p3,p4,totalPrice,name, des;
+
     ImageView food;
     Button addToCart, showCal;
-    String total;
+    String total,foodDes,link,price,foodname;
 
     DatabaseReference ref1, ref2, ref3, ref4, ref, ref5;
 
@@ -46,9 +50,10 @@ public class customise_food extends AppCompatActivity {
         p2 = findViewById(R.id.tv_p2);
         p3 = findViewById(R.id.tv_p3);
         p4 = findViewById(R.id.tv_p4);
+        food = findViewById(R.id.imgfood);
         name = findViewById(R.id.txt_cuzName);
         des = findViewById(R.id.txt_cuzDes);
-        url = findViewById(R.id.customize_url);
+        //price = findViewById(R.id.customize_url);
         totalPrice = findViewById(R.id.txt_TotalPrice);
         addToCart = findViewById(R.id.btn_addtocart);
         showCal = findViewById(R.id.btn_showCal);
@@ -137,14 +142,16 @@ public class customise_food extends AppCompatActivity {
         ref5.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String foodDes = dataSnapshot.child("description").getValue().toString();
-                String foodname = dataSnapshot.child("name").getValue().toString();
-                String link = dataSnapshot.child("foodImage").getValue(String.class);
-                url.setText(link);
-                Picasso.get()
-                        .load(link)
-                        .into(food);
+                foodDes = dataSnapshot.child("description").getValue().toString();
+                foodname = dataSnapshot.child("name").getValue().toString();
+                link = dataSnapshot.child("foodImage").getValue(String.class);
+                price = dataSnapshot.child("price").getValue().toString();
                     name.setText(foodname);
+                Glide.with(food.getContext())
+                        .load(link)
+                        .placeholder(R.drawable.common_google_signin_btn_icon_dark)
+                        .error(R.drawable.common_google_signin_btn_icon_dark_normal)
+                        .into(food);
                des.setText(foodDes);
 
             }
@@ -252,6 +259,84 @@ public class customise_food extends AppCompatActivity {
                     calCalories.putExtra("op4Price",p4.getText().toString());
                 }
                 startActivity(calCalories);
+
+            }
+        });
+
+        addToCart.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                cartFood  cf =new cartFood(foodDes,link,foodname,price);
+
+                ref = FirebaseDatabase.getInstance().getReference().child("FoodCart").child("C1").child("R1");
+                ref.child(foodname).setValue(cf).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()){
+                            Toast.makeText(customise_food.this, "Successful", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+                if(op1.isChecked()){
+                    String op11 = op1.getText().toString();
+                    String p11 = p1.getText().toString();
+                    foodOptions op1 = new foodOptions(op11,p11);
+                    ref = FirebaseDatabase.getInstance().getReference().child("FoodCart").child("C1").child("R1").child(foodname);
+                    ref.child("options").child("op1").setValue(op1).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()){
+                                Toast.makeText(customise_food.this, "Successful", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+
+
+                }
+                if(op2.isChecked()){
+                    String op12 = op2.getText().toString();
+                    String p12 = p2.getText().toString();
+                    foodOptions op2 = new foodOptions(op12,p12);
+                    ref = FirebaseDatabase.getInstance().getReference().child("FoodCart").child("C1").child("R1").child(foodname);
+                    ref.child("options").child("op2").setValue(op2).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()){
+                                Toast.makeText(customise_food.this, "Successful", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                }
+                if(op3.isChecked()){
+                    String op13 = op3.getText().toString();
+                    String p13 = p3.getText().toString();
+                    foodOptions op3 = new foodOptions(op13,p13);
+                    ref = FirebaseDatabase.getInstance().getReference().child("FoodCart").child("C1").child("R1").child(foodname);
+                    ref.child("options").child("op3").setValue(op3).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()){
+                                Toast.makeText(customise_food.this, "Successful", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                }
+                if(op4.isChecked()){
+                    String op14 = op4.getText().toString();
+                    String p14 = p4.getText().toString();
+                    foodOptions op4 = new foodOptions(op14,p14);
+                    ref = FirebaseDatabase.getInstance().getReference().child("FoodCart").child("C1").child("R1").child(foodname);
+                    ref.child("options").child("op4").setValue(op4).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()){
+                                Toast.makeText(customise_food.this, "Successful", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                }
+
 
             }
         });

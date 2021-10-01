@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -29,7 +30,6 @@ public class update_review extends AppCompatActivity {
     Button btnUpdate;
     ImageView food;
     FoodReviews foodReviews;
-    String FoodID, RestaurantID, UserID;
     DatabaseReference reff;
 
     @Override
@@ -47,7 +47,7 @@ public class update_review extends AppCompatActivity {
         foodReviews = new FoodReviews();
 
 
-        reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Food").child(FoodID).child("FoodDetails");
+        reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodDetails");
         
         reff.addValueEventListener(new ValueEventListener() {
             @Override
@@ -56,10 +56,12 @@ public class update_review extends AppCompatActivity {
                 String foodname = dataSnapshot.child("name").getValue().toString();
                 String Price = dataSnapshot.child("price").getValue().toString();
                 String link = dataSnapshot.child("foodImage").getValue(String.class);
-                   url.setText(link);
-                Picasso.get()
-                       .load(link)
-                       .into(food);
+
+                Glide.with(food.getContext())
+                        .load(link)
+                        .placeholder(R.drawable.common_google_signin_btn_icon_dark)
+                        .error(R.drawable.common_google_signin_btn_icon_dark_normal)
+                        .into(food);
 
                 name.setText(foodname);
                 des.setText(foodDes);
@@ -90,8 +92,8 @@ public class update_review extends AppCompatActivity {
         HashMap Review = new HashMap();
         Review.put("review", review);
 
-        DatabaseReference upRef = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Food").child(FoodID)
-                .child("FoodReviews").child("Customers").child(UserID);
+        DatabaseReference upRef = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1")
+                .child("FoodReviews").child("Customers").child("C1");
 
         upRef.updateChildren(Review).addOnCompleteListener(new OnCompleteListener(){
 

@@ -92,7 +92,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView7"
         android:layout_width="409dp"
-        android:layout_height="300dp"
+        android:layout_height="290dp"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
         android:layout_marginTop="1dp"
@@ -125,9 +125,9 @@
                 android:textSize="18sp" />
 
             <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="411dp"
-                android:layout_height="342dp"
+                android:id="@+id/imgfood"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
@@ -137,10 +137,11 @@
                 android:layout_marginStart="0dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="-86dp"
-                android:layout_marginEnd="-2dp"
-                android:layout_marginRight="-2dp"
-                android:layout_marginBottom="-5dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="86dp"
                 android:background="?android:attr/selectableItemBackground"
+                android:scaleType="fitCenter"
                 app:srcCompat="@drawable/food4" />
 
             <TextView
@@ -152,7 +153,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginEnd="4dp"
                 android:layout_marginRight="4dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="16dp"
                 android:text="@string/customize_foodDescription"
                 android:textColor="@color/ThemeBlack"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -160,31 +161,30 @@
             <ImageButton
                 android:id="@+id/imageButton23"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="24dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="352dp"
-                android:layout_marginLeft="352dp"
-                android:layout_marginTop="230dp"
-                android:layout_marginEnd="33dp"
-                android:layout_marginRight="33dp"
-                android:layout_marginBottom="46dp"
+                android:layout_marginStart="347dp"
+                android:layout_marginLeft="347dp"
+                android:layout_marginTop="215dp"
+                android:layout_marginEnd="34dp"
+                android:layout_marginRight="34dp"
+                android:layout_marginBottom="51dp"
                 android:background="?android:attr/selectableItemBackground"
+                android:clickable="false"
                 app:srcCompat="@drawable/ic_baseline_favorite_24"
                 app:tint="@color/FavoriteIcon"
-                tools:ignore="VectorDrawableCompat,SpeakableTextPresentCheck" />
+                tools:ignore="VectorDrawableCompat,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <TextView
-                android:id="@+id/customize_url"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="112dp"
-                android:text="TextView" />
+                android:layout_marginBottom="112dp" />
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -228,7 +228,7 @@
         android:textSize="16sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/chk_option1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.812"
+        app:layout_constraintHorizontal_bias="0.815"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -240,7 +240,7 @@
         android:textSize="16sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/chk_option3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.812"
+        app:layout_constraintHorizontal_bias="0.815"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
@@ -250,7 +250,7 @@
         android:text="@string/customize_item4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tv_p4"
-        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintHorizontal_bias="0.351"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chk_option3"
         app:layout_constraintVertical_bias="0.0"
@@ -265,10 +265,10 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintHorizontal_bias="0.812"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_p3"
-        app:layout_constraintVertical_bias="0.003" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/chk_option3"
@@ -369,12 +369,13 @@
         android:layout_width="44dp"
         android:layout_height="20dp"
         android:text="LKR."
+        android:textColor="@color/ThemeBlack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.653"
+        app:layout_constraintHorizontal_bias="0.61"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.517" />
+        app:layout_constraintVertical_bias="0.454" />
 
     <TextView
         android:id="@+id/textView13"

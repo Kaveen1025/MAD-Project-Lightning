@@ -25,7 +25,6 @@ public class rate_food extends AppCompatActivity {
     TextView name, des, url;
     ImageView img;
     Button customize;
-    String FoodID, RestaurantID;
 
     DatabaseReference ref;
 

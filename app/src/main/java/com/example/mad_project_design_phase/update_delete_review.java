@@ -11,6 +11,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -27,7 +28,7 @@ public class update_delete_review extends AppCompatActivity {
     RatingBar rtbar;
     ImageView FoodImage;
     Button btnDelete, btnUpdate;
-    String FoodID, UserId, RestaurantID;
+
     DatabaseReference ref;
     DatabaseReference reff;
 
@@ -46,9 +47,9 @@ public class update_delete_review extends AppCompatActivity {
         btnUpdate = (Button) findViewById(R.id.btnUpdate);
 
 
-        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Food").child(FoodID).child("FoodReviews")
-                .child("Customers").child(UserId);
-        reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Food").child(FoodID).child("FoodDetails");
+        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodReviews")
+                .child("Customers").child("C1");
+        reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodDetails");
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -73,9 +74,14 @@ public class update_delete_review extends AppCompatActivity {
                 String foodname = dataSnapshot.child("name").getValue().toString();
                 String Price = dataSnapshot.child("price").getValue().toString();
                 String link = dataSnapshot.child("foodImage").getValue(String.class);
-                url.setText(link);
-                Picasso.get()
+//                url.setText(link);
+//                Picasso.get()
+//                        .load(link)
+//                        .into(FoodImage);
+                Glide.with(FoodImage.getContext())
                         .load(link)
+                        .placeholder(R.drawable.common_google_signin_btn_icon_dark)
+                        .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                         .into(FoodImage);
 
                 foodName.setText(foodname);
@@ -92,8 +98,8 @@ public class update_delete_review extends AppCompatActivity {
         btnDelete.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View v){
-                DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Food").child(FoodID).child("FoodReviews")
-                        .child("Customers").child(UserId);
+                DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodReviews")
+                        .child("Customers").child("C1");
 
                 delRef.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override

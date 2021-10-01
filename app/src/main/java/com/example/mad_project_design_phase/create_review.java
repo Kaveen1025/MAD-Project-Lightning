@@ -12,6 +12,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -19,7 +20,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-//import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Picasso;
 
 
 public class create_review extends AppCompatActivity {
@@ -31,7 +32,7 @@ public class create_review extends AppCompatActivity {
     ImageView food;
     DatabaseReference reff;
     DatabaseReference ref;
-    String UserID,FoodID, RestaurantID;
+
     FoodReviews reviews;
 
     @Override
@@ -39,22 +40,22 @@ public class create_review extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_review);
 
-        //rtbar = (RatingBar) findViewById(R.id.ratingbar);
-        //txt_writeReview = (EditText) findViewById(R.id.txt_writeReview);
-        //btnSubmit = (Button) findViewById(R.id.btnSubmitReview);
-        //foodName = (TextView) findViewById(R.id.txt_foodname);
-        //food = (ImageView) findViewById(R.id.img_food);
-        //url = (TextView) findViewById(R.id.img_url);
+        rtbar = (RatingBar) findViewById(R.id.ratingbar);
+        txt_writeReview = (EditText) findViewById(R.id.txt_writeReview);
+        btnSubmit = (Button) findViewById(R.id.btnSubmitReview);
+        foodName = (TextView) findViewById(R.id.txtfoodname);
+        food = (ImageView) findViewById(R.id.img_food);
+        url = (TextView) findViewById(R.id.img_url);
 
-        reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Food").child(FoodID).child("FoodReviews").child("Customers");
-        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Food").child(FoodID).child("FoodDetails");
+        reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodReviews").child("Customers");
+        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodDetails");
         btnSubmit.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 String s = String.valueOf(rtbar.getRating());
                 String r = txt_writeReview.getText().toString().trim();
 
                 reviews = new FoodReviews(s,r);
-                reff.child(UserID).setValue(reviews).addOnCompleteListener(new OnCompleteListener<Void>() {
+                reff.child("C1").setValue(reviews).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
@@ -78,6 +79,12 @@ public class create_review extends AppCompatActivity {
 //                        .load(link)
 //                        .into(food);
                 foodName.setText(foodname);
+
+                Glide.with(food.getContext())
+                        .load(link)
+                        .placeholder(R.drawable.common_google_signin_btn_icon_dark)
+                        .error(R.drawable.common_google_signin_btn_icon_dark_normal)
+                        .into(food);
             }
 
             @Override
