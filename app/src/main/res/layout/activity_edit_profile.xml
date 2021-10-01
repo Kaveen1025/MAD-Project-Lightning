@@ -60,7 +60,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/edit_fn" />
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -89,7 +89,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textEmailAddress"
-            android:text="@string/edit_email" />
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -118,7 +118,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="numberDecimal"
-            android:text="@string/edit_phone" />
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -159,7 +159,8 @@
             android:layout_height="52dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -187,7 +188,8 @@
             android:layout_height="52dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -217,7 +219,8 @@
             android:ems="10"
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -228,18 +231,21 @@
         android:layout_marginLeft="44dp"
         android:layout_marginBottom="16dp"
         android:text="@string/Update_btn"
+        android:textColor="#ffff"
         app:backgroundTint="@color/ThemeGreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/delete_btn"
+        android:id="@+id/deletePbtn"
         android:layout_width="144dp"
         android:layout_height="55dp"
         android:layout_marginEnd="44dp"
         android:layout_marginRight="44dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/Delete_btn"
+        android:onClick="DeleteUserprofile"
+        android:text="Delete"
+        android:textColor="#ffff"
         app:backgroundTint="@color/ThemeGreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -270,7 +276,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/edit_ln" />
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -299,20 +305,19 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPostalAddress"
-            android:text="@string/edit_address" />
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <ImageView
-        android:id="@+id/restLogo"
-        android:layout_width="42dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="144dp"
-        android:layout_marginRight="144dp"
+    <ImageButton
+        android:id="@+id/Upload_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginRight="148dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_camera"
+        app:srcCompat="@drawable/image_upload"
         tools:ignore="VectorDrawableCompat" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

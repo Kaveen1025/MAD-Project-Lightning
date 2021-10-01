@@ -1,6 +1,6 @@
 package com.example.mad_project_design_phase;
 
-public class Customer{
+public class Customer {
 
 
     private String FirstName;
@@ -9,19 +9,17 @@ public class Customer{
     private String Address;
     private String PhoneNumber;
     private String Password;
+    private String pimage;
 
-
-     //Customer() {}
-
-    public Customer(String firstName, String lastName, String email, String address, String phoneNumber, String password) {
+    public Customer(String firstName, String lastName, String email, String address, String phoneNumber, String password, String pimage) {
         FirstName = firstName;
         LastName = lastName;
         Email = email;
         Address = address;
         PhoneNumber = phoneNumber;
         Password = password;
+        this.pimage = pimage;
     }
-
 
     public String getFirstName() {
         return FirstName;
@@ -71,4 +69,11 @@ public class Customer{
         Password = password;
     }
 
+    public String getPimage() {
+        return pimage;
+    }
+
+    public void setPimage(String pimage) {
+        this.pimage = pimage;
+    }
 }
