@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,7 +35,7 @@ public class edit_card extends AppCompatActivity {
         edtCardNumber=(EditText) findViewById(R.id.edtCardNumber);
         edtCardHolder=(EditText) findViewById(R.id.edtCardHolder);
         edtCardDate=(EditText) findViewById(R.id.edtCardDate);
-        btnUpdate = (Button) findViewById(R.id.btnUpdate);
+        btnUpdate = (Button) findViewById(R.id.btnPayC);
 
         db = FirebaseDatabase.getInstance().getReference().child("Payment").child("DgaCUSQDSOOgGnoFmv3ojR3vpH73").child("AdgeASFDGnjvfn4vf");
         db.addValueEventListener(new ValueEventListener() {
