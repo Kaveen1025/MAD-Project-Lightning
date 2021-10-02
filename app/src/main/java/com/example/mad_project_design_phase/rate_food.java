@@ -35,7 +35,7 @@ public class rate_food extends AppCompatActivity {
 
         name = (TextView) findViewById(R.id.foodRating_name);
         des = (TextView) findViewById(R.id.foodRating_des);
-        url = (TextView) findViewById(R.id.rateFood_url);
+       // url = (TextView) findViewById(R.id.rateFood_url);
         img =(ImageView) findViewById(R.id.foodRating_img);
         customize =(Button) findViewById(R.id.btn_customize);
 
