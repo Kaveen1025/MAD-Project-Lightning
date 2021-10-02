@@ -16,11 +16,15 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -46,7 +50,7 @@ import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class edit_profile extends AppCompatActivity {
+public class edit_profile extends Working_Side {
 
     EditText edit_fn, edit_ln, edit_email,  edit_add,  edit_phone, current_password, new_password,confirm_password;
     Button update_btn, delete_btn;
@@ -63,11 +67,32 @@ public class edit_profile extends AppCompatActivity {
     Uri filepath;
     Bitmap bitmap;
 
+
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    Toolbar toolbar;
+    ImageButton notificationBtn,profileBtn,cartBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_edit_profile);
+
+        notificationBtn = findViewById(R.id.notificationBtn);
+        profileBtn = findViewById(R.id.profileBtn);
+        cartBtn = findViewById(R.id.cartBtn);
+
+
+        drawerLayout = findViewById(R.id.drawerLayout2);
+        navigationView = findViewById(R.id.navvd);
+        toolbar = findViewById(R.id.toolbarss);
+        setSupportActionBar(toolbar);
+        navigationView.bringToFront();
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(this);
 
         edit_fn = findViewById(R.id.edit_fn);
         edit_ln = findViewById(R.id.edit_ln);
@@ -362,5 +387,36 @@ public class edit_profile extends AppCompatActivity {
 
 
 
+    }
+
+
+    protected void onResume() {
+        super.onResume();
+
+        notificationBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(edit_profile.this,notification.class);
+                startActivity(i);
+
+            }
+        });
+
+
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(edit_profile.this,user_profile.class);
+                startActivity(i);
+            }
+        });
+
+        cartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(edit_profile.this,edit_cart.class);
+                startActivity(i);
+            }
+        });
     }
 }

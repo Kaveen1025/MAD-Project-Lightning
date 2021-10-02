@@ -51,7 +51,7 @@ public class FoodCartAdapter extends FirebaseRecyclerAdapter<FoodCart, FoodCartA
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.food_image);
 
-        holder.quantitys.setText("1");
+        //holder.quantitys.setText("1");
 //      holder.increment.setOnClickListener(new View.OnClickListener() {
 //          @Override
 //          public void onClick(View view) {

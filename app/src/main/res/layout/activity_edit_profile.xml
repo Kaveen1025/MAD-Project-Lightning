@@ -337,4 +337,126 @@
 
     </RelativeLayout>
 
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Working_Side"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start"
+        android:id="@+id/drawerLayout2"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                android:id="@+id/toolbarss"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:elevation="8dp">
+
+                <ImageButton
+                    android:id="@+id/notificationBtn"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginStart="180dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="@string/notificationDes"
+                    app:srcCompat="@drawable/ic_notification"
+                    tools:ignore="VectorDrawableCompat"
+                    android:layout_marginLeft="240dp" />
+
+                <ImageButton
+                    android:id="@+id/profileBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginRight="28dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="36dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="@string/profileDes"
+                    app:srcCompat="@drawable/ic_profile"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <ImageButton
+                    android:id="@+id/cartBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="@string/cartDes"
+                    app:srcCompat="@drawable/ic_cart"
+                    tools:ignore="VectorDrawableCompat" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <Button
+                        android:id="@+id/update_btn"
+                        android:layout_width="144dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="44dp"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginEnd="224dp"
+                        android:layout_marginRight="224dp"
+                        android:layout_marginBottom="19dp"
+                        android:text="@string/Update_btn"
+                        android:textColor="#ffff"
+                        app:backgroundTint="@color/ThemeGreen" />
+
+                    <Button
+                        android:id="@+id/deletePbtn"
+                        android:layout_width="144dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="54dp"
+                        android:layout_marginRight="54dp"
+                        android:layout_marginBottom="19dp"
+                        android:onClick="DeleteUserprofile"
+                        android:text="Delete"
+                        android:textColor="#ffff"
+                        app:backgroundTint="@color/ThemeGreen" />
+                </RelativeLayout>
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/navvd"
+            app:headerLayout="@layout/header"
+            app:menu="@menu/main_menu"
+            android:layout_gravity = "start"
+            />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

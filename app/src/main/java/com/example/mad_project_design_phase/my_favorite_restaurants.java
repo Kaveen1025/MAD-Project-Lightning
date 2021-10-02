@@ -21,6 +21,9 @@ public class my_favorite_restaurants extends Working_Side{
                                             // ********
     RecyclerView rv;
     FRMainAdapter mainAdapter;
+
+
+
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
@@ -50,12 +53,15 @@ public class my_favorite_restaurants extends Working_Side{
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
         //**********
+
+
+
         rv = (RecyclerView) findViewById(R.id.FavRestaurants);
 
         rv.setLayoutManager(new LinearLayoutManager(this));
 
 
-
+///*********************
 
         FirebaseRecyclerOptions<FavoriteRestaurant> options =
                 new FirebaseRecyclerOptions.Builder<FavoriteRestaurant>()
@@ -81,6 +87,7 @@ public class my_favorite_restaurants extends Working_Side{
         mainAdapter.stopListening();
     }
 
+    //***********************************
     protected void onResume() {
         super.onResume();
 
@@ -110,5 +117,7 @@ public class my_favorite_restaurants extends Working_Side{
             }
         });
     }
+
+    //*********************************************
 
 }

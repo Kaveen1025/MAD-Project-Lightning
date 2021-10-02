@@ -12,24 +12,27 @@
         android:theme="@style/Theme.MADProjectDesignphase"
         tools:replace="android:label,android:theme">
 
-        <activity android:name=".update_review">
+        <activity android:name=".checkout">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        
         <activity android:name=".my_favorite_restaurants"/>
-<!--        <activity android:name=".update_review" />-->
+        <activity android:name=".update_review" />
         <activity android:name=".all_the_restaurants"/>
             <activity android:name=".notification"/>
         <activity android:name=".edit_cart"/>
-<!--        <activity android:name=".user_profile"/>-->
+        <activity android:name=".user_profile"/>
         <activity android:name=".view_orders"/>
         <activity android:name=".purchase_history"/>
         <activity android:name=".My_reviews"/>
         <activity android:name=".favorits_food"/>
         <activity android:name=".my_restaurant_review"/>
+        <activity android:name=".MainSearch"/>
 
     </application>
 
