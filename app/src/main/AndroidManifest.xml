@@ -12,7 +12,7 @@
         android:theme="@style/Theme.MADProjectDesignphase"
         tools:replace="android:label,android:theme">
 
-        <activity android:name=".user_profile">
+        <activity android:name=".update_review">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".my_favorite_restaurants"/>
-        <activity android:name=".update_review" />
+<!--        <activity android:name=".update_review" />-->
         <activity android:name=".all_the_restaurants"/>
             <activity android:name=".notification"/>
         <activity android:name=".edit_cart"/>
