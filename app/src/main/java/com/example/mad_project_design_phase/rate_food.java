@@ -1,14 +1,14 @@
 package com.example.mad_project_design_phase;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DataSnapshot;
@@ -35,7 +35,7 @@ public class rate_food extends AppCompatActivity {
 
         name = (TextView) findViewById(R.id.foodRating_name);
         des = (TextView) findViewById(R.id.foodRating_des);
-        url = (TextView) findViewById(R.id.rateFood_url);
+       // url = (TextView) findViewById(R.id.rateFood_url);
         img =(ImageView) findViewById(R.id.foodRating_img);
         customize =(Button) findViewById(R.id.btn_customize);
 

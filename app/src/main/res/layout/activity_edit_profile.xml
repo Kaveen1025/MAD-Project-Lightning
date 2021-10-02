@@ -240,7 +240,7 @@
         android:id="@+id/deletePbtn"
         android:layout_width="144dp"
         android:layout_height="55dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginEnd="50dp"
         android:layout_marginRight="44dp"
         android:layout_marginBottom="16dp"
         android:onClick="DeleteUserprofile"
