@@ -317,7 +317,8 @@
             android:onClick="DeleteUserprofile"
             android:text="Delete"
             android:textColor="#ffff"
-            app:backgroundTint="@color/ThemeGreen" />
+            app:backgroundTint="@color/ThemeGreen"
+            tools:ignore="DuplicateIds" />
 
         <Button
             android:id="@+id/update_btn"
@@ -333,7 +334,8 @@
             android:layout_marginBottom="19dp"
             android:text="@string/Update_btn"
             android:textColor="#ffff"
-            app:backgroundTint="@color/ThemeGreen" />
+            app:backgroundTint="@color/ThemeGreen"
+            tools:ignore="DuplicateIds" />
 
     </RelativeLayout>
 
@@ -425,7 +427,8 @@
                         android:layout_marginBottom="19dp"
                         android:text="@string/Update_btn"
                         android:textColor="#ffff"
-                        app:backgroundTint="@color/ThemeGreen" />
+                        app:backgroundTint="@color/ThemeGreen"
+                        tools:ignore="DuplicateIds" />
 
                     <Button
                         android:id="@+id/deletePbtn"
@@ -440,7 +443,8 @@
                         android:onClick="DeleteUserprofile"
                         android:text="Delete"
                         android:textColor="#ffff"
-                        app:backgroundTint="@color/ThemeGreen" />
+                        app:backgroundTint="@color/ThemeGreen"
+                        tools:ignore="DuplicateIds" />
                 </RelativeLayout>
             </FrameLayout>
 
