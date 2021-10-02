@@ -8,6 +8,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.navigation.NavigationView;
@@ -21,12 +24,21 @@ public class my_favorite_restaurants extends Working_Side{
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    ImageButton notificationBtn,profileBtn,cartBtn;
     //Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_favorite_restaurants);
+
+
+
+        notificationBtn = findViewById(R.id.notificationBtn);
+        profileBtn = findViewById(R.id.profileBtn);
+        cartBtn = findViewById(R.id.cartBtn);
+
+
         //********
         drawerLayout = findViewById(R.id.drawerLayout2);
         navigationView = findViewById(R.id.navvd);
@@ -41,6 +53,7 @@ public class my_favorite_restaurants extends Working_Side{
         rv = (RecyclerView) findViewById(R.id.FavRestaurants);
 
         rv.setLayoutManager(new LinearLayoutManager(this));
+
 
 
 
@@ -68,6 +81,34 @@ public class my_favorite_restaurants extends Working_Side{
         mainAdapter.stopListening();
     }
 
+    protected void onResume() {
+        super.onResume();
 
+        notificationBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(my_favorite_restaurants.this,notification.class);
+                startActivity(i);
+
+            }
+        });
+
+
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(my_favorite_restaurants.this,user_profile.class);
+                startActivity(i);
+            }
+        });
+
+        cartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(my_favorite_restaurants.this,edit_cart.class);
+                startActivity(i);
+            }
+        });
+    }
 
 }

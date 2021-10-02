@@ -258,7 +258,6 @@
     <string name="myReviews_foodDes3">Chinese styled fried rice with seafood.</string>
     <string name="create_review_food">Seafood Spagettti</string>
     <string name="update_delete_review_des">Spagetti together with Shrimp and our special sause.</string>
-    <string name="update_delete_review_review"> Received with good condition and on time. My friend liked it so much and taste good 👍</string>
     <string name="update_delete_review_Updatebtn">Update Review</string>
     <string name="update_delete_review_Deletebtn">Delete Review</string>
     <string name="hintText">Type here...</string>
@@ -303,6 +302,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="Search">Search</string>
 
 
 </resources>

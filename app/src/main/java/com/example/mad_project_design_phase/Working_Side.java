@@ -23,12 +23,20 @@ public class Working_Side extends AppCompatActivity implements  NavigationView.O
     NavigationView navigationView;
     Toolbar toolbar;
     Intent i;
+    ImageButton notificationBtn,profileBtn,cartBtn;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_working_side);
+
+
+
+        notificationBtn = findViewById(R.id.notificationBtn);
+        profileBtn = findViewById(R.id.profileBtn);
+        cartBtn = findViewById(R.id.cartBtn);
+
 
         // ******
         drawerLayout = findViewById(R.id.drawerLayout2);
@@ -69,8 +77,8 @@ public class Working_Side extends AppCompatActivity implements  NavigationView.O
                 break;
 
             case R.id.myFoodReviewss:
-               // i = new Intent();
-                //startActivity();
+                i = new Intent(Working_Side.this,My_reviews.class);
+                startActivity(i);
                 break;
             case R.id.myRestaurantReviewss:
                 i = new Intent(Working_Side.this,my_restaurant_review.class);
@@ -78,24 +86,58 @@ public class Working_Side extends AppCompatActivity implements  NavigationView.O
                 break;
 
             case R.id.cards:
-                //i = new Intent();
-                //startActivity();
+              //  i = new Intent(Working_Side.this,Ca.class);
+               // startActivity(i);
                 break;
             case R.id.orderss:
-                //i = new Intent();
-                //startActivity();
+                i = new Intent(Working_Side.this,view_orders.class);
+                startActivity(i);
                 break;
             case R.id.PH:
-                //i = new Intent();
-                //startActivity();
+                i = new Intent(Working_Side.this,purchase_history.class);
+                startActivity(i);
                 break;
             case R.id.logout:
-                //i = new Intent();
-                //startActivity();
+                i = new Intent(Working_Side.this,login_page_2.class);
+
+                /// write a code for sign out form the DB*******
+                startActivity(i);
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        notificationBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Working_Side.this,notification.class);
+                startActivity(i);
+
+            }
+        });
+
+
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Working_Side.this,user_profile.class);
+                startActivity(i);
+            }
+        });
+
+        cartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Working_Side.this,edit_cart.class);
+                startActivity(i);
+            }
+        });
     }
 
 
