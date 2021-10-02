@@ -20,6 +20,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/edit_profile"
+        android:layout_width="141dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Edit_Profile"
+        android:textColor="#171616"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout_edit_fn"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -209,6 +223,33 @@
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <Button
+        android:id="@+id/update_btn"
+        android:layout_width="144dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/Update_btn"
+        android:textColor="#ffff"
+        app:backgroundTint="@color/ThemeGreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/deletePbtn"
+        android:layout_width="144dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="DeleteUserprofile"
+        android:text="Delete"
+        android:textColor="#ffff"
+        app:backgroundTint="@color/ThemeGreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout_edit_ln"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -278,137 +319,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/image_upload"
         tools:ignore="VectorDrawableCompat" />
-
-    
-    <androidx.drawerlayout.widget.DrawerLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".Working_Side"
-        android:fitsSystemWindows="true"
-        tools:openDrawer="start"
-        android:id="@+id/drawerLayout2"
-        >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbarss"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@color/white"
-                android:elevation="8dp"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-
-                <ImageButton
-                    android:id="@+id/notificationBtn"
-                    android:layout_width="66dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="180dp"
-                    android:layout_marginLeft="240dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="20dp"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:contentDescription="@string/notificationDes"
-                    app:srcCompat="@drawable/ic_notification"
-                    tools:ignore="VectorDrawableCompat" />
-
-                <ImageButton
-                    android:id="@+id/profileBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="36dp"
-                    android:layout_marginEnd="38dp"
-                    android:layout_marginRight="28dp"
-                    android:layout_marginBottom="12dp"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:contentDescription="@string/profileDes"
-                    app:srcCompat="@drawable/ic_profile"
-                    tools:ignore="VectorDrawableCompat" />
-
-                <ImageButton
-                    android:id="@+id/cartBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="0dp"
-                    android:layout_marginRight="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:contentDescription="@string/cartDes"
-                    app:srcCompat="@drawable/ic_cart"
-                    tools:ignore="VectorDrawableCompat" />
-
-            </androidx.appcompat.widget.Toolbar>
-
-            <FrameLayout
-                android:id="@+id/fragment_container"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/edit_profile"
-                        android:layout_width="141dp"
-                        android:layout_height="44dp"
-                        android:layout_marginTop="16dp"
-                        android:text="@string/Edit_Profile"
-                        android:textColor="#171616"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
-
-                    <Button
-                        android:id="@+id/deletePbtn"
-                        android:layout_width="144dp"
-                        android:layout_height="55dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="38dp"
-                        android:layout_marginRight="38dp"
-                        android:layout_marginBottom="14dp"
-                        android:onClick="DeleteUserprofile"
-                        android:text="Delete"
-                        android:textColor="#ffff"
-                        app:backgroundTint="@color/ThemeGreen" />
-
-                    <Button
-                        android:id="@+id/update_btn"
-                        android:layout_width="144dp"
-                        android:layout_height="55dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="52dp"
-                        android:layout_marginLeft="52dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="@string/Update_btn"
-                        android:textColor="#ffff"
-                        app:backgroundTint="@color/ThemeGreen" />
-
-                </RelativeLayout>
-
-            </FrameLayout>
-
-
-        </LinearLayout>
-
-        <com.google.android.material.navigation.NavigationView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/navvd"
-            app:headerLayout="@layout/header"
-            app:menu="@menu/main_menu"
-            android:layout_gravity = "start"
-            />
-
-    </androidx.drawerlayout.widget.DrawerLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

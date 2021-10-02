@@ -64,6 +64,8 @@ public class sign_up_page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_page);
+
+
         Toast.makeText(this, "FireBase Connection Success", Toast.LENGTH_SHORT).show();
 
         button_signup = findViewById(R.id.button_signup);
@@ -103,12 +105,16 @@ public class sign_up_page extends AppCompatActivity {
         button_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                uploadtofirebase();
+
+                    uploadtofirebase();
+
             }
         });
 
 
+
     }
+
 
 
     @Override
@@ -128,12 +134,22 @@ public class sign_up_page extends AppCompatActivity {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+    
+//    private boolean validateFirstname(){
+//
+//        String Firstname = firstname.getText().toString().trim();
+//    }
 
 
     private void uploadtofirebase() {
 
+        if (filepath == null) {
 
-        final ProgressDialog dialog=new ProgressDialog(this);
+            Toast.makeText(this, "Please select a profile image", Toast.LENGTH_SHORT).show();
+            
+        }else{
+
+            final ProgressDialog dialog=new ProgressDialog(this);
         dialog.setTitle("File Uploader");
         dialog.show();
 
@@ -151,69 +167,68 @@ public class sign_up_page extends AppCompatActivity {
 //        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer");
         auth = FirebaseAuth.getInstance();
 
-        FirebaseStorage storage=FirebaseStorage.getInstance();
-        final StorageReference uploader=storage.getReference("Image1"+new Random().nextInt(50));
 
-        uploader.putFile(filepath)
-                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot)
-                    {
-                        uploader.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                            @Override
-                            public void onSuccess(Uri uri){
+            FirebaseStorage storage = FirebaseStorage.getInstance();
+            final StorageReference uploader = storage.getReference("Image1" + new Random().nextInt(50));
 
-                                dialog.dismiss();
-                                FirebaseDatabase db=FirebaseDatabase.getInstance();
-                                DatabaseReference dbref = db.getReference("Customer");
-                                String Email = input_email.getText().toString().trim();
-                                String Password =password.getText().toString().trim();
-                                auth.createUserWithEmailAndPassword(Email,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<AuthResult> task) {
-                                        if(task.isSuccessful()){
-                                            Toast.makeText(sign_up_page.this, "User created", Toast.LENGTH_SHORT).show();
-                                            Customer obj=new Customer(firstname.getText().toString(),lastname.getText().toString(),input_email.getText().toString(),postal_address.getText().toString(),phone_number.getText().toString(),password.getText().toString(),uri.toString());
-                                            firebaseUser = auth.getCurrentUser();
-                                            dbref.child(firebaseUser.getUid()).setValue(obj).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<Void> task) {
-                                                    if(task.isSuccessful()){
-                                                        Toast.makeText(sign_up_page.this, "User added", Toast.LENGTH_SHORT).show();
-                                                        String ConfirmPassword = et_confirm_password.getText().toString();
+            uploader.putFile(filepath)
+                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            uploader.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
 
-                                                        firstname.setText("");
-                                                        lastname.setText("");
-                                                        input_email.setText("");
-                                                        postal_address.setText("");
-                                                        phone_number.setText("");
-                                                        password.setText("");
-                                                        et_confirm_password.setText("");
+                                    dialog.dismiss();
+                                    FirebaseDatabase db = FirebaseDatabase.getInstance();
+                                    DatabaseReference dbref = db.getReference("Customer");
+                                    String Email = input_email.getText().toString().trim();
+                                    String Password = password.getText().toString().trim();
+                                    auth.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<AuthResult> task) {
+                                            if (task.isSuccessful()) {
+                                                Toast.makeText(sign_up_page.this, "User created", Toast.LENGTH_SHORT).show();
+                                                Customer obj = new Customer(firstname.getText().toString(), lastname.getText().toString(), input_email.getText().toString(), postal_address.getText().toString(), phone_number.getText().toString(), password.getText().toString(), uri.toString());
+                                                firebaseUser = auth.getCurrentUser();
+                                                dbref.child(firebaseUser.getUid()).setValue(obj).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                    @Override
+                                                    public void onComplete(@NonNull Task<Void> task) {
+                                                        if (task.isSuccessful()) {
+                                                            Toast.makeText(sign_up_page.this, "Customer Added Successfully", Toast.LENGTH_SHORT).show();
+                                                            String ConfirmPassword = et_confirm_password.getText().toString();
 
-                                                        profile_image.setImageResource(R.drawable.user);
-                                                        //Toast.makeText(getApplicationContext(),"Uploaded",Toast.LENGTH_LONG).show();
+                                                            firstname.setText("");
+                                                            lastname.setText("");
+                                                            input_email.setText("");
+                                                            postal_address.setText("");
+                                                            phone_number.setText("");
+                                                            password.setText("");
+                                                            et_confirm_password.setText("");
+
+                                                            profile_image.setImageResource(R.drawable.user);
+
+                                                        }
                                                     }
-                                                }
-                                            });
+                                                });
+                                            }
                                         }
-                                    }
-                                });
+                                    });
 
 
+                                }
+                            });
+                        }
+                    })
+                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                            float percent = (100 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
+                            dialog.setMessage("Uploaded :" + (int) percent + " %");
+                        }
+                    });
 
-                            }
-                        });
-                    }
-                })
-                .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onProgress(UploadTask.TaskSnapshot taskSnapshot)
-                    {
-                        float percent=(100*taskSnapshot.getBytesTransferred())/taskSnapshot.getTotalByteCount();
-                        dialog.setMessage("Uploaded :"+(int)percent+" %");
-                    }
-                });
-
+        }
 
     }
 
@@ -247,19 +262,6 @@ public class sign_up_page extends AppCompatActivity {
 
 
 
-//    //method to clear all user inputs
-//
-//    public void ClearControls(){
-//
-//        firstname.setText("");
-//        lastname.setText("");
-//        input_email.setText("");
-//        postal_address.setText("");
-//        phone_number.setText("");
-//        password.setText("");
-//        et_confirm_password.setText("");
-//
-//    }
 
 
 
