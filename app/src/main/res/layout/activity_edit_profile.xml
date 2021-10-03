@@ -300,44 +300,7 @@
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/deletePbtn"
-            android:layout_width="144dp"
-            android:layout_height="55dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="200dp"
-            android:layout_marginLeft="200dp"
-            android:layout_marginEnd="63dp"
-            android:layout_marginRight="63dp"
-            android:layout_marginBottom="18dp"
-            android:onClick="DeleteUserprofile"
-            android:text="Delete"
-            android:textColor="#ffff"
-            app:backgroundTint="@color/ThemeGreen"
-            tools:ignore="DuplicateIds" />
-
-        <Button
-            android:id="@+id/update_btn"
-            android:layout_width="144dp"
-            android:layout_height="55dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="44dp"
-            android:layout_marginLeft="44dp"
-            android:layout_marginEnd="228dp"
-            android:layout_marginRight="228dp"
-            android:layout_marginBottom="19dp"
-            android:text="@string/Update_btn"
-            android:textColor="#ffff"
-            app:backgroundTint="@color/ThemeGreen"
-            tools:ignore="DuplicateIds" />
-
-    </RelativeLayout>
+        app:layout_constraintTop_toTopOf="parent"/>
 
 
 

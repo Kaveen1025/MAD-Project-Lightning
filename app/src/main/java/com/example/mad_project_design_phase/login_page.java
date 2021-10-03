@@ -27,8 +27,8 @@ public class login_page extends AppCompatActivity {
         getStarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent nextIntend = new Intent(login_page.this, sign_up_page.class);
-                //startActivity(nextIntend);
+                Intent nextIntend = new Intent(login_page.this, sign_up_page.class);
+                startActivity(nextIntend);
             }
         });
     }

@@ -49,6 +49,9 @@ public class user_profile extends Working_Side {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
 
+        up_edit = findViewById(R.id.up_edit);
+        btn_View_Address = findViewById(R.id.btn_View_Address);
+
         notificationBtn = findViewById(R.id.notificationBtn);
         profileBtn = findViewById(R.id.profileBtn);
         cartBtn = findViewById(R.id.cartBtn);
@@ -103,6 +106,25 @@ public class user_profile extends Working_Side {
 
     protected void onResume() {
         super.onResume();
+
+        up_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(user_profile.this,edit_profile.class);
+                startActivity(i);
+            }
+        });
+
+        btn_View_Address.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(user_profile.this,view_address.class);
+                startActivity(i);
+            }
+        });
+
 
         notificationBtn.setOnClickListener(new View.OnClickListener() {
             @Override

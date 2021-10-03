@@ -1,17 +1,20 @@
 package com.example.mad_project_design_phase;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -47,6 +50,7 @@ public class sign_up_page extends AppCompatActivity {
 
     EditText firstname, lastname, input_email, postal_address, phone_number, password, et_confirm_password;
     Button button_signup;
+    TextView login;
     ImageButton Upload_image;
     CircleImageView profile_image;
     Customer CusObj;
@@ -64,7 +68,7 @@ public class sign_up_page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_page);
-
+        login = findViewById(R.id.textView9);
 
         Toast.makeText(this, "FireBase Connection Success", Toast.LENGTH_SHORT).show();
 
@@ -111,6 +115,15 @@ public class sign_up_page extends AppCompatActivity {
             }
         });
 
+        login.setOnTouchListener(new View.OnTouchListener() {
+            @SuppressLint("ClickableViewAccessibility")
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Intent i = new Intent(sign_up_page.this,login_page_2.class);
+                startActivity(i);
+                return false;
+            }
+        });
 
 
     }

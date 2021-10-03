@@ -51,34 +51,34 @@ public class FoodCartAdapter extends FirebaseRecyclerAdapter<FoodCart, FoodCartA
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.food_image);
 
-        //holder.quantitys.setText("1");
-//      holder.increment.setOnClickListener(new View.OnClickListener() {
-//          @Override
-//          public void onClick(View view) {
-//              Integer number = Integer.parseInt(holder.quantitys.getText().toString());
-//              number  += 1;
-//              Integer newPrice = Integer.parseInt(model.getPrice())  * number;
-//              holder.quantitys.setText(String.valueOf(number));
-//                holder.price.setText(String.valueOf(newPrice));
-//          }
-//      });
+        holder.quantitys.setText("1");
+      holder.increment.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+              Integer number = Integer.parseInt(holder.quantitys.getText().toString());
+              number  += 1;
+              Integer newPrice = Integer.parseInt(model.getPrice())  * number;
+              holder.quantitys.setText(String.valueOf(number));
+                holder.price.setText(String.valueOf(newPrice));
+          }
+      });
 
 
 
-//    holder.decrement.setOnClickListener(new View.OnClickListener() {
-//    @Override
-//    public void onClick(View view) {
-//        Integer number = Integer.parseInt(holder.quantitys.getText().toString());
-//        number  -= 1;
-//        if(number == 0){
-//            holder.quantitys.setText("1");
-//        }
-//        Integer newPrice = Integer.parseInt(model.getPrice())  * number;
-//        holder.quantitys.setText(String.valueOf(number));
-//        holder.price.setText(String.valueOf(newPrice));
-//
-//    }
-//});
+    holder.decrement.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Integer number = Integer.parseInt(holder.quantitys.getText().toString());
+        number  -= 1;
+        if(number == 0){
+            holder.quantitys.setText("1");
+        }
+        Integer newPrice = Integer.parseInt(model.getPrice())  * number;
+        holder.quantitys.setText(String.valueOf(number));
+        holder.price.setText(String.valueOf(newPrice));
+
+    }
+});
 
     }
 

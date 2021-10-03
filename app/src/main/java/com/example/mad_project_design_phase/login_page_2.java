@@ -66,8 +66,8 @@ public class login_page_2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //Intent signupIntent = new Intent(login_page_2.this, sign_up_page.class);
-                //startActivity(signupIntent);
+                Intent signupIntent = new Intent(login_page_2.this, sign_up_page.class);
+                startActivity(signupIntent);
             }
         });
     }
@@ -78,7 +78,7 @@ public class login_page_2 extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(login_page_2.this, "Login Success!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(login_page_2.this,home_page.class);
+                    Intent intent = new Intent(login_page_2.this,newhomess.class);
                     intent.putExtra("UserID",auth.getCurrentUser().getUid());
                     startActivity(intent);
 

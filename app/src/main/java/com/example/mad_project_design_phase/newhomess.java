@@ -3,6 +3,7 @@ package com.example.mad_project_design_phase;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -15,6 +16,7 @@ import com.google.android.material.navigation.NavigationView;
 public class newhomess extends Working_Side {
 
 
+    Button search,allRestaurnat;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
@@ -25,6 +27,8 @@ public class newhomess extends Working_Side {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newhomess);
 
+        search = findViewById(R.id.btn_search);
+        allRestaurnat = findViewById(R.id.btn_dicover_rest);
 
         notificationBtn = findViewById(R.id.notificationBtn);
         profileBtn = findViewById(R.id.profileBtn);
@@ -44,6 +48,23 @@ public class newhomess extends Working_Side {
 
     protected void onResume() {
         super.onResume();
+
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(newhomess.this,MainSearch.class);
+                startActivity(i);
+            }
+        });
+
+        allRestaurnat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(newhomess.this,all_the_restaurants.class);
+                startActivity(i);
+
+            }
+        });
 
         notificationBtn.setOnClickListener(new View.OnClickListener() {
             @Override
