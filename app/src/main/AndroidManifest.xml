@@ -12,7 +12,7 @@
         android:theme="@style/Theme.MADProjectDesignphase"
         tools:replace="android:label,android:theme">
 
-        <activity android:name=".addAcard">
+        <activity android:name=".login_page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,11 +20,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".edit_card"/>
-<!--        <activity android:name=".addAcard"/>-->
+        <activity android:name=".addAcard"/>
         <activity android:name=".add_new_address"/>
         <activity android:name=".sign_up_page"/>
         <activity android:name=".login_page_2"/>
-<!--        <activity android:name=".newhomess"/>-->
+        <activity android:name=".newhomess"/>
         <activity android:name=".view_orders"/>
         <activity android:name=".purchase_history"/>
         <activity android:name=".notification"/>
@@ -39,7 +39,7 @@
         <activity android:name=".customise_food"/>
         <activity android:name=".show_calories"/>
         <activity android:name=".view_address"/>
-<!--        <activity android:name=".card_details"/>-->
+        <activity android:name=".card_details"/>
         <activity android:name=".My_reviews"/>
         <activity android:name=".favorits_food"/>
         <activity android:name=".my_restaurant_review"/>

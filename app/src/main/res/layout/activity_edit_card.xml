@@ -7,22 +7,6 @@
     tools:context=".edit_card">
 
 
-    <TextView
-        android:id="@+id/textView46"
-        android:layout_width="101dp"
-        android:layout_height="41dp"
-        android:text="@string/edit_card_topic"
-        android:textColor="@color/ThemeBlack"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.527"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.139" />
-
-
     <androidx.drawerlayout.widget.DrawerLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -95,15 +79,34 @@
                     android:layout_height="match_parent">
 
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="300dp"
-                        android:layout_height="60dp"
+                    <TextView
+                        android:id="@+id/textView46"
+                        android:layout_width="101dp"
+                        android:layout_height="41dp"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginEnd="40dp"
-                        android:layout_marginRight="111dp"
-                        android:layout_marginBottom="360dp">
+                        android:layout_marginEnd="170dp"
+                        android:layout_marginRight="170dp"
+                        android:layout_marginBottom="589dp"
+                        android:text="@string/edit_card_topic"
+                        android:textColor="@color/ThemeBlack"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="54dp"
+                        android:layout_marginLeft="54dp"
+                        android:layout_marginEnd="54dp"
+                        android:layout_marginRight="54dp"
+                        android:layout_marginBottom="310dp">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -126,8 +129,6 @@
                                     android:layout_alignParentStart="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentTop="true"
-                                    android:layout_marginStart="17dp"
-                                    android:layout_marginLeft="17dp"
                                     android:layout_marginTop="7dp"
                                     android:ems="10"
                                     android:inputType="textPersonName"
@@ -141,12 +142,16 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="300dp"
                         android:layout_height="60dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginEnd="40dp"
-                        android:layout_marginRight="111dp"
-                        android:layout_marginBottom="500dp">
+                        android:layout_marginStart="54dp"
+                        android:layout_marginLeft="54dp"
+                        android:layout_marginEnd="54dp"
+                        android:layout_marginRight="54dp"
+                        android:layout_marginBottom="510dp">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -159,8 +164,6 @@
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentTop="true"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginLeft="16dp"
                                 android:layout_marginTop="7dp"
                                 android:layout_marginBottom="500dp"
                                 android:editable="false"
@@ -174,12 +177,16 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="300dp"
                         android:layout_height="60dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginEnd="40dp"
-                        android:layout_marginRight="100dp"
-                        android:layout_marginBottom="430dp">
+                        android:layout_marginStart="54dp"
+                        android:layout_marginLeft="54dp"
+                        android:layout_marginEnd="54dp"
+                        android:layout_marginRight="54dp"
+                        android:layout_marginBottom="410dp">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -192,8 +199,6 @@
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentTop="true"
-                                android:layout_marginStart="18dp"
-                                android:layout_marginLeft="18dp"
                                 android:layout_marginTop="8dp"
                                 android:ems="10"
                                 android:inputType="textPersonName"
@@ -206,12 +211,16 @@
                         android:id="@+id/cardView22"
                         android:layout_width="300dp"
                         android:layout_height="60dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginEnd="40dp"
-                        android:layout_marginRight="70dp"
-                        android:layout_marginBottom="290dp">
+                        android:layout_marginStart="54dp"
+                        android:layout_marginLeft="54dp"
+                        android:layout_marginEnd="54dp"
+                        android:layout_marginRight="54dp"
+                        android:layout_marginBottom="210dp">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -238,7 +247,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginEnd="66dp"
                         android:layout_marginRight="66dp"
-                        android:layout_marginBottom="121dp"
+                        android:layout_marginBottom="112dp"
                         android:text="@string/edit_card_btn_update"
                         app:backgroundTint="@color/ThemeGreen"
                         app:cornerRadius="12dp" />
@@ -252,7 +261,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginEnd="243dp"
                         android:layout_marginRight="243dp"
-                        android:layout_marginBottom="122dp"
+                        android:layout_marginBottom="112dp"
                         android:text="back"
                         app:backgroundTint="@color/ThemeGreen"
                         app:cornerRadius="12dp" />
