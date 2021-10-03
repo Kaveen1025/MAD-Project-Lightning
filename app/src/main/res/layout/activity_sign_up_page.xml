@@ -9,13 +9,14 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
-        android:layout_width="157dp"
-        android:layout_height="114dp"
-        android:layout_marginTop="66dp"
+        android:layout_width="140dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="48dp"
         android:src="@drawable/user"
         app:civ_border_color="#FF000000"
         app:civ_border_width="2dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,7 +24,7 @@
         android:id="@+id/sign_up"
         android:layout_width="119dp"
         android:layout_height="45dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="16dp"
         android:text="Sign Up"
         android:textColor="#171616"
         android:textSize="30sp"
@@ -38,7 +39,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="319dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="540dp"
+        android:layout_marginBottom="520dp"
         android:hint="@string/First_Name"
         app:boxCornerRadiusBottomEnd="5dp"
         app:boxCornerRadiusBottomStart="5dp"
@@ -62,7 +63,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="319dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="480dp"
+        android:layout_marginBottom="460dp"
         android:hint="@string/Last_Name"
         app:boxCornerRadiusBottomEnd="5dp"
         app:boxCornerRadiusBottomStart="5dp"
@@ -86,7 +87,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="319dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="420dp"
+        android:layout_marginBottom="400dp"
         android:hint="@string/Email"
         app:boxCornerRadiusBottomEnd="5dp"
         app:boxCornerRadiusBottomStart="5dp"
@@ -105,7 +106,8 @@
             android:layout_height="52dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -113,7 +115,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="319dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="360dp"
+        android:layout_marginBottom="340dp"
         android:hint="@string/Address"
         app:boxCornerRadiusBottomEnd="5dp"
         app:boxCornerRadiusBottomStart="5dp"
@@ -132,7 +134,8 @@
             android:layout_height="52dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPostalAddress" />
+            android:inputType="textPostalAddress"
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -140,7 +143,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="319dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginBottom="280dp"
         android:hint="@string/Phone_Number"
         app:boxCornerRadiusBottomEnd="5dp"
         app:boxCornerRadiusBottomStart="5dp"
@@ -159,7 +162,8 @@
             android:layout_height="52dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -167,7 +171,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="319dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="240dp"
+        android:layout_marginBottom="220dp"
         android:hint="@string/Password"
         app:boxCornerRadiusBottomEnd="5dp"
         app:boxCornerRadiusBottomStart="5dp"
@@ -186,7 +190,8 @@
             android:layout_height="52dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -194,7 +199,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="319dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="180dp"
+        android:layout_marginBottom="160dp"
         android:hint="@string/confirm_password"
         app:boxCornerRadiusBottomEnd="5dp"
         app:boxCornerRadiusBottomStart="5dp"
@@ -213,14 +218,15 @@
             android:layout_height="52dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/agree"
         android:layout_width="293dp"
         android:layout_height="38dp"
-        android:layout_marginBottom="136dp"
+        android:layout_marginBottom="118dp"
         android:text="@string/Agree"
         android:textColor="@color/ThemeBlack"
         android:textSize="16sp"
@@ -235,15 +241,16 @@
         android:layout_height="38dp"
         android:layout_marginStart="44dp"
         android:layout_marginLeft="44dp"
-        android:layout_marginBottom="136dp"
+        android:layout_marginBottom="122dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/button_signup"
         android:layout_width="213dp"
         android:layout_height="57dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="50dp"
         android:text="@string/Sign_UP"
         app:backgroundTint="@color/ThemeGreen"
         android:textColor="#ffff"
@@ -257,7 +264,7 @@
         android:layout_height="31dp"
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="10dp"
         android:layout_weight="1"
         android:text="@string/alredy_account"
         android:textColor="@color/ThemeBlack"
@@ -271,26 +278,27 @@
         android:layout_height="31dp"
         android:layout_marginEnd="72dp"
         android:layout_marginRight="72dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="10dp"
         android:clickable="true"
         android:text="@string/log_in"
         android:textColor="@color/purple_700"
         android:textColorLink="@color/purple_700"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <ImageButton
         android:id="@+id/Upload_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginRight="148dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginRight="152dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/image_upload"
-        tools:ignore="VectorDrawableCompat" />
+        tools:ignore="VectorDrawableCompat,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

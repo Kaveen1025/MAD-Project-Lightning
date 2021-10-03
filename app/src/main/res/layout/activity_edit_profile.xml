@@ -7,294 +7,6 @@
     tools:context=".edit_profile">
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image"
-        android:layout_width="138dp"
-        android:layout_height="112dp"
-        android:layout_marginTop="44dp"
-        android:src="@drawable/user"
-        app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/edit_profile"
-        android:layout_width="141dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/Edit_Profile"
-        android:textColor="#171616"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_edit_fn"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="319dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="564dp"
-        android:hint="@string/First_Name"
-        app:boxCornerRadiusBottomEnd="5dp"
-        app:boxCornerRadiusBottomStart="5dp"
-        app:boxCornerRadiusTopEnd="5dp"
-        app:boxCornerRadiusTopStart="5dp"
-        app:boxStrokeColor="@color/ThemeGreen"
-        app:endIconTint="@color/ThemeBlack"
-        app:hintTextColor="@color/ThemeGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-
-        <EditText
-            android:id="@+id/edit_fn"
-            android:layout_width="319dp"
-            android:layout_height="52dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_edit_email"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="319dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="432dp"
-        android:hint="@string/Email"
-        app:boxCornerRadiusBottomEnd="5dp"
-        app:boxCornerRadiusBottomStart="5dp"
-        app:boxCornerRadiusTopEnd="5dp"
-        app:boxCornerRadiusTopStart="5dp"
-        app:boxStrokeColor="@color/ThemeGreen"
-        app:endIconTint="@color/ThemeBlack"
-        app:hintTextColor="@color/ThemeGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <EditText
-            android:id="@+id/edit_email"
-            android:layout_width="319dp"
-            android:layout_height="52dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_edit_phone"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="319dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="296dp"
-        android:hint="@string/Phone_Number"
-        app:boxCornerRadiusBottomEnd="5dp"
-        app:boxCornerRadiusBottomStart="5dp"
-        app:boxCornerRadiusTopEnd="5dp"
-        app:boxCornerRadiusTopStart="5dp"
-        app:boxStrokeColor="@color/ThemeGreen"
-        app:endIconTint="@color/ThemeBlack"
-        app:hintTextColor="@color/ThemeGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <EditText
-            android:id="@+id/edit_phone"
-            android:layout_width="319dp"
-            android:layout_height="52dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="numberDecimal"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/changeP"
-        android:layout_width="205dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginBottom="264dp"
-        android:text="@string/Change_P"
-        android:textColor="@color/ThemeGreen"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_current_P"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="319dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="204dp"
-        android:hint="@string/Current_Password"
-        app:boxCornerRadiusBottomEnd="5dp"
-        app:boxCornerRadiusBottomStart="5dp"
-        app:boxCornerRadiusTopEnd="5dp"
-        app:boxCornerRadiusTopStart="5dp"
-        app:boxStrokeColor="@color/ThemeGreen"
-        app:endIconTint="@color/ThemeBlack"
-        app:hintTextColor="@color/ThemeGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <EditText
-            android:id="@+id/current_password"
-            android:layout_width="319dp"
-            android:layout_height="52dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPassword"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_new_P"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="319dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="142dp"
-        android:hint="@string/new_P"
-        app:boxCornerRadiusBottomEnd="5dp"
-        app:boxCornerRadiusBottomStart="5dp"
-        app:boxCornerRadiusTopEnd="5dp"
-        app:boxCornerRadiusTopStart="5dp"
-        app:boxStrokeColor="@color/ThemeGreen"
-        app:endIconTint="@color/ThemeBlack"
-        app:hintTextColor="@color/ThemeGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <EditText
-            android:id="@+id/new_password"
-            android:layout_width="319dp"
-            android:layout_height="52dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPassword"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_confirm_P"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="319dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="80dp"
-        android:hint="@string/confirm_P"
-        app:boxCornerRadiusBottomEnd="5dp"
-        app:boxCornerRadiusBottomStart="5dp"
-        app:boxCornerRadiusTopEnd="5dp"
-        app:boxCornerRadiusTopStart="5dp"
-        app:boxStrokeColor="@color/ThemeGreen"
-        app:endIconTint="@color/ThemeBlack"
-        app:hintTextColor="@color/ThemeGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <EditText
-            android:id="@+id/confirm_password"
-            android:layout_width="319dp"
-            android:layout_height="52dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPassword"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_edit_ln"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="319dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="496dp"
-        android:hint="@string/Last_Name"
-        app:boxCornerRadiusBottomEnd="5dp"
-        app:boxCornerRadiusBottomStart="5dp"
-        app:boxCornerRadiusTopEnd="5dp"
-        app:boxCornerRadiusTopStart="5dp"
-        app:boxStrokeColor="@color/ThemeGreen"
-        app:endIconTint="@color/ThemeBlack"
-        app:hintTextColor="@color/ThemeGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-
-        <EditText
-            android:id="@+id/edit_ln"
-            android:layout_width="319dp"
-            android:layout_height="52dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_edit_add"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="319dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="364dp"
-        android:hint="@string/Address"
-        app:boxCornerRadiusBottomEnd="5dp"
-        app:boxCornerRadiusBottomStart="5dp"
-        app:boxCornerRadiusTopEnd="5dp"
-        app:boxCornerRadiusTopStart="5dp"
-        app:boxStrokeColor="@color/ThemeGreen"
-        app:endIconTint="@color/ThemeBlack"
-        app:hintTextColor="@color/ThemeGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <EditText
-            android:id="@+id/edit_add"
-            android:layout_width="319dp"
-            android:layout_height="52dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPostalAddress"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <ImageButton
-        android:id="@+id/Upload_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginRight="148dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/image_upload"
-        tools:ignore="VectorDrawableCompat" />
-
-
-
     <RelativeLayout
         android:layout_width="414dp"
         android:layout_height="match_parent"
@@ -376,6 +88,343 @@
                     android:layout_height="match_parent">
 
 
+                    <TextView
+                        android:id="@+id/edit_profile"
+                        android:layout_width="141dp"
+                        android:layout_height="44dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="227dp"
+                        android:layout_marginRight="227dp"
+                        android:text="@string/Edit_Profile"
+                        android:textColor="#171616"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="130dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="38dp"
+                        android:layout_marginEnd="141dp"
+                        android:layout_marginRight="141dp"
+                        android:src="@drawable/user"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp" />
+
+                    <ImageButton
+                        android:id="@+id/Upload_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="103dp"
+                        android:layout_marginEnd="150dp"
+                        android:layout_marginRight="150dp"
+                        app:srcCompat="@drawable/image_upload"
+                        tools:ignore="VectorDrawableCompat,SpeakableTextPresentCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_edit_fn"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="319dp"
+                        android:layout_height="58dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="44dp"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginEnd="44dp"
+                        android:layout_marginRight="44dp"
+                        android:layout_marginBottom="489dp"
+                        android:hint="@string/First_Name"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        app:boxStrokeColor="@color/ThemeGreen"
+                        app:endIconTint="@color/ThemeBlack"
+                        app:hintTextColor="@color/ThemeGreen">
+
+
+                        <EditText
+                            android:id="@+id/edit_fn"
+                            android:layout_width="319dp"
+                            android:layout_height="52dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            tools:ignore="SpeakableTextPresentCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_edit_ln"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="319dp"
+                        android:layout_height="58dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="44dp"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginEnd="44dp"
+                        android:layout_marginRight="44dp"
+                        android:layout_marginBottom="432dp"
+                        android:hint="@string/Last_Name"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        app:boxStrokeColor="@color/ThemeGreen"
+                        app:endIconTint="@color/ThemeBlack"
+                        app:hintTextColor="@color/ThemeGreen">
+
+
+                        <EditText
+                            android:id="@+id/edit_ln"
+                            android:layout_width="319dp"
+                            android:layout_height="52dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            tools:ignore="SpeakableTextPresentCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_edit_email"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="319dp"
+                        android:layout_height="58dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="44dp"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginEnd="44dp"
+                        android:layout_marginRight="44dp"
+                        android:layout_marginBottom="375dp"
+                        android:hint="@string/Email"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        app:boxStrokeColor="@color/ThemeGreen"
+                        app:endIconTint="@color/ThemeBlack"
+                        app:hintTextColor="@color/ThemeGreen">
+
+                        <EditText
+                            android:id="@+id/edit_email"
+                            android:layout_width="319dp"
+                            android:layout_height="52dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textEmailAddress"
+                            tools:ignore="SpeakableTextPresentCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_edit_phone"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="319dp"
+                        android:layout_height="58dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="44dp"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginEnd="44dp"
+                        android:layout_marginRight="44dp"
+                        android:layout_marginBottom="318dp"
+                        android:hint="@string/Phone_Number"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        app:boxStrokeColor="@color/ThemeGreen"
+                        app:endIconTint="@color/ThemeBlack"
+                        app:hintTextColor="@color/ThemeGreen">
+
+                        <EditText
+                            android:id="@+id/edit_phone"
+                            android:layout_width="319dp"
+                            android:layout_height="52dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            tools:ignore="SpeakableTextPresentCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/changeP"
+                        android:layout_width="205dp"
+                        android:layout_height="27dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="44dp"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginTop="150dp"
+                        android:layout_marginEnd="162dp"
+                        android:layout_marginRight="162dp"
+                        android:layout_marginBottom="230dp"
+                        android:text="@string/Change_P"
+                        android:textColor="@color/ThemeGreen"
+                        android:textSize="16sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_confirm_P"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="319dp"
+                        android:layout_height="58dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="44dp"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginEnd="44dp"
+                        android:layout_marginRight="44dp"
+                        android:layout_marginBottom="65dp"
+                        android:hint="@string/confirm_P"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        app:boxStrokeColor="@color/ThemeGreen"
+                        app:endIconTint="@color/ThemeBlack"
+                        app:hintTextColor="@color/ThemeGreen">
+
+                        <EditText
+                            android:id="@+id/confirm_password"
+                            android:layout_width="320dp"
+                            android:layout_height="52dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPassword"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:ignore="SpeakableTextPresentCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_new_P"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="320dp"
+                        android:layout_height="58dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="44dp"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginEnd="44dp"
+                        android:layout_marginRight="44dp"
+                        android:layout_marginBottom="122dp"
+                        android:hint="@string/new_P"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        app:boxStrokeColor="@color/ThemeGreen"
+                        app:endIconTint="@color/ThemeBlack"
+                        app:hintTextColor="@color/ThemeGreen">
+
+                        <EditText
+                            android:id="@+id/new_password"
+                            android:layout_width="319dp"
+                            android:layout_height="52dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPassword"
+                            tools:ignore="SpeakableTextPresentCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_current_P"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="319dp"
+                        android:layout_height="58dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="44dp"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginTop="150dp"
+                        android:layout_marginEnd="44dp"
+                        android:layout_marginRight="44dp"
+                        android:layout_marginBottom="178dp"
+                        android:hint="@string/Current_Password"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        app:boxStrokeColor="@color/ThemeGreen"
+                        app:endIconTint="@color/ThemeBlack"
+                        app:hintTextColor="@color/ThemeGreen">
+
+                        <EditText
+                            android:id="@+id/current_password"
+                            android:layout_width="319dp"
+                            android:layout_height="52dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPassword"
+                            tools:ignore="SpeakableTextPresentCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_edit_add"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="319dp"
+                        android:layout_height="58dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="44dp"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginEnd="44dp"
+                        android:layout_marginRight="44dp"
+                        android:layout_marginBottom="260dp"
+                        android:hint="@string/Address"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        app:boxStrokeColor="@color/ThemeGreen"
+                        app:endIconTint="@color/ThemeBlack"
+                        app:hintTextColor="@color/ThemeGreen">
+
+                        <EditText
+                            android:id="@+id/edit_add"
+                            android:layout_width="319dp"
+                            android:layout_height="52dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPostalAddress"
+                            tools:ignore="SpeakableTextPresentCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
                     <Button
                         android:id="@+id/update_btn"
                         android:layout_width="144dp"
@@ -385,9 +434,9 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginStart="44dp"
                         android:layout_marginLeft="44dp"
-                        android:layout_marginEnd="224dp"
-                        android:layout_marginRight="224dp"
-                        android:layout_marginBottom="19dp"
+                        android:layout_marginEnd="225dp"
+                        android:layout_marginRight="225dp"
+                        android:layout_marginBottom="4dp"
                         android:text="@string/Update_btn"
                         android:textColor="#ffff"
                         app:backgroundTint="@color/ThemeGreen"
@@ -400,9 +449,9 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginEnd="54dp"
-                        android:layout_marginRight="54dp"
-                        android:layout_marginBottom="19dp"
+                        android:layout_marginEnd="47dp"
+                        android:layout_marginRight="47dp"
+                        android:layout_marginBottom="4dp"
                         android:onClick="DeleteUserprofile"
                         android:text="Delete"
                         android:textColor="#ffff"
