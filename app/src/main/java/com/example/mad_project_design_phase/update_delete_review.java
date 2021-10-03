@@ -43,11 +43,17 @@ public class update_delete_review extends Working_Side {
     NavigationView navigationView;
     Toolbar toolbar;
     ImageButton notificationBtn,profileBtn,cartBtn;
+    Intent intent;
+    String FoodID,RestaurantID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_delete_review);
+
+        intent = getIntent();
+        FoodID = intent.getStringExtra("FoodID");
+        RestaurantID = intent.getStringExtra("RestID");
 
         notificationBtn = findViewById(R.id.notificationBtn);
         profileBtn = findViewById(R.id.profileBtn);
@@ -75,9 +81,9 @@ public class update_delete_review extends Working_Side {
         btnUpdate = (Button) findViewById(R.id.btnUpdate);
 
 
-        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodReviews")
+        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Food").child(FoodID).child("FoodReviews")
                 .child("Customers").child("C1");
-        reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodDetails");
+        reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Food").child(FoodID).child("FoodDetails");
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -126,7 +132,7 @@ public class update_delete_review extends Working_Side {
         btnDelete.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View v){
-                DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodReviews")
+                DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Food").child(FoodID).child("FoodReviews")
                         .child("Customers").child("C1");
 
                 delRef.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {

@@ -1,24 +1,24 @@
-package com.example.mad_project_design_phase;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-import android.service.autofill.RegexValidator;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-
-import com.basgeekball.awesomevalidation.AwesomeValidation;
-import com.basgeekball.awesomevalidation.ValidationStyle;
-import com.basgeekball.awesomevalidation.utility.RegexTemplate;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-public class addAcard extends AppCompatActivity {
+//package com.example.mad_project_design_phase;
+//
+//import androidx.annotation.NonNull;
+//import androidx.appcompat.app.AppCompatActivity;
+//
+//import android.os.Bundle;
+//import android.service.autofill.RegexValidator;
+//import android.view.View;
+//import android.widget.Button;
+//import android.widget.EditText;
+//import android.widget.Toast;
+//
+//import com.basgeekball.awesomevalidation.AwesomeValidation;
+//import com.basgeekball.awesomevalidation.ValidationStyle;
+//import com.basgeekball.awesomevalidation.utility.RegexTemplate;
+//import com.google.android.gms.tasks.OnCompleteListener;
+//import com.google.android.gms.tasks.Task;
+//import com.google.firebase.database.DatabaseReference;
+//import com.google.firebase.database.FirebaseDatabase;
+//
+//public class addAcard extends AppCompatActivity {
 //    //Initialize Variables
 //    EditText txtCardType,txtCardNumber,txtCardHolder,txtCardDate;
 //    Button btnSave;
@@ -88,4 +88,4 @@ public class addAcard extends AppCompatActivity {
 //                }}
 //        });
 //    }
-}
+//}

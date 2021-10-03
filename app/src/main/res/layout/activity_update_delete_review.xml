@@ -7,21 +7,6 @@
     tools:context=".update_delete_review">
 
 
-
-    <TextView
-        android:id="@+id/textView39"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/myReviews_topic"
-        android:textColor="@color/ThemeBlack"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.524"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108" />
-
     <ImageView
         android:id="@+id/img_updateReview"
         android:layout_width="452dp"
@@ -34,21 +19,6 @@
         app:layout_constraintVertical_bias="0.229"
         app:srcCompat="@drawable/cake222"
         android:scaleType="centerCrop"/>
-
-    <RatingBar
-        android:id="@+id/updateRatingbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:progressTint="@color/RatingStar"
-        android:theme="@style/RatingBar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.675"
-        tools:ignore="SpeakableTextPresentCheck" />
-
 
 
     <androidx.drawerlayout.widget.DrawerLayout
@@ -124,6 +94,20 @@
                     android:layout_height="match_parent">
 
 
+                    <RatingBar
+                        android:id="@+id/updateRatingbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="83dp"
+                        android:layout_marginRight="83dp"
+                        android:layout_marginBottom="247dp"
+                        android:progressTint="@color/RatingStar"
+                        android:theme="@style/RatingBar"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
                     <Button
                         android:id="@+id/btnUpdate"
                         android:layout_width="wrap_content"
@@ -163,6 +147,19 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintTop_toTopOf="parent">
 
+                            <TextView
+                                android:id="@+id/textView39"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginEnd="138dp"
+                                android:layout_marginRight="138dp"
+                                android:layout_marginBottom="41dp"
+                                android:text="@string/myReviews_topic"
+                                android:textColor="@color/ThemeBlack"
+                                android:textSize="24sp" />
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
 
