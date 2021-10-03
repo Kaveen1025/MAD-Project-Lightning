@@ -47,7 +47,7 @@ public class user_profile extends AppCompatActivity {
         up_edit = findViewById(R.id.up_edit);
         btn_View_Address = findViewById(R.id.btn_View_Address);
         profile_image = findViewById(R.id.profile_image);
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("Sheheni");// id **
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("AhLIouE0q9YwizgYAgbgglsnyuC3");// id **
 
        dbRef.addValueEventListener(new ValueEventListener() {
            @Override

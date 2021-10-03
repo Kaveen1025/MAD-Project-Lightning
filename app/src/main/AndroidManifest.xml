@@ -17,7 +17,7 @@
         >
 
         <activity
-            android:name=".sign_up_page"
+            android:name=".edit_profile"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -35,7 +35,7 @@
 
         <TextView
             android:id="@+id/foodNtext"
-            android:layout_width="match_parent"
+            android:layout_width="241dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/food_image"
@@ -46,7 +46,7 @@
 
         <TextView
             android:id="@+id/foodDtext"
-            android:layout_width="264dp"
+            android:layout_width="268dp"
             android:layout_height="66dp"
             android:layout_below="@id/foodNtext"
             android:layout_marginLeft="10dp"
@@ -135,6 +135,21 @@
             android:backgroundTint="@color/ThemeGreen"
             app:srcCompat="@drawable/i_remove"
             tools:ignore="VectorDrawableCompat,SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/CartI_Delete"
+            android:layout_width="18dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="110dp"
+            android:layout_marginBottom="132dp"
+            app:srcCompat="@drawable/ic_carti_delete"
+            tools:ignore="VectorDrawableCompat" />
 
 
     </RelativeLayout>

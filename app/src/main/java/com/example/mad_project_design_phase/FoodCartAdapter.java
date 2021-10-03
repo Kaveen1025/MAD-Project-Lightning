@@ -3,26 +3,20 @@ package com.example.mad_project_design_phase;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 import com.bumptech.glide.Glide;
-
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-
 import com.google.firebase.database.FirebaseDatabase;
 
 
@@ -80,6 +74,36 @@ public class FoodCartAdapter extends FirebaseRecyclerAdapter<FoodCart, FoodCartA
     }
 });
 
+
+        holder.CartI_Delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(holder.name.getContext());
+                builder.setTitle("Are You Sure?");
+                builder.setMessage("Deleted data can't be Undo.");
+
+                builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which) {
+
+                        FirebaseDatabase.getInstance().getReference().child("FoodCart").child("C1").child("R1")
+                                .child(getRef(position).getKey()).removeValue();
+                    }
+                });
+
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which){
+
+                        Toast.makeText(holder.name.getContext(), "Cancelled", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.show();
+            }
+        });
+
+
     }
 
     @NonNull
@@ -97,7 +121,7 @@ public class FoodCartAdapter extends FirebaseRecyclerAdapter<FoodCart, FoodCartA
         TextView name, description, price,total,quantitys;
         ImageView food_image;
         //ElegantNumberButton number;
-        ImageButton increment,decrement;
+        ImageButton increment,decrement, CartI_Delete;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -110,6 +134,7 @@ public class FoodCartAdapter extends FirebaseRecyclerAdapter<FoodCart, FoodCartA
             increment = (ImageButton) itemView.findViewById(R.id.increment);
             decrement =(ImageButton)  itemView.findViewById(R.id.decrement);
             quantitys = itemView.findViewById(R.id.quantitys);
+            CartI_Delete = (ImageButton)  itemView.findViewById(R.id.CartI_Delete);
 
             //ConstraintLayout myCart = (ConstraintLayout)itemView.findViewById(R.id.my_cart);
         }

@@ -1,15 +1,12 @@
 package com.example.mad_project_design_phase;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.SearchView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -37,7 +34,7 @@ public class view_address extends AppCompatActivity {
 
         FirebaseRecyclerOptions<CustomerAddress> options =
                 new FirebaseRecyclerOptions.Builder<CustomerAddress>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Customer Address").child("DgaCUSQDSOOgGnoFmv3ojR3vpH73"), CustomerAddress.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Customer Address").child("kOeeOYSJ4vURDGQJfj0xZuBnxSg1"), CustomerAddress.class)
                         .build();
 
        viewAddressAdapter = new ViewAddressAdapter(options);

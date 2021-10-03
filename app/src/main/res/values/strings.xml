@@ -288,6 +288,14 @@
     <string name="textHint">Tell us what you like about it...</string>
     <string name="foodRatings">view ratings</string>
     <string name="selectCardHeader">SELECT A CARD</string>
+    <string name="invalid_name">First Name Cannot be Null</string>
+    <string name="invalidL_name">Last Name Cannot be Null</string>
+    <string name="invali_mobile">Invalid Mobile Number(phone number must be 10 digits)</string>
+    <string name="invalid_address">Address Cannot be Empty</string>
+    <string name="invalid_password">Invalid Password(must contain 8 or more characters which contain at least one numeric digit, one special character,one uppercase letter and one lowercase letter)</string>
+    <string name="invalid_Cpassword">Password Mismatch</string>
+    <string name="invalid_email">Invalid Email Address</string>
+    <string name="checked"><![CDATA[Agree With Our Terms & Conditions]]></string>
 
 
 </resources>
