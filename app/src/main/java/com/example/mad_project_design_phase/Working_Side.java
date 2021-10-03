@@ -86,8 +86,8 @@ public class Working_Side extends AppCompatActivity implements  NavigationView.O
                 break;
 
             case R.id.cards:
-               i = new Intent(Working_Side.this,card_details.class);
-                startActivity(i);
+              // i = new Intent(Working_Side.this,card_details.class);
+                //startActivity(i);
                 break;
             case R.id.orderss:
                 i = new Intent(Working_Side.this,view_orders.class);

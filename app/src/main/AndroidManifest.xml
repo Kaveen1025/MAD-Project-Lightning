@@ -39,7 +39,7 @@
         <activity android:name=".customise_food"/>
         <activity android:name=".show_calories"/>
         <activity android:name=".view_address"/>
-        <activity android:name=".card_details"/>
+<!--        <activity android:name=".card_details"/>-->
         <activity android:name=".My_reviews"/>
         <activity android:name=".favorits_food"/>
         <activity android:name=".my_restaurant_review"/>
