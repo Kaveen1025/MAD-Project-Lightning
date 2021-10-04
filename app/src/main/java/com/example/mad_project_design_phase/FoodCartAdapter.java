@@ -51,13 +51,13 @@ public class FoodCartAdapter extends FirebaseRecyclerAdapter<FoodCart, FoodCartA
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.food_image);
 
-        holder.quantitys.setText("1");
+       holder.quantitys.setText("1");
       holder.increment.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View view) {
               Integer number = Integer.parseInt(holder.quantitys.getText().toString());
               number  += 1;
-              Integer newPrice = Integer.parseInt(model.getPrice())  * number;
+              Integer newPrice = Integer.parseInt(model.getPrice()) * number;
               holder.quantitys.setText(String.valueOf(number));
                 holder.price.setText(String.valueOf(newPrice));
           }
@@ -104,12 +104,12 @@ public class FoodCartAdapter extends FirebaseRecyclerAdapter<FoodCart, FoodCartA
             name = (TextView) itemView.findViewById(R.id.foodNtext);
             description = (TextView) itemView.findViewById(R.id.foodDtext);
             price = (TextView) itemView.findViewById(R.id.foodPtext);
-            //number = itemView.findViewById(R.id.txt_amount);
+           // number = itemView.findViewById(R.id.txt_amount);
             total = itemView.findViewById(R.id.total);
             food_image = (ImageView) itemView.findViewById(R.id.food_image);
-           // increment = (ImageButton) itemView.findViewById(R.id.increment);
-            //decrement =(ImageButton)  itemView.findViewById(R.id.decrement);
-           // quantitys = itemView.findViewById(R.id.quantitys);
+           increment = (ImageButton) itemView.findViewById(R.id.increment);
+            decrement =(ImageButton)  itemView.findViewById(R.id.decrement);
+           quantitys = itemView.findViewById(R.id.quantitys);
 
             //ConstraintLayout myCart = (ConstraintLayout)itemView.findViewById(R.id.my_cart);
         }

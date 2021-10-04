@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SearchView;
 
@@ -29,6 +30,7 @@ public class edit_cart extends Working_Side {
     NavigationView navigationView;
     Toolbar toolbar;
     ImageButton notificationBtn,profileBtn,cartBtn;
+    Button checkout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +44,7 @@ public class edit_cart extends Working_Side {
 
         recyclerView = (RecyclerView)findViewById(R.id.CartRV);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
+        checkout = findViewById(R.id.checkout);
 
         drawerLayout = findViewById(R.id.drawerLayout2);
         navigationView = findViewById(R.id.navvd);
@@ -81,6 +83,14 @@ public class edit_cart extends Working_Side {
 
     protected void onResume() {
         super.onResume();
+
+        checkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(edit_cart.this,Select_card.class);
+                startActivity(intent);
+            }
+        });
 
         notificationBtn.setOnClickListener(new View.OnClickListener() {
             @Override

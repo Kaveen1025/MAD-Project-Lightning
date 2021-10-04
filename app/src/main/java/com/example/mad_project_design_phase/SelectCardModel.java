@@ -1,32 +1,31 @@
 package com.example.mad_project_design_phase;
 
 public class SelectCardModel {
-    private String cardtype;
-    private String cardnumber;
+    private String cardType;
+    private String cardNumber;
 
 
     public SelectCardModel() {
     }
 
-    public SelectCardModel(String cardtype, String cardnumber, String cardcvc) {
-        this.cardtype = cardtype;
-        this.cardnumber = cardnumber;
+    public SelectCardModel(String cardType, String cardNumber) {
+        this.cardType = cardType;
+        this.cardNumber = cardNumber;
     }
 
-    public String getCardtype() {
-        return cardtype;
+    public String getCardType() {
+        return cardType;
     }
 
-    public void setCardtype(String cardtype) {
-        this.cardtype = cardtype;
+    public void setCardType(String cardType) {
+        this.cardType = cardType;
     }
 
-    public String getCardnumber() {
-        return cardnumber;
+    public String getCardNumber() {
+        return cardNumber;
     }
 
-    public void setCardnumber(String cardnumber) {
-        this.cardnumber = cardnumber;
+    public void setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
     }
-
 }

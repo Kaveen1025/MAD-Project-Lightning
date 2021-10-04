@@ -33,6 +33,7 @@ public class checkout extends Working_Side {
     NavigationView navigationView;
     Toolbar toolbar;
     ImageButton notificationBtn,profileBtn,cartBtn;
+    Button home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,8 @@ public class checkout extends Working_Side {
         notificationBtn = findViewById(R.id.notificationBtn);
         profileBtn = findViewById(R.id.profileBtn);
         cartBtn = findViewById(R.id.cartBtn);
+
+        home = findViewById(R.id.btnNext);
 
         drawerLayout = findViewById(R.id.drawerLayout2);
         navigationView = findViewById(R.id.navvd);
@@ -61,7 +64,7 @@ public class checkout extends Working_Side {
 
         btnNext = (Button) findViewById(R.id.btnNext);
 
-        db = FirebaseDatabase.getInstance().getReference().child("Customer").child("FGEOGNmjF4Wg9B80L7NhFPx2pvd2");
+        db = FirebaseDatabase.getInstance().getReference().child("Customer").child("GGMo8PMil0YZXMlm09ys77peK7N2");
         db.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -87,6 +90,16 @@ public class checkout extends Working_Side {
 
     protected void onResume() {
         super.onResume();
+
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(checkout.this,newhomess.class);
+                startActivity(intent);
+
+            }
+        });
 
         notificationBtn.setOnClickListener(new View.OnClickListener() {
             @Override

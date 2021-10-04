@@ -4,6 +4,7 @@
     package="com.example.mad_project_design_phase">
     <uses-permission android:name="android.permission.INTERNET" />
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label=" "
@@ -12,16 +13,20 @@
         android:theme="@style/Theme.MADProjectDesignphase"
         tools:replace="android:label,android:theme">
 
-        <activity android:name=".rate_food">
+        <activity android:name=".login_page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".edit_card"/>
-<!--        <activity android:name=".rate_food"/>-->
+        <activity android:name=".rate_food"/>
+        <activity android:name=".Select_card"/>
+        <activity android:name=".checkout"/>
         <activity android:name=".customise_food"/>
+        <activity android:name=".edit_cart"/>
         <activity android:name=".show_calories"/>
         <activity android:name=".create_review"/>
         <activity android:name=".restaurant_ratings_review"/>
@@ -39,14 +44,12 @@
         <activity android:name=".update_review" />
         <activity android:name=".all_the_restaurants"/>
         <activity android:name=".edit_profile"/>
-        <activity android:name=".edit_cart"/>
         <activity android:name=".user_profile"/>
         <activity android:name=".view_address"/>
         <activity android:name=".card_details"/>
         <activity android:name=".My_reviews"/>
         <activity android:name=".favorits_food"/>
         <activity android:name=".my_restaurant_review"/>
-        <activity android:name=".checkout"/>
         <activity android:name=".update_delete_review"/>
 
 

@@ -2,6 +2,7 @@ package com.example.mad_project_design_phase;
 
         import android.app.AlertDialog;
         import android.content.DialogInterface;
+        import android.content.Intent;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
@@ -42,8 +43,16 @@ public class SelectCardAdapter extends FirebaseRecyclerAdapter<SelectCardModel, 
     @Override
     protected void onBindViewHolder(@NonNull @NotNull myViewHolder holder, int position, @NonNull @NotNull SelectCardModel model) {
 
-        holder.cardtype.setText(model.getCardtype());
-        holder.cardnumber.setText(model.getCardnumber());
+        holder.cardtype.setText(model.getCardType());
+        holder.cardnumber.setText(model.getCardNumber());
+        holder.btnPayC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),checkout.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+
 
     }
 

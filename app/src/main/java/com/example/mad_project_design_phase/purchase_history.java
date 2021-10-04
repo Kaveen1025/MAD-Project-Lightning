@@ -4,13 +4,18 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.navigation.NavigationView;
@@ -26,7 +31,7 @@ public class purchase_history extends Working_Side{
     NavigationView navigationView;
     Toolbar toolbar;
     ImageButton notificationBtn,profileBtn,cartBtn;
-
+    TextView txtTotal;
     String CustomerID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +39,12 @@ public class purchase_history extends Working_Side{
         setContentView(R.layout.activity_purchase_history);
 
         CustomerID = CustomerDetails.getCustomerID();
+//        CustomerID = "C1";
         notificationBtn = findViewById(R.id.notificationBtn);
         profileBtn = findViewById(R.id.profileBtn);
         cartBtn = findViewById(R.id.cartBtn);
+
+        txtTotal = findViewById(R.id.txtTotal);
 
         drawerLayout = findViewById(R.id.drawerLayout2);
         navigationView = findViewById(R.id.navvd);
@@ -64,6 +72,11 @@ public class purchase_history extends Working_Side{
         purchasehistoryAdapter = new PurchaseHistoryAdapter(options);
 
         ryvPurchase_History.setAdapter(purchasehistoryAdapter);
+
+        LocalBroadcastManager.getInstance(this)
+                .registerReceiver(mMessageReceiver, new IntentFilter("Total Spending"));
+
+
     }
 
     @Override
@@ -82,6 +95,7 @@ public class purchase_history extends Working_Side{
 
     protected void onResume() {
         super.onResume();
+
 
         notificationBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,5 +123,15 @@ public class purchase_history extends Working_Side{
             }
         });
     }
+
+    public BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+
+            int TotalPrice = intent.getIntExtra("TotalPrice", 0);
+            txtTotal.setText("LKR. " + TotalPrice + ".00");
+        }
+    };
+
 
 }
