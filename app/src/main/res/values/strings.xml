@@ -319,6 +319,10 @@
     <string name="invalid_Cpassword">Password Mismatch</string>
     <string name="invalid_email">Invalid Email Address</string>
     <string name="checked"><![CDATA[Agree With Our Terms & Conditions]]></string>
+    <string name="ratingsss" />
+    <string name="ratingssss">4.0/5.0</string>
+    <string name="payHeaderOnline" />
+    <string name="payHeaderOnlines">Payment Completed via Online</string>
 
 
 </resources>

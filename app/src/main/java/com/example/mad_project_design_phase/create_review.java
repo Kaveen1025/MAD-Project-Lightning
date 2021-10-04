@@ -83,7 +83,7 @@ public class create_review extends Working_Side {
         url = (TextView) findViewById(R.id.img_url);
 
         reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestID).child("Food").child(FoodID).child("FoodReviews").child("Customers");
-        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestID).child("Food").child(FoodID).child("FoodDetails");
+        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestID).child("Food").child(FoodID);
         btnSubmit.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 String s = String.valueOf(rtbar.getRating());

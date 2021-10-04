@@ -58,13 +58,13 @@ public class customise_food extends Working_Side {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customise_food);
 //
-//        intent = getIntent();
-//        RestID = intent.getStringExtra("RestID");
-//        FoodID = intent.getStringExtra("FoodID");
-//        CustomerID = CustomerDetails.getCustomerID();
+        intent = getIntent();
+        RestID = intent.getStringExtra("RestID");
+        FoodID = intent.getStringExtra("FoodID");
+        CustomerID = CustomerDetails.getCustomerID();
 
-        RestID = "R3";
-        FoodID = "F1";
+//        RestID = "R3";
+//        FoodID = "F1";
 
         CustomerID = CustomerDetails.getCustomerID();
         notificationBtn = findViewById(R.id.notificationBtn);
@@ -97,7 +97,7 @@ public class customise_food extends Working_Side {
         addToCart = findViewById(R.id.btn_addtocart);
         showCal = findViewById(R.id.btn_showCal);
                                                                                                                                 /// important change this
-        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestID).child("Food").child(FoodID).child("CutomizeOption");
+        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestID).child("Food").child(FoodID).child("CuztomizeOption");
         ref1 = ref.child("op1");
         ref2 = ref.child("op2");
         ref3 = ref.child("op3");
@@ -110,7 +110,7 @@ public class customise_food extends Working_Side {
 
                 String opt1 =datasnapshot.child("optionName").getValue().toString();
                 String price1 = datasnapshot.child("price").getValue().toString();
-                cal1 = datasnapshot.child("calories").getValue().toString();
+               cal1 = datasnapshot.child("calories").getValue().toString();
 
                 op1.setText(opt1);
                 p1.setText(price1);
@@ -341,6 +341,8 @@ public class customise_food extends Working_Side {
                 calCalories.putExtra("InitialCal",initialCal);
 
                 calCalories.putExtra("FoodName",foodname);
+                calCalories.putExtra("RestID",RestID);
+                calCalories.putExtra("FoodID",FoodID);
                  startActivity(calCalories);
 
             }

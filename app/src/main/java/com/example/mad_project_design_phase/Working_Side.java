@@ -65,6 +65,10 @@ public class Working_Side extends AppCompatActivity implements  NavigationView.O
 
     public boolean onNavigationItemSelected(MenuItem menuItem){
         switch (menuItem.getItemId()){
+            case R.id.home:
+                i = new Intent(Working_Side.this,newhomess.class);
+                startActivity(i);
+                break;
 
             case R.id.myFavRestaurants:
                  i = new Intent(Working_Side.this,my_favorite_restaurants.class);

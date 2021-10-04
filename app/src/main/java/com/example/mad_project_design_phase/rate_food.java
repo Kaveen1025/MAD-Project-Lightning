@@ -48,12 +48,12 @@ public class rate_food extends Working_Side {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rate_food);
 
-//        intent = getIntent();
-//        RestID = intent.getStringExtra("RestID");
-//        FoodID = intent.getStringExtra("FoodID");
+        intent = getIntent();
+        RestID = intent.getStringExtra("RestID");
+        FoodID = intent.getStringExtra("FoodID");
 
-        RestID = "R3";
-        FoodID = "F1";
+//        RestID = "R3";
+//        FoodID = "F1";
 
         notificationBtn = findViewById(R.id.notificationBtn);
         profileBtn = findViewById(R.id.profileBtn);
