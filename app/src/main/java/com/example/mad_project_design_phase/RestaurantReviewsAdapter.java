@@ -37,7 +37,6 @@ public class RestaurantReviewsAdapter extends FirebaseRecyclerAdapter<CustomerRe
         holder.name.setText(model.getName());
         holder.rating.setText(model.getNoOfStars());
         holder.review.setText(model.getReview());
-
         Glide.with(holder.img.getContext()).load(model.getCustomerProfile()).placeholder(R.drawable.common_google_signin_btn_icon_dark)
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal).into(holder.img);
     }

@@ -42,13 +42,13 @@ public class My_Review_adapter extends FirebaseRecyclerAdapter<RCustomerReview,M
 
 
     @Override
-    protected void onBindViewHolder(@NonNull @NotNull myViewHolder holder, int position, @NonNull @NotNull RCustomerReview model) {
+    protected void onBindViewHolder(@NonNull @NotNull myViewHolder holder, final int position, @NonNull @NotNull RCustomerReview model) {
 
         holder.rName.setText(model.getName());
         holder.Review.setText(model.getReview());
         holder.ratingBar.setNumStars(5);
-        //holder.ratingBar.setRating(Float.parseFloat(model.getNoOfStars()));
-        holder.ratingBar.setRating(3);
+        holder.ratingBar.setRating(Float.parseFloat(model.getNoOfStars()));
+        //holder.ratingBar.setRating(model.getNoOfStars().toString());
 
 
         Glide.with(holder.logo.getContext())
@@ -100,8 +100,8 @@ public class My_Review_adapter extends FirebaseRecyclerAdapter<RCustomerReview,M
                         // need confirmation
 
                         // learn position deletion
-                       DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("CustomerReviews").child("C1").child("R1");
-                       DatabaseReference ref2 = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Reviews").child("Customers").child("C1");
+                       DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("CustomerRestaurantReviews").child("C1").child(getRef(position).getKey());
+                      // DatabaseReference ref2 = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Reviews").child("Customers").child("C1");
 
                         ref.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
@@ -135,12 +135,12 @@ public class My_Review_adapter extends FirebaseRecyclerAdapter<RCustomerReview,M
                         RCustomers.put("noOfStars",rating);
                         RCustomers.put("review",reviewDes);
 
-                        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("CustomerReviews").child("C1").child("R1");
+                        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("CustomerRestaurantReviews").child("C1").child(getRef(position).getKey());
                         ref.updateChildren(RCustomers).addOnCompleteListener(new OnCompleteListener() {
                             @Override
                             public void onComplete(@NonNull @NotNull Task task) {
                                 if(task.isSuccessful()){
-                                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Reviews").child("Customers").child("C1");
+                                    //DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Reviews").child("Customers").child("C1");
                                         ref.updateChildren(RCustomers).addOnCompleteListener(new OnCompleteListener() {
                                             @Override
                                             public void onComplete(@NonNull @NotNull Task task) {

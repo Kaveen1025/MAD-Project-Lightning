@@ -22,32 +22,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.096" />
 
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="232dp"
-        android:layout_height="361dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/restlog222" />
-
-    <TextView
-        android:id="@+id/SRestaurantName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/RestaurantName2"
-        android:textColor="@color/ThemeBlack"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.367" />
-
     <TextView
         android:id="@+id/ratingValue"
         android:layout_width="wrap_content"
@@ -193,6 +167,36 @@
                         android:layout_marginBottom="23dp"
                         android:text="@string/ShowMoreBtn"
                         app:backgroundTint="@color/ThemeGreen" />
+
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="251dp"
+                        android:layout_height="146dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="83dp"
+                        android:layout_marginLeft="83dp"
+                        android:layout_marginTop="51dp"
+                        app:srcCompat="@drawable/restlog222" />
+
+                    <TextView
+                        android:id="@+id/SRestaurantName"
+                        android:layout_width="223dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="101dp"
+                        android:layout_marginLeft="101dp"
+                        android:layout_marginTop="183dp"
+                        android:layout_marginEnd="87dp"
+                        android:layout_marginRight="87dp"
+                        android:text="@string/RestaurantName2"
+                        android:textColor="@color/ThemeBlack"
+                        android:textSize="20sp" />
                 </RelativeLayout>
 
             </FrameLayout>
