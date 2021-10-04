@@ -1,16 +1,23 @@
 package com.example.mad_project_design_phase;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -18,7 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-public class rate_food extends AppCompatActivity {
+public class rate_food extends Working_Side {
 
     RecyclerView recyclerView;
     rate_Adapter adapter;
@@ -26,12 +33,37 @@ public class rate_food extends AppCompatActivity {
     ImageView img;
     Button customize;
 
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    Toolbar toolbar;
+    ImageButton notificationBtn,profileBtn,cartBtn;
+
+    Intent intent;
+    String RestID,FoodID;
     DatabaseReference ref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rate_food);
+
+        intent = getIntent();
+        RestID = intent.getStringExtra("RestID");
+        FoodID = intent.getStringExtra("FoodID");
+
+        notificationBtn = findViewById(R.id.notificationBtn);
+        profileBtn = findViewById(R.id.profileBtn);
+        cartBtn = findViewById(R.id.cartBtn);
+
+        drawerLayout = findViewById(R.id.drawerLayout2);
+        navigationView = findViewById(R.id.navvd);
+        toolbar = findViewById(R.id.toolbarss);
+        setSupportActionBar(toolbar);
+        navigationView.bringToFront();
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(this);
 
         name = (TextView) findViewById(R.id.foodRating_name);
         des = (TextView) findViewById(R.id.foodRating_des);
@@ -44,14 +76,14 @@ public class rate_food extends AppCompatActivity {
 
         FirebaseRecyclerOptions<rate_Model> options=
                 new FirebaseRecyclerOptions.Builder<rate_Model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodReviews")
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestID).child("Food").child(FoodID).child("FoodReviews")
                                 .child("Customers"), rate_Model.class)
                         .build();
 
         adapter = new rate_Adapter(options);
         recyclerView.setAdapter( adapter);
 
-        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodDetails");
+        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestID).child("Food").child(FoodID).child("FoodDetails");
 
         ref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -84,6 +116,46 @@ public class rate_food extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         adapter.stopListening();
+    }
+
+
+    protected void onResume() {
+        super.onResume();
+
+        customize.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(rate_food.this,customise_food.class);
+                intent.putExtra("RestID",RestID);
+                intent.putExtra("FoodID",FoodID);
+                startActivity(intent);
+            }
+        });
+        notificationBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(rate_food.this,notification.class);
+                startActivity(i);
+
+            }
+        });
+
+
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(rate_food.this,user_profile.class);
+                startActivity(i);
+            }
+        });
+
+        cartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(rate_food.this,edit_cart.class);
+                startActivity(i);
+            }
+        });
     }
 
 }

@@ -1,5 +1,6 @@
 package com.example.mad_project_design_phase;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -90,6 +92,15 @@ public String userID;
                     }
                 });
 
+        holder.restCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),Restaurant.class);
+                intent.putExtra("RestID",getRef(position).getKey());
+                v.getContext().startActivity(intent);
+            }
+        });
+
         holder.favButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -118,6 +129,7 @@ public String userID;
         ImageView logoImg,mainImage;
         TextView name,address,cuisineType,rating;
         ImageButton favButton;
+        CardView restCard;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -129,7 +141,7 @@ public String userID;
             cuisineType = itemView.findViewById(R.id.cuisineType);
             favButton = itemView.findViewById(R.id.favImageButton);
             rating = itemView.findViewById(R.id.restRatings);
-
+            restCard = itemView.findViewById(R.id.restCard);
         }
     }
 

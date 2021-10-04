@@ -2,6 +2,7 @@ package com.example.mad_project_design_phase;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -21,7 +22,7 @@ public class newhomess extends Working_Side {
     NavigationView navigationView;
     Toolbar toolbar;
     ImageButton notificationBtn,profileBtn,cartBtn;
-
+    String CustomerID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +44,9 @@ public class newhomess extends Working_Side {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+       // CustomerID = CustomerDetails.getCustomerID();
+       // Log.i("dddd",CustomerID);
     }
 
 

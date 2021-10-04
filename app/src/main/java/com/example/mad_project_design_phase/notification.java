@@ -28,7 +28,7 @@ public class notification extends Working_Side {
     NavigationView navigationView;
     Toolbar toolbar;
     ImageButton notificationBtn,profileBtn,cartBtn;
-
+    String CustomerID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +38,7 @@ public class notification extends Working_Side {
         profileBtn = findViewById(R.id.profileBtn);
         cartBtn = findViewById(R.id.cartBtn);
 
+        CustomerID = CustomerDetails.getCustomerID();
         drawerLayout = findViewById(R.id.drawerLayout2);
         navigationView = findViewById(R.id.navvd);
         toolbar = findViewById(R.id.toolbarss);
@@ -55,7 +56,7 @@ public class notification extends Working_Side {
 
         FirebaseRecyclerOptions<NotificationModel> options =
                 new FirebaseRecyclerOptions.Builder<NotificationModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Notifications").child("C1"), NotificationModel.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Notifications").child(CustomerID), NotificationModel.class)
                         .build();
 
 

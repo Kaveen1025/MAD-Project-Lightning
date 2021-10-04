@@ -29,6 +29,7 @@ public class my_favorite_restaurants extends Working_Side{
     Toolbar toolbar;
     ImageButton notificationBtn,profileBtn,cartBtn;
     //Intent i;
+    String CustomerID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,7 @@ public class my_favorite_restaurants extends Working_Side{
         setContentView(R.layout.activity_my_favorite_restaurants);
 
 
-
+        CustomerID = CustomerDetails.getCustomerID();
         notificationBtn = findViewById(R.id.notificationBtn);
         profileBtn = findViewById(R.id.profileBtn);
         cartBtn = findViewById(R.id.cartBtn);
@@ -65,7 +66,7 @@ public class my_favorite_restaurants extends Working_Side{
 
         FirebaseRecyclerOptions<FavoriteRestaurant> options =
                 new FirebaseRecyclerOptions.Builder<FavoriteRestaurant>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("FavoriteRestaurant").child("C1"), FavoriteRestaurant.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("FavoriteRestaurant").child(CustomerID), FavoriteRestaurant.class)
                         .build();
 
 

@@ -5,6 +5,7 @@ package com.example.mad_project_design_phase;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -76,6 +77,14 @@ public class CardDetailsAdapter extends FirebaseRecyclerAdapter<CardDetailsModel
             }
         });
 
+        holder.btnCEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),edit_card.class);
+                intent.putExtra("CardID",getRef(position).getKey());
+                v.getContext().startActivity(intent);
+            }
+        });
 
 
     }
@@ -95,7 +104,7 @@ public class CardDetailsAdapter extends FirebaseRecyclerAdapter<CardDetailsModel
 
 
         TextView cardBank,cardDate,cardHolder,cardType,cardNumber;
-        Button btnDelete;
+        Button btnDelete,btnCEdit;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -108,7 +117,7 @@ public class CardDetailsAdapter extends FirebaseRecyclerAdapter<CardDetailsModel
 
 
             btnDelete =itemView.findViewById(R.id.btnDelete);
-
+            btnCEdit = itemView.findViewById(R.id.btnCEdit);
         }
     }
 

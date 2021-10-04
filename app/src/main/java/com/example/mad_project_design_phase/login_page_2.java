@@ -80,6 +80,11 @@ public class login_page_2 extends AppCompatActivity {
                     Toast.makeText(login_page_2.this, "Login Success!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(login_page_2.this,newhomess.class);
                     intent.putExtra("UserID",auth.getCurrentUser().getUid());
+
+
+                   // CustomerDetails.setCustomerID(auth.getCurrentUser().getUid());
+
+                    CustomerDetails.setCustomerID("C1");
                     startActivity(intent);
 
                 }else{

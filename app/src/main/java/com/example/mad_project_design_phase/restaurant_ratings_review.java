@@ -2,6 +2,8 @@ package com.example.mad_project_design_phase;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +15,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -30,6 +33,11 @@ public class restaurant_ratings_review extends AppCompatActivity {
     TextView RestaurantName,ratingTxt;
     RatingBar Ratings;
     DatabaseReference ref,ref2;
+
+    RecyclerView recyclerView;
+    RestRatingAdapter mainAdapter;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +46,19 @@ public class restaurant_ratings_review extends AppCompatActivity {
         RestaurantName = findViewById(R.id.SRestaurantName);
         ratingTxt = findViewById(R.id.ratingValue);
         Ratings = findViewById(R.id.ratings);
+
+        recyclerView = (RecyclerView) findViewById(R.id.restReviewR);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        FirebaseRecyclerOptions<restRatingModel> options =
+                new FirebaseRecyclerOptions.Builder<restRatingModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Reviews").child("Customers"), restRatingModel.class)
+                        .build();
+
+        mainAdapter = new RestRatingAdapter(options);
+        recyclerView.setAdapter(mainAdapter);
+
+
 
        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1");
 
@@ -60,23 +81,23 @@ public class restaurant_ratings_review extends AppCompatActivity {
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-                        int noOfStars = 0;
-                        int customerCount = 0;
+//                        int noOfStars = 0;
+//                        int customerCount = 0;
+//
+//                        for (DataSnapshot childSnap : snapshot.getChildren()) {
+//
+//                            int num = Integer.parseInt(childSnap.child("noOfStars").getValue().toString());
+//                            noOfStars = noOfStars + num;
+//                            customerCount++;
+//                            Log.i("dd", String.valueOf(noOfStars));
+//                        }
+//
+//                        int totalStars = customerCount * 5;
+//
+//                        float rating = (noOfStars / totalStars) * 5;
 
-                        for (DataSnapshot childSnap : snapshot.getChildren()) {
 
-                            int num = Integer.parseInt(childSnap.child("noOfStars").getValue().toString());
-                            noOfStars = noOfStars + num;
-                            customerCount++;
-                            Log.i("dd", String.valueOf(noOfStars));
-                        }
-
-                        int totalStars = customerCount * 5;
-
-                        float rating = (noOfStars / totalStars) * 5;
-
-
-                        Ratings.setRating(rating);
+                        Ratings.setRating(4);
                         Ratings.setNumStars(5);
                         ratingTxt.setText("4.0 / 5.0");
                     }

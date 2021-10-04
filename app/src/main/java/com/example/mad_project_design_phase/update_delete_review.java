@@ -44,7 +44,7 @@ public class update_delete_review extends Working_Side {
     Toolbar toolbar;
     ImageButton notificationBtn,profileBtn,cartBtn;
     Intent intent;
-    String FoodID,RestaurantID;
+    String FoodID,RestaurantID,CustomerID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,7 @@ public class update_delete_review extends Working_Side {
         intent = getIntent();
         FoodID = intent.getStringExtra("FoodID");
         RestaurantID = intent.getStringExtra("RestID");
+        CustomerID = CustomerDetails.getCustomerID();
 
         notificationBtn = findViewById(R.id.notificationBtn);
         profileBtn = findViewById(R.id.profileBtn);
@@ -82,7 +83,7 @@ public class update_delete_review extends Working_Side {
 
 
         ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Food").child(FoodID).child("FoodReviews")
-                .child("Customers").child("C1");
+                .child("Customers").child(CustomerID);
         reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Food").child(FoodID).child("FoodDetails");
         ref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -133,7 +134,7 @@ public class update_delete_review extends Working_Side {
 
             public void onClick(View v){
                 DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestaurantID).child("Food").child(FoodID).child("FoodReviews")
-                        .child("Customers").child("C1");
+                        .child("Customers").child(CustomerID);
 
                 delRef.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -154,6 +155,16 @@ public class update_delete_review extends Working_Side {
 
     protected void onResume() {
         super.onResume();
+
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(update_delete_review.this,update_review.class);
+                intent.putExtra("RestID",RestaurantID);
+                intent.putExtra("FoodID",FoodID);
+                startActivity(intent);
+            }
+        });
 
         notificationBtn.setOnClickListener(new View.OnClickListener() {
             @Override

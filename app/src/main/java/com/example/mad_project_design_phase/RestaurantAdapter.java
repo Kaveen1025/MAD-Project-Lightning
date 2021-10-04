@@ -2,6 +2,8 @@ package com.example.mad_project_design_phase;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -45,9 +48,30 @@ public class RestaurantAdapter extends FirebaseRecyclerAdapter<RestaurantModel, 
         Glide.with(holder.imgMenu.getContext())
                 .load(model.getFoodImage())
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
-                //.circleCrop()
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.imgMenu);
+
+
+        holder.oneFoodCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),create_review.class);
+                intent.putExtra("RestID",getRef(position).getParent().getParent().getKey());
+                intent.putExtra("FoodID",getRef(position).getKey());
+
+                v.getContext().startActivity(intent);
+            }
+        });
+
+        holder.btnRatings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),rate_food.class);
+                intent.putExtra("RestID",getRef(position).getParent().getParent().getKey());
+                intent.putExtra("FoodID",getRef(position).getKey());
+                v.getContext().startActivity(intent);
+            }
+        });
     }
     @NonNull @NotNull @Override
     public myViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
@@ -62,6 +86,8 @@ public class RestaurantAdapter extends FirebaseRecyclerAdapter<RestaurantModel, 
         TextView name,price;
         ImageView imgMenu;
         Button btnRatings;
+        CardView oneFoodCard;
+
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -70,6 +96,7 @@ public class RestaurantAdapter extends FirebaseRecyclerAdapter<RestaurantModel, 
             price = (TextView)itemView.findViewById(R.id.resPrice);
             imgMenu = itemView.findViewById(R.id.imgMenu);
             btnRatings =itemView.findViewById(R.id.btnRatings);
+            oneFoodCard = itemView.findViewById(R.id.oneFoodCard);
 
         }
     }

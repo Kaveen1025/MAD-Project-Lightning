@@ -27,12 +27,13 @@ public class purchase_history extends Working_Side{
     Toolbar toolbar;
     ImageButton notificationBtn,profileBtn,cartBtn;
 
+    String CustomerID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_purchase_history);
 
-
+        CustomerID = CustomerDetails.getCustomerID();
         notificationBtn = findViewById(R.id.notificationBtn);
         profileBtn = findViewById(R.id.profileBtn);
         cartBtn = findViewById(R.id.cartBtn);
@@ -56,7 +57,7 @@ public class purchase_history extends Working_Side{
 
         FirebaseRecyclerOptions<PurchaseHistoryModel> options =
                 new FirebaseRecyclerOptions.Builder<PurchaseHistoryModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("PurchaseHistory").child("C1"), PurchaseHistoryModel.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("PurchaseHistory").child(CustomerID), PurchaseHistoryModel.class)
                         .build();
 
 

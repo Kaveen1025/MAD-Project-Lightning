@@ -28,16 +28,19 @@ public class my_restaurant_review extends Working_Side {
     NavigationView navigationView;
     Toolbar toolbar;
     ImageButton notificationBtn,profileBtn,cartBtn;
-
+    String CustomerID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_restaurant_review);
 
-
+        CustomerID = CustomerDetails.getCustomerID();
         notificationBtn = findViewById(R.id.notificationBtn);
         profileBtn = findViewById(R.id.profileBtn);
         cartBtn = findViewById(R.id.cartBtn);
+
+
+
 
         drawerLayout = findViewById(R.id.drawerLayout2);
         navigationView = findViewById(R.id.navvd);
@@ -58,7 +61,7 @@ public class my_restaurant_review extends Working_Side {
 
         FirebaseRecyclerOptions<RCustomerReview> options =
                 new FirebaseRecyclerOptions.Builder<RCustomerReview>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("CustomerRestaurantReviews").child("C1"), RCustomerReview.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("CustomerRestaurantReviews").child(CustomerID), RCustomerReview.class)
                         .build();
 
 

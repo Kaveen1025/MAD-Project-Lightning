@@ -29,6 +29,8 @@ public class card_details extends Working_Side {
     ImageButton notificationBtn,profileBtn,cartBtn;
     ImageButton addcard;
 
+    String CustomerID;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_details);
@@ -37,6 +39,8 @@ public class card_details extends Working_Side {
         profileBtn = findViewById(R.id.profileBtn);
         cartBtn = findViewById(R.id.cartBtn);
 
+        //CustomerID = CustomerDetails.getCustomerID();
+        CustomerID = "DgaCUSQDSOOgGnoFmv3ojR3vpH73";
         drawerLayout = findViewById(R.id.drawerLayout2);
         navigationView = findViewById(R.id.navvd);
         toolbar = findViewById(R.id.toolbarss);
@@ -57,7 +61,7 @@ public class card_details extends Working_Side {
 
         FirebaseRecyclerOptions<CardDetailsModel> options =
                 new FirebaseRecyclerOptions.Builder<CardDetailsModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Payment").child("DgaCUSQDSOOgGnoFmv3ojR3vpH73"), CardDetailsModel.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Payment").child(CustomerID), CardDetailsModel.class)
                         .build();
 
 

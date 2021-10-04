@@ -7,118 +7,6 @@
     tools:context=".customise_food">
 
 
-    <CheckBox
-        android:id="@+id/chk_option1"
-        android:layout_width="134dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="380dp"
-        android:text="@string/customize_item1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tv_p1"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <TextView
-        android:id="@+id/tv_p2"
-        android:layout_width="136dp"
-        android:layout_height="40dp"
-        android:gravity="fill"
-        android:text="@string/customize_price2"
-        android:textSize="16sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/chk_option2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.813"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_p1"
-        android:layout_width="134dp"
-        android:layout_height="40dp"
-        android:gravity="fill"
-        android:text="@string/customize_price1"
-        android:textSize="16sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/chk_option1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.815"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_p3"
-        android:layout_width="134dp"
-        android:layout_height="40dp"
-        android:gravity="fill"
-        android:text="@string/customize_price3"
-        android:textSize="16sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/chk_option3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.815"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/chk_option4"
-        android:layout_width="134dp"
-        android:layout_height="40dp"
-        android:text="@string/customize_item4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tv_p4"
-        app:layout_constraintHorizontal_bias="0.351"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chk_option3"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <TextView
-        android:id="@+id/tv_p4"
-        android:layout_width="134dp"
-        android:layout_height="40dp"
-        android:gravity="fill"
-        android:text="@string/customize_price4"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.812"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_p3"
-        app:layout_constraintVertical_bias="0.0" />
-
-
-    <CheckBox
-        android:id="@+id/chk_option3"
-        android:layout_width="134dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginEnd="251dp"
-        android:layout_marginRight="251dp"
-        android:layout_marginBottom="300dp"
-        android:text="@string/customize_item3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <CheckBox
-        android:id="@+id/chk_option2"
-        android:layout_width="134dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginEnd="251dp"
-        android:layout_marginRight="251dp"
-        android:layout_marginBottom="340dp"
-        android:text="@string/customize_item2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
-
     <TextView
         android:id="@+id/textView24"
         android:layout_width="82dp"
@@ -250,6 +138,123 @@
                 android:layout_height="match_parent">
 
 
+                <CheckBox
+                    android:id="@+id/chk_option1"
+                    android:layout_width="134dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginEnd="250dp"
+                    android:layout_marginRight="250dp"
+                    android:layout_marginBottom="345dp"
+                    android:text="@string/customize_item1"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/tv_p1"
+                    android:layout_width="134dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="64dp"
+                    android:layout_marginRight="64dp"
+                    android:layout_marginBottom="343dp"
+                    android:gravity="fill"
+                    android:text="@string/customize_price1"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/chk_option2"
+                    android:layout_width="134dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginEnd="250dp"
+                    android:layout_marginRight="250dp"
+                    android:layout_marginBottom="306dp"
+                    android:text="@string/customize_item2"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/tv_p2"
+                    android:layout_width="136dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="60dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginBottom="302dp"
+                    android:gravity="fill"
+                    android:text="@string/customize_price2"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/chk_option3"
+                    android:layout_width="134dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginEnd="251dp"
+                    android:layout_marginRight="251dp"
+                    android:layout_marginBottom="266dp"
+                    android:text="@string/customize_item3"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/tv_p3"
+                    android:layout_width="134dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginEnd="61dp"
+                    android:layout_marginRight="61dp"
+                    android:layout_marginBottom="262dp"
+                    android:gravity="fill"
+                    android:text="@string/customize_price3"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/chk_option4"
+                    android:layout_width="134dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="245dp"
+                    android:layout_marginRight="245dp"
+                    android:layout_marginBottom="223dp"
+                    android:text="@string/customize_item4"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/tv_p4"
+                    android:layout_width="134dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="61dp"
+                    android:layout_marginRight="61dp"
+                    android:layout_marginBottom="222dp"
+                    android:gravity="fill"
+                    android:text="@string/customize_price4"
+                    android:textSize="16sp" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView7"
                     android:layout_width="409dp"
@@ -320,10 +325,10 @@
                             android:layout_alignParentBottom="true"
                             android:layout_marginStart="0dp"
                             android:layout_marginLeft="0dp"
-                            android:layout_marginTop="-86dp"
+                            android:layout_marginTop="-88dp"
                             android:layout_marginEnd="0dp"
                             android:layout_marginRight="0dp"
-                            android:layout_marginBottom="86dp"
+                            android:layout_marginBottom="88dp"
                             android:background="?android:attr/selectableItemBackground"
                             android:scaleType="fitCenter"
                             app:srcCompat="@drawable/food4" />

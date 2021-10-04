@@ -48,12 +48,16 @@ public class create_review extends Working_Side {
     Toolbar toolbar;
     ImageButton notificationBtn,profileBtn,cartBtn;
 
+    Intent intent;
+    String RestID,FoodID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_review);
-
-
+        intent = getIntent();
+        RestID = intent.getStringExtra("RestID");
+        FoodID = intent.getStringExtra("FoodID");
         notificationBtn = findViewById(R.id.notificationBtn);
         profileBtn = findViewById(R.id.profileBtn);
         cartBtn = findViewById(R.id.cartBtn);
@@ -78,8 +82,8 @@ public class create_review extends Working_Side {
         food = (ImageView) findViewById(R.id.img_food);
         url = (TextView) findViewById(R.id.img_url);
 
-        reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodReviews").child("Customers");
-        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Food").child("F1").child("FoodDetails");
+        reff = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestID).child("Food").child(FoodID).child("FoodReviews").child("Customers");
+        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestID).child("Food").child(FoodID).child("FoodDetails");
         btnSubmit.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 String s = String.valueOf(rtbar.getRating());

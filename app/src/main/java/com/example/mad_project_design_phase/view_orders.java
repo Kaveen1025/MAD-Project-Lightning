@@ -29,12 +29,13 @@ public class view_orders extends Working_Side {
     Toolbar toolbar;
     ImageButton notificationBtn,profileBtn,cartBtn;
 
+    String CustomerID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_orders);
 
-
+        CustomerID = CustomerDetails.getCustomerID();
         notificationBtn = findViewById(R.id.notificationBtn);
         profileBtn = findViewById(R.id.profileBtn);
         cartBtn = findViewById(R.id.cartBtn);
@@ -55,7 +56,7 @@ public class view_orders extends Working_Side {
 
         FirebaseRecyclerOptions<OrderModel> options =
                 new FirebaseRecyclerOptions.Builder<OrderModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Orders").child("C1"), OrderModel.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Orders").child(CustomerID), OrderModel.class)
                         .build();
 
         orderAdapter = new OrderAdapter(options);
