@@ -75,38 +75,38 @@ public class restaurant_ratings_review extends AppCompatActivity {
            }
        });
 
-      //  ref2 = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1");
 
-        FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Reviews").child("Customers")
-                .addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-//                        int noOfStars = 0;
-//                        int customerCount = 0;
+
+//        FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Reviews").child("Customers")
+//                .addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+////                        int noOfStars = 0;
+////                        int customerCount = 0;
+////
+////                        for (DataSnapshot childSnap : snapshot.getChildren()) {
+////
+////                            int num = Integer.parseInt(childSnap.child("noOfStars").getValue().toString());
+////                            noOfStars = noOfStars + num;
+////                            customerCount++;
+////                            Log.i("dd", String.valueOf(noOfStars));
+////                        }
+////
+////                        int totalStars = customerCount * 5;
+////
+////                        float rating = (noOfStars / totalStars) * 5;
 //
-//                        for (DataSnapshot childSnap : snapshot.getChildren()) {
 //
-//                            int num = Integer.parseInt(childSnap.child("noOfStars").getValue().toString());
-//                            noOfStars = noOfStars + num;
-//                            customerCount++;
-//                            Log.i("dd", String.valueOf(noOfStars));
-//                        }
+//                        Ratings.setRating(4);
+//                        Ratings.setNumStars(5);
+//                        ratingTxt.setText("4.0 / 5.0");
+//                    }
 //
-//                        int totalStars = customerCount * 5;
+//                    @Override
+//                    public void onCancelled(@NonNull @NotNull DatabaseError error) {
 //
-//                        float rating = (noOfStars / totalStars) * 5;
-
-
-                        Ratings.setRating(4);
-                        Ratings.setNumStars(5);
-                        ratingTxt.setText("4.0 / 5.0");
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull @NotNull DatabaseError error) {
-
-                    }
-                });
+//                    }
+//                });
 
 
 

@@ -1,5 +1,6 @@
 package com.example.mad_project_design_phase;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,8 +33,10 @@ public class RestRatingAdapter extends FirebaseRecyclerAdapter<restRatingModel,R
         holder.name.setText(model1.getName());
         holder.review.setText(model1.getReview());
         holder.noOfstars.setText(model1.getNoOfStars());
-        Glide.with(holder.userImage.getContext()).load(model1.getUserImage()).placeholder(R.drawable.common_google_signin_btn_icon_dark)
-                .error(R.drawable.common_google_signin_btn_icon_dark_normal).into(holder.userImage);
+//        Glide.with(holder.userImage.getContext()).load(model1.getUserImage()).placeholder(R.drawable.common_google_signin_btn_icon_dark)
+//                .error(R.drawable.common_google_signin_btn_icon_dark_normal).into(holder.userImage);
+
+       // Log.i("dddddddd", "onBindViewHolder: fsdf");
     }
 
     public myViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
