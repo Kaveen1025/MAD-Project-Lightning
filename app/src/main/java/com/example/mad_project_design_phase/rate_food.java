@@ -16,6 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
@@ -83,7 +84,7 @@ public class rate_food extends Working_Side {
         adapter = new rate_Adapter(options);
         recyclerView.setAdapter( adapter);
 
-        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestID).child("Food").child(FoodID).child("FoodDetails");
+        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestID).child("Food").child(FoodID);
 
         ref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -91,9 +92,12 @@ public class rate_food extends Working_Side {
                 String rateName =  snapshot.child("name").getValue().toString();
                 String rateDes =  snapshot.child("description").getValue().toString();
                 String link = snapshot.child("foodImage").getValue(String.class);
-                url.setText(link);
-                Picasso.get()
+
+
+                Glide.with(img.getContext())
                         .load(link)
+                        .placeholder(R.drawable.common_google_signin_btn_icon_dark)
+                        .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                         .into(img);
                 name.setText(rateName);
                 des.setText(rateDes);
