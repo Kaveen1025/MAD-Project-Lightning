@@ -49,7 +49,7 @@ public class favouriteFood_Adapter extends FirebaseRecyclerAdapter<FavouriteMode
         holder.deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseDatabase.getInstance().getReference().child("FavoriteFood").child(UserID).child(getRef(position).getKey()).removeValue();
+                FirebaseDatabase.getInstance().getReference().child("FavoriteFood").child("C1").child(getRef(position).getKey()).removeValue();
             }
         });
 
