@@ -41,26 +41,53 @@ public class show_calories extends AppCompatActivity {
         HashMap<String,Integer> j = new HashMap<>();
         Intent intent = getIntent();
 
-      j.put(intent.getStringExtra("opt1"),Integer.parseInt(intent.getStringExtra("calories1")));
-      j.put(intent.getStringExtra("opt2"),Integer.parseInt(intent.getStringExtra("calories2")));
-      j.put(intent.getStringExtra("opt3"),Integer.parseInt(intent.getStringExtra("calories3")));
-      j.put(intent.getStringExtra("opt4"),Integer.parseInt(intent.getStringExtra("calories4")));
+        if(intent.hasExtra("op1")){
+            String op = intent.getStringExtra("op1");
+            String cal = intent.getStringExtra("cal1");
+            j.put(op,Integer.parseInt(cal));
+        }
+         if(intent.hasExtra("op2")){
+             String op = intent.getStringExtra("op2");
+             String cal = intent.getStringExtra("cal2");
+             j.put(op,Integer.parseInt(cal));
+         }
+         if(intent.hasExtra("op3")){
+             String op = intent.getStringExtra("op3");
+             String cal = intent.getStringExtra("cal3");
+             j.put(op,Integer.parseInt(cal));
+         }
+         if(intent.hasExtra("op4")){
+             String op = intent.getStringExtra("op4");
+             String cal = intent.getStringExtra("cal4");
+             j.put(op,Integer.parseInt(cal));
+         }
+
+//         if(j.isEmpty()){
+//             TotalCalories.setText(intent.getStringExtra("InitialCal") + " kcal");
+//         }
+
+
+//      j.put(intent.getStringExtra("op1"),Integer.parseInt(intent.getStringExtra("cal1")));
+//      j.put(intent.getStringExtra("op2"),Integer.parseInt(intent.getStringExtra("cal2")));
+//      j.put(intent.getStringExtra("op3"),Integer.parseInt(intent.getStringExtra("cal3")));
+//      j.put(intent.getStringExtra("op4"),Integer.parseInt(intent.getStringExtra("cal4")));
 
 
 
-     //   j.put("Spaghetti",129);
-       // j.put("Chicken",160);
-        //j.put("Cheese",189);
-       //j.put("Creamy sauce", 62);
+//
+//     j.put("Spaghetti",129);
+//          j.put("Chicken",160);
+//        j.put("Cheese",189);
+//       j.put("Creamy sauce", 62);
 //
         // need image
         FoodName.setText(intent.getStringExtra("FoodName").toString());
-
+        count = 0;
         for(Map.Entry<String, Integer> set : j.entrySet()) {
 
 
             TextView s = findViewById(optionNames[count]);
-            s.setText(set.getKey().toString());
+            s.setText(set.getKey());
 
             TextView d = findViewById(optionCal[count]);
             d.setText(String.valueOf(set.getValue()) + " kcal");

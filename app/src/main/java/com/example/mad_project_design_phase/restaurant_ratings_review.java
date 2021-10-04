@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,7 +46,7 @@ public class restaurant_ratings_review extends AppCompatActivity {
         ratingTxt = findViewById(R.id.ratingValue);
         Ratings = findViewById(R.id.ratings);
 
-        recyclerView = (RecyclerView) findViewById(R.id.restReviewR);
+        recyclerView = (RecyclerView) findViewById(R.id.RestaurantReview_rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<restRatingModel> options =
@@ -107,12 +106,6 @@ public class restaurant_ratings_review extends AppCompatActivity {
 //
 //                    }
 //                });
-
-
-
-
-
-
 
 
 

@@ -158,15 +158,15 @@
                     android:layout_height="match_parent">
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/restReviewR"
+                        android:id="@+id/RestaurantReview_rv"
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
+                        android:layout_height="214dp"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginEnd="-10dp"
-                        android:layout_marginRight="-10dp"
-                        android:layout_marginBottom="133dp" />
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="94dp" />
 
                     <Button
                         android:id="@+id/SubmitNewReview"

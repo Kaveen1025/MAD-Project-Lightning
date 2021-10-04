@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class favouriteFood_Adapter extends FirebaseRecyclerAdapter<FavouriteModel,favouriteFood_Adapter.myViewHolder> {
 
-    String UserID;
+
 
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See

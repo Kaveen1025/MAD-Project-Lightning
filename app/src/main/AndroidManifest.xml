@@ -49,6 +49,7 @@
         <activity android:name=".checkout"/>
         <activity android:name=".update_delete_review"/>
 
+
     </application>
 
 </manifest>

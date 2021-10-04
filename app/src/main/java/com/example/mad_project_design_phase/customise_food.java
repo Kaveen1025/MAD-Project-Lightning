@@ -49,7 +49,7 @@ public class customise_food extends Working_Side {
     Toolbar toolbar;
     ImageButton notificationBtn,profileBtn,cartBtn;
 
-
+    String cal1,cal2,cal3,cal4,initialCal;
 
     DatabaseReference ref1, ref2, ref3, ref4, ref, ref5;
 
@@ -110,8 +110,11 @@ public class customise_food extends Working_Side {
 
                 String opt1 =datasnapshot.child("optionName").getValue().toString();
                 String price1 = datasnapshot.child("price").getValue().toString();
+                cal1 = datasnapshot.child("calories").getValue().toString();
+
                 op1.setText(opt1);
                 p1.setText(price1);
+
             }
 
             @Override
@@ -125,6 +128,7 @@ public class customise_food extends Working_Side {
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
                 String opt2 = datasnapshot.child("optionName").getValue().toString();
                 String price2 = datasnapshot.child("price").getValue().toString();
+                cal2 = datasnapshot.child("calories").getValue().toString();
                 op2.setText(opt2);
                 p2.setText(price2);
             }
@@ -140,6 +144,7 @@ public class customise_food extends Working_Side {
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
                 String opt3 = datasnapshot.child("optionName").getValue().toString();
                 String price3 = datasnapshot.child("price").getValue().toString();
+                cal3 = datasnapshot.child("calories").getValue().toString();
                 op3.setText(opt3);
                 p3.setText(price3);
             }
@@ -155,6 +160,7 @@ public class customise_food extends Working_Side {
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
                 String opt4 = datasnapshot.child("optionName").getValue().toString();
                 String price4 = datasnapshot.child("price").getValue().toString();
+                cal4 = datasnapshot.child("calories").getValue().toString();
                 op4.setText(opt4);
                 p4.setText(price4);
             }
@@ -169,6 +175,7 @@ public class customise_food extends Working_Side {
             @Override
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
                  total = datasnapshot.child("price").getValue().toString();
+
                 totalPrice.setText(total);
             }
 
@@ -193,6 +200,8 @@ public class customise_food extends Working_Side {
                         .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                         .into(food);
                des.setText(foodDes);
+
+                initialCal = dataSnapshot.child("initialCal").getValue().toString();
 
             }
 
@@ -307,26 +316,32 @@ public class customise_food extends Working_Side {
             @Override
             public void onClick(View view) {
                 Intent calCalories = new Intent(customise_food.this,show_calories.class);
-                HashMap<String,Integer> selectFoodList = new HashMap();
+               // HashMap<String,Integer> selectFoodList = new HashMap();
                 if(op1.isChecked()){
                     calCalories.putExtra("op1",op1.getText().toString());
-                    calCalories.putExtra("op1Price",p1.getText().toString());
+                    calCalories.putExtra("cal1",cal1);
+
+                   // Log.i("abcd", cal1);
+
                 }
                 if(op2.isChecked()){
                     calCalories.putExtra("op2",op2.getText().toString());
-                    calCalories.putExtra("op2Price",p2.getText().toString());
+                    calCalories.putExtra("cal2",cal2);
+
                 }
                 if(op3.isChecked()){
                     calCalories.putExtra("op3",op3.getText().toString());
-                    calCalories.putExtra("op3Price",p3.getText().toString());
+                    calCalories.putExtra("cal3",cal3);
                 }
                 if(op4.isChecked()){
                     calCalories.putExtra("op4",op4.getText().toString());
-                    calCalories.putExtra("op4Price",p4.getText().toString());
+                    calCalories.putExtra("cal4",cal4);
                 }
 
+                calCalories.putExtra("InitialCal",initialCal);
+
                 calCalories.putExtra("FoodName",foodname);
-                startActivity(calCalories);
+                 startActivity(calCalories);
 
             }
         });
