@@ -74,7 +74,7 @@ public class addAcard extends Working_Side {
         awesomeValidation.addValidation(this,R.id.txtCardType,
                 RegexTemplate.NOT_EMPTY,R.string.invalid_type);
         //Add Validation For CardNumber
-        awesomeValidation.addValidation(this,R.id.txtCardNumber, "[0-9]{19}$",R.string.invalid_number);
+//        awesomeValidation.addValidation(this,R.id.txtCardNumber, "[0-9]{19}$",R.string.invalid_number);
         //Add Validation For CardHolder
         awesomeValidation.addValidation(this,R.id.txtCardHolder,
                 RegexTemplate.NOT_EMPTY,R.string.invalid_name);
