@@ -28,31 +28,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.216" />
 
-    <LinearLayout
-        android:layout_width="406dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="54dp"
-        android:baselineAligned="false"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <SearchView
-            android:id="@+id/searchView"
-            android:layout_width="311dp"
-            android:layout_height="match_parent" />
-
-        <Button
-            android:id="@+id/searchSubmit"
-            android:layout_width="77dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/Search"
-            app:backgroundTint="@color/ThemeGreen" />
-    </LinearLayout>
-
-
 
     <androidx.drawerlayout.widget.DrawerLayout
         android:layout_width="match_parent"
@@ -125,6 +100,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+
+                    <LinearLayout
+                        android:layout_width="406dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="6dp"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <SearchView
+                            android:id="@+id/searchView"
+                            android:layout_width="311dp"
+                            android:layout_height="match_parent" />
+
+                        <Button
+                            android:id="@+id/searchSubmit"
+                            android:layout_width="77dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/Search"
+                            app:backgroundTint="@color/ThemeGreen"
+                            tools:ignore="TextContrastCheck" />
+                    </LinearLayout>
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/vegetarian"
