@@ -81,8 +81,12 @@ public class Restaurant extends Working_Side {
 //
                     resName.setText(snapshot.child("name").getValue().toString());
                     resAddress.setText(snapshot.child("address").getValue().toString());
-                    Glide.with(imgRestu).load(snapshot.child("mainImage")).placeholder(R.drawable.common_google_signin_btn_icon_dark)
-                            .error(R.drawable.common_google_signin_btn_icon_dark_normal).into(imgRestu);
+
+                    Glide.with(imgRestu.getContext())
+                            .load(snapshot.child("mainImage"))
+                            .placeholder(R.drawable.common_google_signin_btn_icon_dark)
+                            .error(R.drawable.common_google_signin_btn_icon_dark_normal)
+                            .into(imgRestu);
 
                 }
                 else {

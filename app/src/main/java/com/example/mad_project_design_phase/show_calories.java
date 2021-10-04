@@ -39,28 +39,28 @@ public class show_calories extends AppCompatActivity {
         closeBtn = findViewById(R.id.closeBtn22);
 
         HashMap<String,Integer> j = new HashMap<>();
-      /*  Intent intent = getIntent();
+        Intent intent = getIntent();
 
-      j.put(intent.getStringExtra("Opt1Value"),intent.getStringExtra("calories1"));
-      j.put(intent.getStringExtra("Opt2Value"),intent.getStringExtra("calories2"));
-      j.put(intent.getStringExtra("Opt3Value"),intent.getStringExtra("calories3"));
-      j.put(intent.getStringExtra("Opt4Value"),intent.getStringExtra("calories4"));
+      j.put(intent.getStringExtra("opt1"),Integer.parseInt(intent.getStringExtra("calories1")));
+      j.put(intent.getStringExtra("opt2"),Integer.parseInt(intent.getStringExtra("calories2")));
+      j.put(intent.getStringExtra("opt3"),Integer.parseInt(intent.getStringExtra("calories3")));
+      j.put(intent.getStringExtra("opt4"),Integer.parseInt(intent.getStringExtra("calories4")));
 
-       */
 
-        j.put("Spaghetti",129);
-        j.put("Chicken",160);
-        j.put("Cheese",189);
-       j.put("Creamy sauce", 62);
+
+     //   j.put("Spaghetti",129);
+       // j.put("Chicken",160);
+        //j.put("Cheese",189);
+       //j.put("Creamy sauce", 62);
 //
         // need image
-        FoodName.setText("Cheesy Chicken Spaghetti");
+        FoodName.setText(intent.getStringExtra("FoodName").toString());
 
         for(Map.Entry<String, Integer> set : j.entrySet()) {
 
 
             TextView s = findViewById(optionNames[count]);
-            s.setText(set.getKey());
+            s.setText(set.getKey().toString());
 
             TextView d = findViewById(optionCal[count]);
             d.setText(String.valueOf(set.getValue()) + " kcal");

@@ -57,11 +57,14 @@ public class customise_food extends Working_Side {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customise_food);
+//
+//        intent = getIntent();
+//        RestID = intent.getStringExtra("RestID");
+//        FoodID = intent.getStringExtra("FoodID");
+//        CustomerID = CustomerDetails.getCustomerID();
 
-        intent = getIntent();
-        RestID = intent.getStringExtra("RestID");
-        FoodID = intent.getStringExtra("FoodID");
-        CustomerID = CustomerDetails.getCustomerID();
+        RestID = "R3";
+        FoodID = "F1";
 
         CustomerID = CustomerDetails.getCustomerID();
         notificationBtn = findViewById(R.id.notificationBtn);
@@ -93,13 +96,13 @@ public class customise_food extends Working_Side {
         totalPrice = findViewById(R.id.txt_TotalPrice);
         addToCart = findViewById(R.id.btn_addtocart);
         showCal = findViewById(R.id.btn_showCal);
-
-        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestID).child("Food").child(FoodID).child("CustomizeOption");
+                                                                                                                                /// important change this
+        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestID).child("Food").child(FoodID).child("CutomizeOption");
         ref1 = ref.child("op1");
         ref2 = ref.child("op2");
         ref3 = ref.child("op3");
         ref4 = ref.child("op4");
-        ref5 = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestID).child("Food").child(FoodID).child("FoodDetails");
+        ref5 = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestID).child("Food").child(FoodID);
 
         ref1.addValueEventListener(new ValueEventListener() {
             @Override
@@ -178,6 +181,7 @@ public class customise_food extends Working_Side {
         ref5.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
                 foodDes = dataSnapshot.child("description").getValue().toString();
                 foodname = dataSnapshot.child("name").getValue().toString();
                 link = dataSnapshot.child("foodImage").getValue(String.class);
@@ -320,6 +324,8 @@ public class customise_food extends Working_Side {
                     calCalories.putExtra("op4",op4.getText().toString());
                     calCalories.putExtra("op4Price",p4.getText().toString());
                 }
+
+                calCalories.putExtra("FoodName",foodname);
                 startActivity(calCalories);
 
             }
