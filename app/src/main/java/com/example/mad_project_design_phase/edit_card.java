@@ -51,7 +51,7 @@ public class edit_card extends Working_Side {
 
 
 
-        CustomerID = CustomerDetails.getCustomerID();
+       // CustomerID = CustomerDetails.getCustomerID();
         notificationBtn = findViewById(R.id.notificationBtn);
         profileBtn = findViewById(R.id.profileBtn);
         cartBtn = findViewById(R.id.cartBtn);
