@@ -89,7 +89,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="21dp"
-                        android:layout_marginTop="28dp"
+                        android:layout_marginTop="10dp"
                         android:text="@string/btn_discover_rest"
                         app:backgroundTint="@color/ThemeGreen"
                         app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +103,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        android:layout_marginTop="28dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginRight="20dp"
                         android:text="@string/btn_search"
@@ -112,54 +112,19 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/foodRating_img"
-                        android:layout_width="wrap_content"
-                        android:layout_height="140dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="90dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginRight="15dp"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/rest" />
 
-                    <ImageView
-                        android:id="@+id/imageView16"
-                        android:layout_width="wrap_content"
-                        android:layout_height="45dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
+                    <com.denzcoskun.imageslider.ImageSlider
+                        android:id="@+id/slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="178dp"
                         android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="-6dp"
-                        android:layout_marginLeft="-6dp"
-                        android:layout_marginTop="138dp"
-                        android:layout_marginEnd="391dp"
-                        android:layout_marginRight="391dp"
-                        android:layout_marginBottom="563dp"
-                        app:srcCompat="@drawable/ic_a"
-                        tools:ignore="VectorDrawableCompat" />
+                        android:layout_marginTop="60dp"
+                        app:auto_cycle="true"
+                        app:corner_radius="5"
+                        app:delay="0"
+                        app:period="1000">
 
-                    <ImageView
-                        android:id="@+id/delete_icon"
-                        android:layout_width="25dp"
-                        android:layout_height="38dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="138dp"
-                        android:layout_marginEnd="-5dp"
-                        android:layout_marginRight="-5dp"
-                        app:srcCompat="@drawable/ic_a_left"
-                        tools:ignore="VectorDrawableCompat" />
+                    </com.denzcoskun.imageslider.ImageSlider>
 
                     <TextView
                         android:id="@+id/random_dishes"
@@ -168,10 +133,10 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        android:layout_marginTop="238dp"
+                        android:layout_marginTop="240dp"
                         android:layout_marginEnd="184dp"
                         android:layout_marginRight="184dp"
-                        android:layout_marginBottom="472dp"
+                        android:layout_marginBottom="460dp"
                         android:text="@string/random_dishes"
                         android:textColor="@color/ThemeGreen"
                         android:textSize="20sp"
@@ -203,7 +168,7 @@
                             app:layout_constraintTop_toTopOf="parent">
 
                             <ImageView
-                                android:id="@+id/imageView11"
+                                android:id="@+id/food_image1"
                                 android:layout_width="match_parent"
                                 android:layout_height="88dp"
                                 android:layout_alignParentStart="true"
@@ -216,7 +181,7 @@
                                 app:srcCompat="@drawable/burger" />
 
                             <TextView
-                                android:id="@+id/food_name9"
+                                android:id="@+id/food_name1"
                                 android:layout_width="129dp"
                                 android:layout_height="20dp"
                                 android:layout_alignParentStart="true"
@@ -229,7 +194,7 @@
                                 android:textColor="@color/ThemeBlack" />
 
                             <TextView
-                                android:id="@+id/des1"
+                                android:id="@+id/food1_des"
                                 android:layout_width="147dp"
                                 android:layout_height="57dp"
                                 android:layout_alignParentStart="true"
@@ -261,7 +226,7 @@
                                 android:textSize="12sp" />
 
                             <TextView
-                                android:id="@+id/favourite_cal"
+                                android:id="@+id/food1_price"
                                 android:layout_width="111dp"
                                 android:layout_height="18dp"
                                 android:layout_alignParentStart="true"
@@ -298,14 +263,14 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/favourite_img"
+                                android:id="@+id/food_image2"
                                 android:layout_width="match_parent"
                                 android:layout_height="88dp"
                                 android:scaleType="centerCrop"
                                 app:srcCompat="@drawable/milk_s" />
 
                             <TextView
-                                android:id="@+id/milk_shake"
+                                android:id="@+id/food_name2"
                                 android:layout_width="140dp"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentStart="true"
@@ -322,7 +287,7 @@
                                 android:textColor="@color/ThemeBlack" />
 
                             <TextView
-                                android:id="@+id/milk_s_des"
+                                android:id="@+id/food2_des"
                                 android:layout_width="144dp"
                                 android:layout_height="46dp"
                                 android:layout_alignParentStart="true"
@@ -354,7 +319,7 @@
                                 android:textSize="12sp" />
 
                             <TextView
-                                android:id="@+id/milk_s_price"
+                                android:id="@+id/food2_price"
                                 android:layout_width="106dp"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
@@ -412,7 +377,7 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/favourite_icon"
+                                android:id="@+id/restaurant_image"
                                 android:layout_width="match_parent"
                                 android:layout_height="128dp"
                                 android:layout_alignParentEnd="true"
@@ -473,12 +438,38 @@
                                 android:layout_alignParentBottom="true"
                                 android:layout_marginStart="9dp"
                                 android:layout_marginLeft="9dp"
-                                android:layout_marginEnd="8dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_marginBottom="1dp"
+                                android:layout_marginEnd="11dp"
+                                android:layout_marginRight="11dp"
+                                android:layout_marginBottom="3dp"
                                 android:text="@string/location"
                                 android:textColor="@color/ThemeBlack"
                                 android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/cuisine_type"
+                                android:layout_width="212dp"
+                                android:layout_height="31dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="23dp"
+                                android:textColor="@color/ThemeBlack"
+                                android:text="italian" />
+
+                            <TextView
+                                android:id="@+id/locations"
+                                android:layout_width="233dp"
+                                android:layout_height="34dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginEnd="19dp"
+                                android:layout_marginRight="19dp"
+                                android:layout_marginBottom="-2dp"
+                                android:textColor="@color/ThemeBlack"
+                                android:text="Kalutara" />
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
 

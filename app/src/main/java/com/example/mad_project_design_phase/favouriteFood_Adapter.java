@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -70,10 +69,10 @@ public class favouriteFood_Adapter extends FirebaseRecyclerAdapter<FavouriteMode
 
         public myViewHolder(@NonNull View itemView){
             super(itemView);
-            img = (ImageView) itemView.findViewById(R.id.favourite_img);
+            img = (ImageView) itemView.findViewById(R.id.food_image2);
             price = (TextView) itemView.findViewById(R.id.favourite_price);
             name = (TextView) itemView.findViewById(R.id.favourite_name);
-            calories = (TextView) itemView.findViewById(R.id.favourite_cal);
+            calories = (TextView) itemView.findViewById(R.id.food1_price);
             deleteBtn = (ImageButton) itemView.findViewById(R.id.delete_icon);
 
         }

@@ -8,19 +8,23 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import androidx.appcompat.widget.Toolbar;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
+import com.basgeekball.awesomevalidation.utility.RegexTemplate;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -66,6 +70,7 @@ public class edit_profile extends Working_Side {
     CircleImageView profile_image;
     Uri filepath;
     Bitmap bitmap;
+    AwesomeValidation awesomeValidation;
 
 
     DrawerLayout drawerLayout;
@@ -78,21 +83,6 @@ public class edit_profile extends Working_Side {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_edit_profile);
-
-        notificationBtn = findViewById(R.id.notificationBtn);
-        profileBtn = findViewById(R.id.profileBtn);
-        cartBtn = findViewById(R.id.cartBtn);
-
-
-        drawerLayout = findViewById(R.id.drawerLayout2);
-        navigationView = findViewById(R.id.navvd);
-        toolbar = findViewById(R.id.toolbarss);
-        setSupportActionBar(toolbar);
-        navigationView.bringToFront();
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-        navigationView.setNavigationItemSelectedListener(this);
 
         edit_fn = findViewById(R.id.edit_fn);
         edit_ln = findViewById(R.id.edit_ln);
@@ -108,7 +98,23 @@ public class edit_profile extends Working_Side {
         Upload_image = findViewById(R.id.Upload_image);
 
 
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("GGMo8PMil0YZXMlm09ys77peK7N2");// id **
+        notificationBtn = findViewById(R.id.notificationBtn);
+        profileBtn = findViewById(R.id.profileBtn);
+        cartBtn = findViewById(R.id.cartBtn);
+
+        drawerLayout = findViewById(R.id.drawerLayout2);
+        navigationView = findViewById(R.id.navvd);
+        toolbar = findViewById(R.id.toolbarss);
+        setSupportActionBar(toolbar);
+        navigationView.bringToFront();
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(this);
+
+
+
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("kOeeOYSJ4vURDGQJfj0xZuBnxSg1");// id **
         storageReference = FirebaseStorage.getInstance().getReference();
 
         Upload_image.setOnClickListener(new View.OnClickListener() {
@@ -168,94 +174,81 @@ public class edit_profile extends Working_Side {
 
         //btnUpdate
 
+        //Initialize validation style
+        awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
+
+        //add validation for first name
+        awesomeValidation.addValidation(this,R.id.edit_fn, RegexTemplate.NOT_EMPTY,R.string.invalid_name);
+
+        //add validation for last name
+        awesomeValidation.addValidation(this,R.id.edit_ln, RegexTemplate.NOT_EMPTY,R.string.invalidL_name);
+
+        //add validation for email
+        awesomeValidation.addValidation(this,R.id.edit_email, Patterns.EMAIL_ADDRESS,R.string.invalid_email);
+
+        //add validation for phone number
+        awesomeValidation.addValidation(this,R.id.edit_phone,"[0-9]{3}[0-9]{3}[0-9]{4}$",R.string.invali_mobile);
+
+        //add validation for address
+        awesomeValidation.addValidation(this,R.id.edit_add, RegexTemplate.NOT_EMPTY,R.string.invalid_address);
+
+//        //add validation for password
+//        awesomeValidation.addValidation(this,R.id.new_password,"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$",R.string.invalid_password);
+
+
+
 
         update_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if(!(current_password.getText().toString().isEmpty())){
-                    String enteredPassword = current_password.getText().toString();
-                    if(enteredPassword.equals(currentPassword)){
+                if (awesomeValidation.validate()) {
 
-                        if(new_password.getText().toString().equals(confirm_password.getText().toString())){
-                            HashMap customer = new HashMap();
-                            customer.put("password",new_password.getText().toString().trim());
-                            dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("YATaDgnUNUhCCMzAXWXuBz3RcVJ3");
+                    if(!(current_password.getText().toString().isEmpty())){
+                        String enteredPassword = current_password.getText().toString();
+                        if(enteredPassword.equals(currentPassword)){
 
-                            dbRef.updateChildren(customer).addOnCompleteListener(new OnCompleteListener() {
-                                @Override
-                                public void onComplete(@NonNull Task task) {
-                                    if(task.isSuccessful()){
-                                        Toast.makeText(edit_profile.this, "Password Changed Success", Toast.LENGTH_SHORT).show();
-                                    }else{
-                                        Toast.makeText(edit_profile.this, "Password Changed Failed", Toast.LENGTH_SHORT).show();
+                            if(new_password.getText().toString().equals(confirm_password.getText().toString())){
+                                HashMap customer = new HashMap();
+                                customer.put("password",new_password.getText().toString().trim());
+                                dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("kOeeOYSJ4vURDGQJfj0xZuBnxSg1");
+
+                                dbRef.updateChildren(customer).addOnCompleteListener(new OnCompleteListener() {
+                                    @Override
+                                    public void onComplete(@NonNull Task task) {
+                                        if(task.isSuccessful()){
+                                            Toast.makeText(edit_profile.this, "Password Changed Success", Toast.LENGTH_SHORT).show();
+                                        }else{
+                                            Toast.makeText(edit_profile.this, "Password Changed Failed", Toast.LENGTH_SHORT).show();
+                                        }
                                     }
-                                }
-                            });
-                        }else
-                        {
-                            Toast.makeText(edit_profile.this, "Password Mismatch", Toast.LENGTH_SHORT).show();
+                                });
+                            }else
+                            {
+                                Toast.makeText(edit_profile.this, "Password Mismatch", Toast.LENGTH_SHORT).show();
+                            }
+                        }else{
+
+                            Toast.makeText(edit_profile.this, "Invalid Current Password", Toast.LENGTH_SHORT).show();
                         }
                     }else{
-
-                        Toast.makeText(edit_profile.this, "Invalid Current Password", Toast.LENGTH_SHORT).show();
+                        updatetofirebase();
                     }
-            }else{
-                    updatetofirebase();
+
+
+
+                }else{
+
+
+                    Toast.makeText(getApplicationContext(),
+                            "Validation Failed", Toast.LENGTH_SHORT).show();
                 }
+
+
             }
         });
 
-
-
-//        update_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if(!(current_password.getText().toString().isEmpty())){
-//                    String enteredPassword = current_password.getText().toString();
-//                    if(enteredPassword.equals(currentPassword)){
-//
-//                        if(new_password.getText().toString().equals(confirm_password.getText().toString())){
-//                            HashMap customer = new HashMap();
-//                            customer.put("password",new_password.getText().toString().trim());
-//                            dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child(CustomerID);
-//
-//                            dbRef.updateChildren(customer).addOnCompleteListener(new OnCompleteListener() {
-//                                @Override
-//                                public void onComplete(@NonNull Task task) {
-//                                    if(task.isSuccessful()){
-//                                        Toast.makeText(edit_profile.this, "Password Changed Success", Toast.LENGTH_SHORT).show();
-//                                    }else{
-//                                        Toast.makeText(edit_profile.this, "Password Changed Failed", Toast.LENGTH_SHORT).show();
-//                                    }
-//                                }
-//                            });
-//                        }else
-//                        {
-//                            Toast.makeText(edit_profile.this, "Password Mismatch", Toast.LENGTH_SHORT).show();
-//                        }
-//                    }else{
-//
-//                        Toast.makeText(edit_profile.this, "Invalid Current Password", Toast.LENGTH_SHORT).show();
-//                    }
-//
-//                }else{
-//
-//                    String firstName = edit_fn.getText().toString().trim();
-//                    String lastName  = edit_ln.getText().toString().trim();
-//                    String email     = edit_email.getText().toString().trim();
-//                    String address   = edit_add.getText().toString().trim();
-//                    String phoneNumber =edit_phone.getText().toString().trim();
-//
-//                    UpdateUserProfile(firstName, lastName, email, address, phoneNumber);
-//                }
-//
-//            }
-
-//
-//        });
-//
- }
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -277,85 +270,61 @@ public class edit_profile extends Working_Side {
 
     public void updatetofirebase()
     {
-        final ProgressDialog pd=new ProgressDialog(this);
-        pd.setTitle("File Uploader");
-        pd.show();
 
-        final StorageReference uploader=storageReference.child("Image1" +System.currentTimeMillis());
-        uploader.putFile(filepath)
-                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        uploader.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                            @Override
-                            public void onSuccess(Uri uri) {
-                                final Map<String,Object> map = new HashMap<>();
+        if(filepath == null){
 
-                                map.put("pimage",uri.toString());
-                                map.put("firstName", edit_fn.getText().toString());
-                                map.put("lastName", edit_ln.getText().toString());
-                                map.put("email", edit_email.getText().toString());
-                                map.put("phoneNumber", edit_phone.getText().toString());
-                                map.put("address", edit_add.getText().toString());
+            Toast.makeText(this, "Please Re-Select Your Profile Image", Toast.LENGTH_SHORT).show();
+
+        }else {
+
+            final ProgressDialog pd = new ProgressDialog(this);
+            pd.setTitle("File Uploader");
+            pd.show();
+
+            final StorageReference uploader = storageReference.child("Image1" + System.currentTimeMillis());
+            uploader.putFile(filepath)
+                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            uploader.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    final Map<String, Object> map = new HashMap<>();
+
+                                    map.put("pimage", uri.toString());
+                                    map.put("firstName", edit_fn.getText().toString());
+                                    map.put("lastName", edit_ln.getText().toString());
+                                    map.put("email", edit_email.getText().toString());
+                                    map.put("phoneNumber", edit_phone.getText().toString());
+                                    map.put("address", edit_add.getText().toString());
 //                                currentPassword = dataSnapshot.child("password").getValue().toString();
-                                dbRef2 = FirebaseDatabase.getInstance().getReference();
-                                dbRef2.child("Customer").child("YATaDgnUNUhCCMzAXWXuBz3RcVJ3").updateChildren(map).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<Void> task) {
-                                        if(task.isSuccessful()){
-                                            Toast.makeText(edit_profile.this, "Updated", Toast.LENGTH_SHORT).show();
+                                    dbRef2 = FirebaseDatabase.getInstance().getReference();
+                                    dbRef2.child("Customer").child("kOeeOYSJ4vURDGQJfj0xZuBnxSg1").updateChildren(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if (task.isSuccessful()) {
+                                                Toast.makeText(edit_profile.this, "Updated", Toast.LENGTH_SHORT).show();
+                                            }
                                         }
-                                    }
-                                });
+                                    });
 
 
-                                pd.dismiss();
-                            }
-                        });
-                    }
-                })
-                .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
-                        float percent=(100*snapshot.getBytesTransferred())/snapshot.getTotalByteCount();
-                        pd.setMessage("Uploaded :"+(int)percent+"%");
-                    }
-                });
+                                    pd.dismiss();
+                                }
+                            });
+                        }
+                    })
+                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
+                            float percent = (100 * snapshot.getBytesTransferred()) / snapshot.getTotalByteCount();
+                            pd.setMessage("Uploaded :" + (int) percent + "%");
+                        }
+                    });
+        }
 
     }
 
-
-
-    //Update Profile
-
-//    private void UpdateUserProfile(String FirstName, String LastName, String Email, String Address, String PhoneNumber) {
-//
-//        HashMap customer = new HashMap();
-//        customer.put("firstName", FirstName);
-//        customer.put("lastName", LastName);
-//        customer.put("email", Email);
-//        customer.put("address", Address);
-//        customer.put("phoneNumber", PhoneNumber);
-//
-//        //** change password? ->
-//
-//        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child(CustomerID); //*userID?
-//        dbRef.updateChildren(customer).addOnCompleteListener(new OnCompleteListener() {
-//            @Override
-//            public void onComplete(@NonNull Task task) {
-//                if(task.isSuccessful()){
-//
-//                    Toast.makeText(edit_profile.this, "Profile Updated Successfully", Toast.LENGTH_SHORT).show();
-//
-//                }else{
-//
-//                    Toast.makeText(edit_profile.this, "Profile Update Failed", Toast.LENGTH_SHORT).show();
-//
-//                }
-//            }
-//        });
-//
-//    }
 
     public void DeleteUserprofile(View view){
 
@@ -365,11 +334,18 @@ public class edit_profile extends Working_Side {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.hasChild("Sheheni")){ // ** userId
+                if(dataSnapshot.hasChild("kOeeOYSJ4vURDGQJfj0xZuBnxSg1")){ // ** userId
 
-                    dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("Sheheni"); // ** userId
+                    dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("kOeeOYSJ4vURDGQJfj0xZuBnxSg1"); // ** userId
                     dbRef.removeValue();
                     Toast.makeText(getApplicationContext(), "Profile deleted Successfully", Toast.LENGTH_SHORT).show();
+
+                    edit_fn.setText("");
+                    edit_ln.setText("");
+                    edit_email.setText("");
+                    edit_phone.setText("");
+                    edit_add.setText("");
+                    profile_image.setImageResource(R.drawable.user);
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "No Source to Delete", Toast.LENGTH_SHORT).show();

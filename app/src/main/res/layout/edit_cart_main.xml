@@ -27,7 +27,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginStart="15dp"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="17dp"
+            android:layout_marginTop="28dp"
             android:layout_marginEnd="200dp"
             android:layout_marginRight="200dp"
             android:text="My Cart"
@@ -54,7 +54,7 @@
             android:layout_marginLeft="139dp"
             android:layout_marginEnd="134dp"
             android:layout_marginRight="134dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="25dp"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/pizza_l"></ImageView>
 
@@ -133,34 +133,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <Button
-                        android:id="@+id/ClearCart"
-                        android:layout_width="137dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginTop="23dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_marginBottom="634dp"
-                        android:text="Clear Cart"
-                        android:textAllCaps="false"
-                        android:textColor="#ffffff"
-                        app:backgroundTint="@color/ThemeGreen"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.102" />
 
                     <RelativeLayout
                         android:layout_width="410dp"
-                        android:layout_height="142dp"
-                        android:layout_marginTop="1dp"
-                        android:layout_marginEnd="1dp"
+                        android:layout_height="138dp"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="1dp"
                         android:layout_marginRight="1dp">
 
                         <Button
@@ -229,7 +210,8 @@
                             android:id="@+id/textView19"
                             android:layout_width="match_parent"
                             android:layout_height="138dp"
-                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginBottom="2dp"
                             android:background="@drawable/box"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -241,15 +223,15 @@
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/CartRV"
-                        android:layout_width="405dp"
-                        android:layout_height="343dp"
-                        android:layout_marginStart="1dp"
+                        android:layout_width="409dp"
+                        android:layout_height="383dp"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginTop="1dp"
-                        android:layout_marginEnd="1dp"
-                        android:layout_marginBottom="150dp" />
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="129dp" />
                 </RelativeLayout>
             </FrameLayout>
 

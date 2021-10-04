@@ -143,10 +143,10 @@
     <string name="qty2">2</string>
     <string name="qty3">1</string>
     <string name="qty4">1</string>
-    <string name="lava_price">LKR.650.00</string>
-    <string name="burger_price">LKR.700.00</string>
-    <string name="price_bread">LKR.100.00</string>
-    <string name="total_amount1"><b>LKR.1450.00</b></string>
+    <string name="lava_price">650.00</string>
+    <string name="burger_price">700.00</string>
+    <string name="price_bread">100.00</string>
+    <string name="total_amount1"><b>1450.00</b></string>
     <string name="my_cart"><b>My Cart </b></string>
     <string name="cart_fname">Name</string>
     <string name="food_namec"><b><![CDATA[Double Chicken & Cheese Fiesta]]></b></string>
@@ -171,8 +171,8 @@
     <string name="milk_s_price"><b>LKR.450.00</b></string>
     <string name="Restaurants"><b>Restaurants</b></string>
     <string name="cafe_name"><b>Cafe Crepe</b></string>
-    <string name="cuisine_typ"><b>Cusine Type:</b> Italian</string>
-    <string name="location"><b>Location:</b> Kalutara</string>
+    <string name="cuisine_typ"><b>Cuisine Type: </b></string>
+    <string name="location"><b>Location:</b></string>
     <string name="RestaurantName2">MAKI SUSHI</string>
     <string name="yourFavourites"><b>Your Favourites</b></string>
     <string name="customize_TotalPrice">Total Price</string>
@@ -310,6 +310,15 @@
     <string name="invalid_date">This field cannot be Empty!</string>
     <string name="invalid_number">Please Enter a valid Card Number!</string>
     <string name="invalid_cvc">Please enter the 3 digit value!!</string>
+
+    <string name="invalidf_name">First Name Cannot be Null</string>
+    <string name="invalidL_name">Last Name Cannot be Null</string>
+    <string name="invali_mobile">Invalid Mobile Number(phone number must be 10 digits)</string>
+    <string name="invalid_address">Address Cannot be Empty</string>
+    <string name="invalid_password">Invalid Password(must contain 8 or more characters which contain at least one numeric digit, one special character,one uppercase letter and one lowercase letter)</string>
+    <string name="invalid_Cpassword">Password Mismatch</string>
+    <string name="invalid_email">Invalid Email Address</string>
+    <string name="checked"><![CDATA[Agree With Our Terms & Conditions]]></string>
 
 
 </resources>

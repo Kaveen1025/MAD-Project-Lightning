@@ -205,7 +205,7 @@
                             app:layout_constraintTop_toTopOf="parent">
 
                             <ImageView
-                                android:id="@+id/imageView11"
+                                android:id="@+id/food_image1"
                                 android:layout_width="match_parent"
                                 android:layout_height="88dp"
                                 android:layout_alignParentStart="true"
@@ -218,7 +218,7 @@
                                 app:srcCompat="@drawable/burger" />
 
                             <TextView
-                                android:id="@+id/food_name9"
+                                android:id="@+id/food_name1"
                                 android:layout_width="129dp"
                                 android:layout_height="20dp"
                                 android:layout_alignParentStart="true"
@@ -231,7 +231,7 @@
                                 android:textColor="@color/ThemeBlack" />
 
                             <TextView
-                                android:id="@+id/des1"
+                                android:id="@+id/food1_des"
                                 android:layout_width="147dp"
                                 android:layout_height="57dp"
                                 android:layout_alignParentStart="true"
@@ -263,7 +263,7 @@
                                 android:textSize="12sp" />
 
                             <TextView
-                                android:id="@+id/favourite_cal"
+                                android:id="@+id/food1_price"
                                 android:layout_width="111dp"
                                 android:layout_height="18dp"
                                 android:layout_alignParentStart="true"
@@ -300,14 +300,14 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/favourite_img"
+                                android:id="@+id/food_image2"
                                 android:layout_width="match_parent"
                                 android:layout_height="88dp"
                                 android:scaleType="centerCrop"
                                 app:srcCompat="@drawable/milk_s" />
 
                             <TextView
-                                android:id="@+id/milk_shake"
+                                android:id="@+id/food_name2"
                                 android:layout_width="140dp"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentStart="true"
@@ -324,7 +324,7 @@
                                 android:textColor="@color/ThemeBlack" />
 
                             <TextView
-                                android:id="@+id/milk_s_des"
+                                android:id="@+id/food2_des"
                                 android:layout_width="144dp"
                                 android:layout_height="46dp"
                                 android:layout_alignParentStart="true"
@@ -356,7 +356,7 @@
                                 android:textSize="12sp" />
 
                             <TextView
-                                android:id="@+id/milk_s_price"
+                                android:id="@+id/food2_price"
                                 android:layout_width="106dp"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
@@ -414,7 +414,7 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/favourite_icon"
+                                android:id="@+id/restaurant_image"
                                 android:layout_width="match_parent"
                                 android:layout_height="128dp"
                                 android:layout_alignParentEnd="true"
