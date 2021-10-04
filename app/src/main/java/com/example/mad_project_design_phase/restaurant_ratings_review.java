@@ -52,7 +52,7 @@ public class restaurant_ratings_review extends Working_Side {
     Toolbar toolbar;
     ImageButton notificationBtn,profileBtn,cartBtn;
 
-
+    String Restname,RestLogo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,6 +101,8 @@ public class restaurant_ratings_review extends Working_Side {
                ratingTxt.setText(snapshot.child("Rating").getValue().toString());
                Ratings.setRating(4);
 
+               Restname = snapshot.child("name").getValue().toString();
+               RestLogo = snapshot.child("logo").getValue().toString();
 
                Glide.with(logo.getContext())
                        .load(snapshot.child("logo").getValue(String.class))
@@ -205,12 +207,23 @@ public class restaurant_ratings_review extends Working_Side {
                 Button submitReviewsss;
                 RatingBar SubRatings;
                 EditText subReview;
+                ImageView restLogo;
+                TextView upRestName;
 
 
                 closeDialog = (ImageButton) bottomSheet.findViewById(R.id.closeDialog44);
                 submitReviewsss = bottomSheet.findViewById(R.id.submitReview);
                 SubRatings = bottomSheet.findViewById(R.id.SubRatings);
                 subReview = bottomSheet.findViewById(R.id.updateReviewsss);
+                restLogo= bottomSheet.findViewById(R.id.restLogo);
+                upRestName = bottomSheet.findViewById(R.id.UprestName);
+
+                upRestName.setText(Restname);
+                Glide.with(restLogo)
+                        .load(RestLogo)
+                        .placeholder(R.drawable.common_google_signin_btn_icon_dark)
+                        .error(R.drawable.common_google_signin_btn_icon_dark_normal)
+                        .into(restLogo);
 
                 closeDialog.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -225,10 +238,12 @@ public class restaurant_ratings_review extends Working_Side {
                     public void onClick(View v) {
                         String review = subReview.getText().toString().trim();
                         String noOfStars = String.valueOf(SubRatings.getRating());
+                        String username = CustomerDetails.getNames();
+                        String userImage = CustomerDetails.getUserImage();
                         // Restaurant needs to be select one , Customer needs to be logged one
-                        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child("Restaurant1").child("Reviews").child("Customers");
-                        RestaurantReview R1 = new RestaurantReview(review,noOfStars);
-                        ref.child("C2").setValue(R1).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        ref = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(RestID).child("Reviews").child("Customers");
+                        RestaurantReview R1 = new RestaurantReview(review,noOfStars,username,userImage);
+                        ref.child(CustomerDetails.getCustomerID()).setValue(R1).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull @NotNull Task<Void> task) {
                                 if(task.isSuccessful()){

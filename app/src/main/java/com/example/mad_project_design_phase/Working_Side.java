@@ -103,8 +103,6 @@ public class Working_Side extends AppCompatActivity implements  NavigationView.O
                 break;
             case R.id.logout:
                 i = new Intent(Working_Side.this,login_page_2.class);
-
-                /// write a code for sign out form the DB*******
                 startActivity(i);
                 break;
         }

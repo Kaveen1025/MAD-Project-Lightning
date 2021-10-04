@@ -46,9 +46,6 @@ public String userID;
 
 
 
-
-
-
         Glide.with(holder.mainImage.getContext())
                 .load(model.getMainImage())
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
@@ -84,7 +81,7 @@ public String userID;
 
                         float rating = ( noOfStars / totalStars ) * 5;
 
-                        holder.rating.setText(String.valueOf(rating) + " / 5.0");
+                        holder.rating.setText(String.valueOf(rating + 1 * 4) + " / 5.0");
 
                     }
 

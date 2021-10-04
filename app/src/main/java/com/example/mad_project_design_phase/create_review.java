@@ -88,9 +88,11 @@ public class create_review extends Working_Side {
             public void onClick(View view){
                 String s = String.valueOf(rtbar.getRating());
                 String r = txt_writeReview.getText().toString().trim();
+                String username = CustomerDetails.getNames();
+                String userImage = CustomerDetails.getUserImage();
 
-                reviews = new FoodReviews(s,r);
-                reff.child("C1").setValue(reviews).addOnCompleteListener(new OnCompleteListener<Void>() {
+                reviews = new FoodReviews(s,r,username,userImage);
+                reff.child(CustomerDetails.getCustomerID()).setValue(reviews).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
